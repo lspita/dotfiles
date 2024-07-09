@@ -1,11 +1,23 @@
-# local bins
+export DOTFILES_PATH="$HOME/dotfiles"
+
+# -- local bins --
 export PATH="$HOME/.local/bin:$PATH"
 
-# source custom scripts
-export DOTFILES_PATH="$HOME/dotfiles"
-CUSTOM_SCRIPTS_PATH="$HOME/.config/zsh/scripts"
+# -- custom scripts --
 
-mkdir -p "$CUSTOM_SCRIPTS_PATH"
-for script in $CUSTOM_SCRIPTS_PATH/*; do
-	source "$script"
+# Prioritized scripts are executed before the others. Remember to add the script to the order array
+ZSH_SCRIPTS_PATH="$HOME/.config/zsh/scripts"
+ZSH_PRIORITY_SCRIPTS_PATH="$ZSH_SCRIPTS_PATH/priority"
+ZSH_PRIORITY_SCRIPTS_ORDER=("utils.sh" "plugins.sh")
+
+for s in "${ZSH_PRIORITY_SCRIPTS_ORDER[@]}"; do
+    s_full="$ZSH_PRIORITY_SCRIPTS_PATH/$s"
+    if [[ -f "$s_full" ]]; then
+        source "$s_full"
+    fi
+done
+
+mkdir -p "$ZSH_SCRIPTS_PATH"
+for s in $ZSH_SCRIPTS_PATH/*; do
+	source "$s"
 done
