@@ -8,7 +8,7 @@ export PATH="$HOME/.local/bin:$PATH"
 # Prioritized scripts are executed before the others. Remember to add the script to the order array
 ZSH_SCRIPTS_PATH="$HOME/.config/zsh/scripts"
 ZSH_PRIORITY_SCRIPTS_PATH="$ZSH_SCRIPTS_PATH/priority"
-ZSH_PRIORITY_SCRIPTS_ORDER=("utils.sh" "plugins.sh")
+ZSH_PRIORITY_SCRIPTS_ORDER=("utils.sh" "p10k.sh" "plugins.sh")
 
 for s in "${ZSH_PRIORITY_SCRIPTS_ORDER[@]}"; do
     s_full="$ZSH_PRIORITY_SCRIPTS_PATH/$s"
