@@ -73,3 +73,18 @@ as sudo (`sudo su`)
 - `cd /boot/loader/entries`
 - Rename default entry to arch.conf and remove the others
 - In arch.conf, edit "options root=... rw ..." to "options root=... rw quiet splash ..."
+
+
+# User dirs
+
+```sh
+cd $HOME
+mv Desktop desktop
+mv Downloads downloads
+mv Templates templates
+mv Public public
+mv Documents documents
+mv Music music
+mv Pictures pictures
+mv Videos videos
+```
