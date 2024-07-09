@@ -67,12 +67,12 @@ sudo systemctl enable --now docker.service
 # Systemd-boot
 
 as sudo (`sudo su`)
-- `bootctl install`
 - `cd /boot/loader`
 - In loader.conf, change "timeout <x>" to "timeout 0"
 - `cd /boot/loader/entries`
 - Rename default entry to arch.conf and remove the others
 - In arch.conf, edit "options root=... rw ..." to "options root=... rw quiet splash ..."
+- `bootctl install`
 
 
 # User dirs
