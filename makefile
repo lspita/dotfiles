@@ -1,5 +1,5 @@
 restow:
-	STOW_FLAG="R" ./install.sh
+	STOW_FLAG="-R" ./install.sh
 
 delete:
-	STOW_FLAG="D" ./install.sh
+	STOW_FLAG="-D" ./install.sh

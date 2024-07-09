@@ -6,7 +6,7 @@ TARGETS_SCRIPT="targets.sh"
 source "$TARGETS_SCRIPT"
 
 if [[ -z $STOW_FLAG ]]; then
-	STOW_FLAG="R"
+	STOW_FLAGS="-R"
 fi
 
 readarray -t ignore_list < "$STOW_IGNORE" # read lines of $STOW_IGNORE into $ignore_list
@@ -18,12 +18,10 @@ for i in "${ignore_list[@]}"; do
   ignore_map["$i"]=true
 done
 
-for package in *; do
+for package in */; do
   if [[ ${ignore_map["$package"]} == true ]]; then
-  	# echo "$package IGNORED"
   	continue
   else
-  	# echo "package: $package"
 	read -r -a target <<< "${targets["$DEFAULT_TARGET"]}" # convert the string into an array
 	
   	if [[ "${targets["$package"]}" ]]; then
@@ -38,7 +36,7 @@ for package in *; do
   		sudo_prefix="sudo"
   	fi
   	
-  	command="${sudo_prefix} stow --target=$path -$STOW_FLAG $package"
+  	command="$sudo_prefix stow --target=$path $STOW_FLAG $package"
   	echo $command
   	eval $command
   fi
