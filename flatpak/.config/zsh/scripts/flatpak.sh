@@ -1,7 +1,7 @@
 FLATPAK_DUMP_PATH="$DOTFILES_PATH/dumps/flatpak.dump"
 
 flatpak-freeze() {
-    flatpak list --app --columns=application | xargs echo -n > $1
+    flatpak list --app --columns=application | xargs echo -n > "$FLATPAK_DUMP_PATH"
 }
 
 flatpak-restore() {
