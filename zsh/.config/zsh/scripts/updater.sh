@@ -16,3 +16,18 @@ full-restore() {
     extensions-restore
     dconf-restore
 }
+
+
+full-backup() {
+    message="Backup $(date +%s)"
+
+    if [[ $# > 0 ]]; then
+        message="$1"
+    fi
+    
+    full-upgrade
+    full-freeze
+
+    git -C "$DOTFILES_PATH" commit -am "$message"
+    git -C  "$DOTFILES_PATH" push
+}

@@ -1,3 +1,11 @@
+[ca/desrt/dconf-editor]
+saved-pathbar-path='/org/gnome/shell/extensions/blur-my-shell/'
+saved-view='/org/gnome/shell/extensions/'
+show-warning=false
+window-height=500
+window-is-maximized=true
+window-width=540
+
 [com/mattjakeman/ExtensionManager]
 height=1016
 is-maximized=false
@@ -21,8 +29,8 @@ show-map=true
 tab-width=uint32 4
 
 [org/gnome/control-center]
-last-panel='wifi'
-window-state=(1626, 958, false)
+last-panel='sound'
+window-state=(1626, 720, false)
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST', 'Pardus']
@@ -57,7 +65,7 @@ sources=[('xkb', 'it')]
 xkb-options=['terminate:ctrl_alt_bksp', 'lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
-color-scheme='default'
+color-scheme='prefer-dark'
 document-font-name='NotoSans Nerd Font 12'
 enable-animations=true
 enable-hot-corners=false
@@ -148,15 +156,20 @@ maximized=false
 last-folder-path='/home/lspita/Downloads'
 
 [org/gnome/settings-daemon/plugins/color]
-night-light-last-coordinates=(43.785515947529106, 11.203379200000001)
+night-light-last-coordinates=(43.78903887095553, 11.203379200000001)
 
 [org/gnome/settings-daemon/plugins/media-keys]
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Super>Return'
 command='kgx'
 name='Launch Terminal'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Super>f'
+command='nautilus'
+name='Launch Explorer'
 
 [org/gnome/settings-daemon/plugins/power]
 sleep-inactive-ac-type='nothing'
@@ -165,27 +178,22 @@ sleep-inactive-ac-type='nothing'
 app-picker-layout=[{'nm-connection-editor.desktop': <{'position': <0>}>, 'anydesk.desktop': <{'position': <1>}>, 'bssh.desktop': <{'position': <2>}>, 'bvnc.desktop': <{'position': <3>}>, 'avahi-discover.desktop': <{'position': <4>}>, 'bitwarden.desktop': <{'position': <5>}>, 'btrfs-assistant.desktop': <{'position': <6>}>, 'org.gnome.Calculator.desktop': <{'position': <7>}>, 'org.gnome.Calendar.desktop': <{'position': <8>}>, 'org.gnome.Snapshot.desktop': <{'position': <9>}>, 'org.gnome.Characters.desktop': <{'position': <10>}>, 'org.gnome.clocks.desktop': <{'position': <11>}>, 'org.gnome.Console.desktop': <{'position': <12>}>, 'org.gnome.Contacts.desktop': <{'position': <13>}>, 'org.gnome.baobab.desktop': <{'position': <14>}>, 'org.gnome.DiskUtility.desktop': <{'position': <15>}>, 'simple-scan.desktop': <{'position': <16>}>, 'org.gnome.Evince.desktop': <{'position': <17>}>, 'me.dusansimic.DynamicWallpaper.desktop': <{'position': <18>}>, 'electron29.desktop': <{'position': <19>}>, 'com.mattjakeman.ExtensionManager.desktop': <{'position': <20>}>, 'org.gnome.Extensions.desktop': <{'position': <21>}>, 'org.gnome.font-viewer.desktop': <{'position': <22>}>, 'google-chrome.desktop': <{'position': <23>}>}, {'yelp.desktop': <{'position': <0>}>, 'htop.desktop': <{'position': <1>}>, 'org.gnome.Loupe.desktop': <{'position': <2>}>, 'org.gnome.Logs.desktop': <{'position': <3>}>, 'cups.desktop': <{'position': <4>}>, 'mcontrolcenter.desktop': <{'position': <5>}>, 'org.gnome.Music.desktop': <{'position': <6>}>, 'nvim.desktop': <{'position': <7>}>, 'jconsole-java11-openjdk.desktop': <{'position': <8>}>, 'jshell-java11-openjdk.desktop': <{'position': <9>}>, 'org.qbittorrent.qBittorrent.desktop': <{'position': <10>}>, 'assistant.desktop': <{'position': <11>}>, 'designer.desktop': <{'position': <12>}>, 'linguist.desktop': <{'position': <13>}>, 'qdbusviewer.desktop': <{'position': <14>}>, 'qv4l2.desktop': <{'position': <15>}>, 'qvidcap.desktop': <{'position': <16>}>, 'org.gnome.Settings.desktop': <{'position': <17>}>, 'org.gnome.Software.desktop': <{'position': <18>}>, 'spotify.desktop': <{'position': <19>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <20>}>, 'org.gnome.TextEditor.desktop': <{'position': <21>}>, 'org.gnome.Tour.desktop': <{'position': <22>}>, 'org.gnome.tweaks.desktop': <{'position': <23>}>}, {'org.gnome.Totem.desktop': <{'position': <0>}>, 'code.desktop': <{'position': <1>}>, 'org.gnome.Weather.desktop': <{'position': <2>}>, 'dev.zed.Zed.desktop': <{'position': <3>}>}]
 disabled-extensions=['workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com']
 enabled-extensions=['light-style@gnome-shell-extensions.gcampax.github.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'AlphabeticalAppGrid@stuarthayhurst', 'user-theme-x@tuberry.github.io', 'nightthemeswitcher@romainvigier.fr', 'app-hider@lynith.dev', 'blur-my-shell@aunetx', 'unite@hardpixel.eu', 'tilingshell@ferrarodomenico.com', 'forge@jmmaranan.com', 'just-perfection-desktop@just-perfection']
-favorite-apps=['firefox.desktop', 'code.desktop', 'org.gnome.Nautilus.desktop']
+favorite-apps=['firefox.desktop', 'code.desktop', 'org.gnome.Nautilus.desktop', 'spotify.desktop', 'org.gnome.Console.desktop']
 welcome-dialog-last-shown-version='46.3.1'
 
 [org/gnome/shell/app-switcher]
 current-workspace-only=true
 
+[org/gnome/shell/extensions/app-hider]
+hidden-apps=['nm-connection-editor.desktop', 'bssh.desktop', 'bvnc.desktop', 'avahi-discover.desktop', 'cmake-gui.desktop', 'electron29.desktop', 'org.gnome.Extensions.desktop', 'yelp.desktop', 'htop.desktop', 'nvim.desktop', 'cups.desktop', 'jconsole-java11-openjdk.desktop', 'jshell-java11-openjdk.desktop', 'assistant.desktop', 'designer.desktop', 'linguist.desktop', 'qdbusviewer.desktop', 'qv4l2.desktop', 'qvidcap.desktop', 'org.gnome.Tour.desktop', 'xdvi.desktop']
+hidden-search-apps=['nm-connection-editor.desktop', 'bssh.desktop', 'bvnc.desktop', 'avahi-discover.desktop', 'cmake-gui.desktop', 'electron29.desktop', 'org.gnome.Extensions.desktop', 'yelp.desktop', 'htop.desktop', 'nvim.desktop', 'cups.desktop', 'jconsole-java11-openjdk.desktop', 'jshell-java11-openjdk.desktop', 'assistant.desktop', 'designer.desktop', 'linguist.desktop', 'qdbusviewer.desktop', 'qv4l2.desktop', 'qvidcap.desktop', 'org.gnome.Tour.desktop', 'xdvi.desktop']
+
 [org/gnome/shell/extensions/blur-my-shell]
-hacks-level=1
 settings-version=2
 
 [org/gnome/shell/extensions/blur-my-shell/appfolder]
 brightness=0.59999999999999998
 sigma=30
-
-[org/gnome/shell/extensions/blur-my-shell/applications]
-blur=false
-blur-on-overview=false
-dynamic-opacity=false
-enable-all=true
-opacity=235
-sigma=40
 
 [org/gnome/shell/extensions/blur-my-shell/dash-to-dock]
 blur=true
@@ -194,32 +202,17 @@ pipeline='pipeline_default_rounded'
 sigma=30
 static-blur=true
 style-dash-to-dock=0
-unblur-in-overview=false
-
-[org/gnome/shell/extensions/blur-my-shell/dash-to-panel]
-blur-original-panel=false
-
-[org/gnome/shell/extensions/blur-my-shell/hidetopbar]
-compatibility=false
 
 [org/gnome/shell/extensions/blur-my-shell/lockscreen]
 pipeline='pipeline_default'
 
 [org/gnome/shell/extensions/blur-my-shell/overview]
-blur=true
 pipeline='pipeline_default'
-style-components=3
 
 [org/gnome/shell/extensions/blur-my-shell/panel]
-blur=true
 brightness=0.59999999999999998
-force-light-text=false
-override-background=true
-override-background-dynamically=true
 pipeline='pipeline_default'
 sigma=30
-style-panel=0
-unblur-in-overview=true
 
 [org/gnome/shell/extensions/blur-my-shell/screenshot]
 pipeline='pipeline_default'
@@ -312,11 +305,11 @@ workspaces-in-app-grid=true
 world-clock=false
 
 [org/gnome/shell/extensions/nightthemeswitcher/time]
-location=(43.785515947529106, 11.203379200000001)
+location=(43.789470173320936, 11.203379200000001)
 manual-schedule=false
 nightthemeswitcher-ondemand-keybinding=['<Super>F8']
-sunrise=6.1125161691819443
-sunset=20.572050475863321
+sunrise=6.1217404576262666
+sunset=20.566244743843583
 
 [org/gnome/shell/extensions/tilingshell]
 last-version-name-installed='11'
@@ -334,7 +327,7 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1720509197
+check-timestamp=int64 1720598541
 first-run=false
 flatpak-purge-timestamp=int64 1720516748
 
@@ -351,8 +344,8 @@ selected-color=(true, 0.10196078568696976, 0.37254902720451355, 0.70588237047195
 [org/gtk/gtk4/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=true
-sidebar-width=140
+show-hidden=false
+sidebar-width=210
 sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
