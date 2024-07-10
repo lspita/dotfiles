@@ -5,12 +5,6 @@ yay -Rs epiphany gnome-maps gnome-connections epiphany # remove bloat
 sudo usermod -aG video $USER # make gnome-camera work
 ```
 
-# Packages
-
-```sh
-yay -S python python-pip make
-```
-
 # Zsh
 
 ```sh
