@@ -156,7 +156,7 @@ maximized=false
 last-folder-path='/home/lspita/Downloads'
 
 [org/gnome/settings-daemon/plugins/color]
-night-light-last-coordinates=(43.78903887095553, 11.203379200000001)
+night-light-last-coordinates=(43.77936240951734, 11.203379200000001)
 
 [org/gnome/settings-daemon/plugins/media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
@@ -305,11 +305,11 @@ workspaces-in-app-grid=true
 world-clock=false
 
 [org/gnome/shell/extensions/nightthemeswitcher/time]
-location=(43.785168648800635, 11.203379200000001)
+location=(43.775928503207091, 11.203379200000001)
 manual-schedule=false
 nightthemeswitcher-ondemand-keybinding=['<Super>F8']
-sunrise=6.122038710431319
-sunset=20.565962565394422
+sunrise=6.1228860037769621
+sunset=20.565222269178086
 
 [org/gnome/shell/extensions/tilingshell]
 last-version-name-installed='11'
@@ -329,7 +329,7 @@ locations=@av []
 [org/gnome/software]
 check-timestamp=int64 1720598541
 first-run=false
-flatpak-purge-timestamp=int64 1720516748
+flatpak-purge-timestamp=int64 1720605675
 
 [org/gnome/system/location]
 enabled=true
