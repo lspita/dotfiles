@@ -1,5 +1,10 @@
 export DOTFILES_PATH="$HOME/dotfiles"
 
+# -- zsh --
+
+SAVEHIST=1000
+HISTFILE=~/.zsh_history
+
 # -- local bins --
 export PATH="$HOME/.local/bin:$PATH"
 

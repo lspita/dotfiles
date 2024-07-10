@@ -305,11 +305,11 @@ workspaces-in-app-grid=true
 world-clock=false
 
 [org/gnome/shell/extensions/nightthemeswitcher/time]
-location=(43.789470173320936, 11.203379200000001)
+location=(43.785168648800635, 11.203379200000001)
 manual-schedule=false
 nightthemeswitcher-ondemand-keybinding=['<Super>F8']
-sunrise=6.1217404576262666
-sunset=20.566244743843583
+sunrise=6.122038710431319
+sunset=20.565962565394422
 
 [org/gnome/shell/extensions/tilingshell]
 last-version-name-installed='11'
