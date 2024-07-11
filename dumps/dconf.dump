@@ -65,7 +65,7 @@ sources=[('xkb', 'it')]
 xkb-options=['terminate:ctrl_alt_bksp', 'lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
-color-scheme='prefer-dark'
+color-scheme='default'
 document-font-name='NotoSans Nerd Font 12'
 enable-animations=true
 enable-hot-corners=false
@@ -156,7 +156,7 @@ maximized=false
 last-folder-path='/home/lspita/Downloads'
 
 [org/gnome/settings-daemon/plugins/color]
-night-light-last-coordinates=(43.77936240951734, 11.203379200000001)
+night-light-last-coordinates=(44.090798397582347, 12.5642373)
 
 [org/gnome/settings-daemon/plugins/media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
@@ -305,11 +305,11 @@ workspaces-in-app-grid=true
 world-clock=false
 
 [org/gnome/shell/extensions/nightthemeswitcher/time]
-location=(43.775928503207091, 11.203379200000001)
+location=(44.090798397582347, 12.5642373)
 manual-schedule=false
 nightthemeswitcher-ondemand-keybinding=['<Super>F8']
-sunrise=6.1228860037769621
-sunset=20.565222269178086
+sunrise=6.0259653878090447
+sunset=20.48482584153296
 
 [org/gnome/shell/extensions/tilingshell]
 last-version-name-installed='11'
