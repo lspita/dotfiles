@@ -19,7 +19,7 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-EDITOR='code'
+EDITOR='vim'
 
 # -- zsh --
 
