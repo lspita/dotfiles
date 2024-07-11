@@ -1,5 +1,0 @@
-[Service]
-ExecStart=/home/lspita/.local/bin/power-monitor.sh
-
-[Install]
-WantedBy=default.target
