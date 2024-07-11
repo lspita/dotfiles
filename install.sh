@@ -33,11 +33,12 @@ for package in */; do
   	
   	sudo_prefix=""
   	if [[ $use_sudo == true ]]; then
-  		sudo_prefix="sudo"
+  		sudo_prefix="sudo "
   	fi
   	
-  	command="$sudo_prefix stow --target=$path $STOW_FLAG $package"
-  	echo $command
-  	eval $command
+  	command="${sudo_prefix}stow --target=$path $STOW_FLAG $package"
+	echo "$command"
+  	output=$(eval $command)
+	echo "$output"
   fi
 done
