@@ -1,0 +1,1 @@
+alias battery-status="tlp-stat -b"

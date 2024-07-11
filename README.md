@@ -82,3 +82,11 @@ mv Music music
 mv Pictures pictures
 mv Videos videos
 ```
+
+# Tlp
+
+```sh
+yay -S tlp tlp-rdw tlpui
+sudo systemctl enable --now tlp.service NetworkManager-dispatcher.service
+sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
+```
