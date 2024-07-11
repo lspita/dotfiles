@@ -19,7 +19,7 @@ full-restore() {
 
 
 full-backup() {
-    message="Backup $(date +%s)"
+    message="Backup $(date +"%Y-%m-%d %H:%M:%S %Z")"
 
     if [[ $# > 0 ]]; then
         message="$1"

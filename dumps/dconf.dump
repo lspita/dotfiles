@@ -96,7 +96,7 @@ application-id='org.gnome.TextEditor.desktop'
 application-id='spotify.desktop'
 
 [org/gnome/desktop/peripherals/keyboard]
-numlock-state=false
+numlock-state=true
 
 [org/gnome/desktop/peripherals/touchpad]
 two-finger-scrolling-enabled=true
@@ -305,11 +305,11 @@ workspaces-in-app-grid=true
 world-clock=false
 
 [org/gnome/shell/extensions/nightthemeswitcher/time]
-location=(44.090798397582347, 12.5642373)
+location=(44.089536719790004, 12.5642373)
 manual-schedule=false
 nightthemeswitcher-ondemand-keybinding=['<Super>F8']
-sunrise=6.0259653878090447
-sunset=20.48482584153296
+sunrise=6.0263064240959849
+sunset=20.484570228477104
 
 [org/gnome/shell/extensions/tilingshell]
 last-version-name-installed='11'
@@ -327,7 +327,7 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1720598541
+check-timestamp=int64 1720687127
 first-run=false
 flatpak-purge-timestamp=int64 1720605675
 
