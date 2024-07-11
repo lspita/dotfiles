@@ -17,7 +17,7 @@ width=1482
 audible-bell=false
 font-scale=1.2000000000000002
 last-window-maximised=false
-last-window-size=(1228, 712)
+last-window-size=(1745, 903)
 theme='auto'
 
 [org/gnome/TextEditor]
@@ -156,7 +156,7 @@ maximized=false
 last-folder-path='/home/lspita/Downloads'
 
 [org/gnome/settings-daemon/plugins/color]
-night-light-last-coordinates=(44.090798397582347, 12.5642373)
+night-light-last-coordinates=(44.046275479329267, 12.5642373)
 
 [org/gnome/settings-daemon/plugins/media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
@@ -305,11 +305,11 @@ workspaces-in-app-grid=true
 world-clock=false
 
 [org/gnome/shell/extensions/nightthemeswitcher/time]
-location=(44.089536719790004, 12.5642373)
+location=(44.046275479329267, 12.5642373)
 manual-schedule=false
 nightthemeswitcher-ondemand-keybinding=['<Super>F8']
-sunrise=6.0263064240959849
-sunset=20.484570228477104
+sunrise=6.0299903874278691
+sunset=20.481248937625011
 
 [org/gnome/shell/extensions/tilingshell]
 last-version-name-installed='11'
@@ -352,6 +352,20 @@ sort-order='ascending'
 type-format='category'
 view-type='list'
 window-size=(1373, 805)
+
+[org/gtk/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=175
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+window-position=(26, 23)
+window-size=(1338, 982)
 
 [system/locale]
 region='en_IE.UTF-8'

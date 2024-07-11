@@ -93,7 +93,6 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
-power-profiles-daemon
 python-pip
 qbittorrent
 rust
@@ -131,6 +130,9 @@ texlive-plaingeneric
 texlive-pstricks
 texlive-publishers
 texlive-xetex
+tlp
+tlp-rdw
+tlpui
 totem
 tracker3-miners
 ttf-firacode-nerd
