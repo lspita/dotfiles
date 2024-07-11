@@ -1,4 +1,25 @@
-export DOTFILES_PATH="$HOME/dotfiles"
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# -- oh-my-zsh --
+
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_CUSTOM="$ZSH/custom"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+# ENABLE_CORRECTION="true"
+COMPLETION_WAITING_DOTS="true"
+HIST_STAMPS="yyyy-mm-dd"
+
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+EDITOR='code'
 
 # -- zsh --
 
@@ -8,21 +29,6 @@ HISTFILE=~/.zsh_history
 # -- local bins --
 export PATH="$HOME/.local/bin:$PATH"
 
-# -- custom scripts --
+# -- custom --
 
-# Prioritized scripts are executed before the others. Remember to add the script to the order array
-ZSH_SCRIPTS_PATH="$HOME/.config/zsh/scripts"
-ZSH_PRIORITY_SCRIPTS_PATH="$ZSH_SCRIPTS_PATH/priority"
-ZSH_PRIORITY_SCRIPTS_ORDER=("ls.sh" "utils.sh" "p10k.sh" "plugins.sh")
-
-for s in "${ZSH_PRIORITY_SCRIPTS_ORDER[@]}"; do
-    s_full="$ZSH_PRIORITY_SCRIPTS_PATH/$s"
-    if [[ -f "$s_full" ]]; then
-        source "$s_full"
-    fi
-done
-
-mkdir -p "$ZSH_SCRIPTS_PATH"
-for s in $ZSH_SCRIPTS_PATH/*; do
-	source "$s"
-done
+export DOTFILES_PATH="$HOME/dotfiles"
