@@ -38,7 +38,6 @@ for package in */; do
   	
   	command="${sudo_prefix}stow --target=$path $STOW_FLAG $package"
 	echo "$command"
-  	output=$(eval $command)
-	echo "$output"
+  	eval $command
   fi
 done
