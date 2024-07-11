@@ -65,7 +65,7 @@ sources=[('xkb', 'it')]
 xkb-options=['terminate:ctrl_alt_bksp', 'lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
-color-scheme='default'
+color-scheme='prefer-dark'
 document-font-name='NotoSans Nerd Font 12'
 enable-animations=true
 enable-hot-corners=false

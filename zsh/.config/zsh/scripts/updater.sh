@@ -28,6 +28,7 @@ full-backup() {
     full-upgrade
     full-freeze
 
+    git -C "$DOTFILES_PATH" add "$DOTFILES_PATH"
     git -C "$DOTFILES_PATH" commit -am "$message"
     git -C  "$DOTFILES_PATH" push
 }
