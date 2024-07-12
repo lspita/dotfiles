@@ -1,6 +1,4 @@
 alias open="xdg-open"
-alias lg='lazygit'
-alias c='code .'
 
 purge-all() {
     rm -rf * 
