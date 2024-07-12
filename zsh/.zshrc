@@ -1,3 +1,10 @@
+# -- custom --
+
+export DOTFILES_PATH="$HOME/dotfiles"
+export PATH="$HOME/.local/bin:$PATH"
+
+# -- p10k--
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -25,10 +32,3 @@ EDITOR='vim'
 
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
-
-# -- local bins --
-export PATH="$HOME/.local/bin:$PATH"
-
-# -- custom --
-
-export DOTFILES_PATH="$HOME/dotfiles"

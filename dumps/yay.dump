@@ -1,3 +1,4 @@
+alsa-utils
 anydesk-bin
 baobab
 base
@@ -87,11 +88,15 @@ neovim
 network-manager-applet
 networkmanager
 nodejs
+noto-fonts
+noto-fonts-cjk
+noto-fonts-extra
 npm
 orca
 pipewire
 pipewire-alsa
 pipewire-jack
+pipewire-media-session
 pipewire-pulse
 python-pip
 qbittorrent
@@ -138,12 +143,12 @@ tracker3-miners
 ttf-firacode-nerd
 ttf-noto-nerd
 valgrind
+vim
 visual-studio-code-bin
 vulkan-intel
 vulkan-radeon
 wget
 wireless_tools
-wireplumber
 xdg-desktop-portal-gnome
 xdg-user-dirs-gtk
 xdg-utils
@@ -159,6 +164,3 @@ yelp
 zoxide
 zram-generator
 zsh
-zsh-autosuggestions
-zsh-syntax-highlighting
-zsh-theme-powerlevel10k-git

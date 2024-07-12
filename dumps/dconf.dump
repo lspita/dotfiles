@@ -29,7 +29,7 @@ show-map=true
 tab-width=uint32 4
 
 [org/gnome/control-center]
-last-panel='background'
+last-panel='sound'
 window-state=(1626, 720, false)
 
 [org/gnome/desktop/app-folders]
@@ -66,10 +66,10 @@ xkb-options=['terminate:ctrl_alt_bksp', 'lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
 color-scheme='default'
-document-font-name='NotoSans Nerd Font 12'
+document-font-name='Noto Sans 12'
 enable-animations=true
 enable-hot-corners=false
-font-name='NotoSans Nerd Font 12'
+font-name='Noto Sans 12'
 gtk-enable-primary-paste=false
 monospace-font-name='FiraCode Nerd Font 12'
 show-battery-percentage=true
@@ -134,6 +134,16 @@ window-size=(1024, 768)
 [org/gnome/evolution-data-server]
 migrated=true
 
+[org/gnome/gnome-system-monitor]
+show-dependencies=false
+show-whose-processes='user'
+window-height=659
+window-width=1143
+
+[org/gnome/gnome-system-monitor/disktreenew]
+col-6-visible=true
+col-6-width=0
+
 [org/gnome/mutter]
 center-new-windows=true
 edge-tiling=true
@@ -156,7 +166,7 @@ maximized=false
 last-folder-path='/home/lspita/Downloads'
 
 [org/gnome/settings-daemon/plugins/color]
-night-light-last-coordinates=(44.075513999290557, 12.5642373)
+night-light-last-coordinates=(44.08349879826843, 12.5642373)
 
 [org/gnome/settings-daemon/plugins/media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
@@ -186,8 +196,8 @@ welcome-dialog-last-shown-version='46.3.1'
 current-workspace-only=true
 
 [org/gnome/shell/extensions/app-hider]
-hidden-apps=['nm-connection-editor.desktop', 'bssh.desktop', 'bvnc.desktop', 'avahi-discover.desktop', 'cmake-gui.desktop', 'electron29.desktop', 'org.gnome.Extensions.desktop', 'yelp.desktop', 'htop.desktop', 'nvim.desktop', 'cups.desktop', 'jconsole-java11-openjdk.desktop', 'jshell-java11-openjdk.desktop', 'assistant.desktop', 'designer.desktop', 'linguist.desktop', 'qdbusviewer.desktop', 'qv4l2.desktop', 'qvidcap.desktop', 'org.gnome.Tour.desktop', 'xdvi.desktop']
-hidden-search-apps=['nm-connection-editor.desktop', 'bssh.desktop', 'bvnc.desktop', 'avahi-discover.desktop', 'cmake-gui.desktop', 'electron29.desktop', 'org.gnome.Extensions.desktop', 'yelp.desktop', 'htop.desktop', 'nvim.desktop', 'cups.desktop', 'jconsole-java11-openjdk.desktop', 'jshell-java11-openjdk.desktop', 'assistant.desktop', 'designer.desktop', 'linguist.desktop', 'qdbusviewer.desktop', 'qv4l2.desktop', 'qvidcap.desktop', 'org.gnome.Tour.desktop', 'xdvi.desktop']
+hidden-apps=['nm-connection-editor.desktop', 'bssh.desktop', 'bvnc.desktop', 'avahi-discover.desktop', 'cmake-gui.desktop', 'electron29.desktop', 'org.gnome.Extensions.desktop', 'yelp.desktop', 'htop.desktop', 'nvim.desktop', 'cups.desktop', 'jconsole-java11-openjdk.desktop', 'jshell-java11-openjdk.desktop', 'assistant.desktop', 'designer.desktop', 'linguist.desktop', 'qdbusviewer.desktop', 'qv4l2.desktop', 'qvidcap.desktop', 'org.gnome.Tour.desktop', 'xdvi.desktop', 'vim.desktop']
+hidden-search-apps=['nm-connection-editor.desktop', 'bssh.desktop', 'bvnc.desktop', 'avahi-discover.desktop', 'cmake-gui.desktop', 'electron29.desktop', 'org.gnome.Extensions.desktop', 'yelp.desktop', 'htop.desktop', 'nvim.desktop', 'cups.desktop', 'jconsole-java11-openjdk.desktop', 'jshell-java11-openjdk.desktop', 'assistant.desktop', 'designer.desktop', 'linguist.desktop', 'qdbusviewer.desktop', 'qv4l2.desktop', 'qvidcap.desktop', 'org.gnome.Tour.desktop', 'xdvi.desktop', 'vim.desktop']
 
 [org/gnome/shell/extensions/blur-my-shell]
 settings-version=2
@@ -306,11 +316,11 @@ workspaces-in-app-grid=true
 world-clock=false
 
 [org/gnome/shell/extensions/nightthemeswitcher/time]
-location=(44.075513999290557, 12.5642373)
-manual-schedule=false
+location=(44.055719134899768, 12.5642373)
+manual-schedule=true
 nightthemeswitcher-ondemand-keybinding=['<Super>F8']
-sunrise=6.0292226011455412
-sunset=20.482318892112161
+sunrise=0.0
+sunset=0.0
 
 [org/gnome/shell/extensions/tilingshell]
 last-version-name-installed='11'
@@ -328,9 +338,9 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1720687127
+check-timestamp=int64 1720772036
 first-run=false
-flatpak-purge-timestamp=int64 1720605675
+flatpak-purge-timestamp=int64 1720715875
 
 [org/gnome/system/location]
 enabled=true
