@@ -20,6 +20,11 @@ last-window-maximised=false
 last-window-size=(1745, 903)
 theme='auto'
 
+[org/gnome/Snapshot]
+is-maximized=false
+window-height=640
+window-width=800
+
 [org/gnome/TextEditor]
 highlight-current-line=true
 last-save-directory='file:///home/lspita'
@@ -29,8 +34,8 @@ show-map=true
 tab-width=uint32 4
 
 [org/gnome/control-center]
-last-panel='sound'
-window-state=(1626, 720, false)
+last-panel='network'
+window-state=(1357, 909, false)
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST', 'Pardus']
@@ -162,11 +167,15 @@ search-filter-time-type='last_modified'
 initial-size=(1717, 965)
 maximized=false
 
+[org/gnome/nm-applet/eap/b6367a4e-4498-4d9b-bb27-0da2e1912a67]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
 [org/gnome/portal/filechooser/org.gnome.Settings]
-last-folder-path='/home/lspita/Downloads'
+last-folder-path='/home/lspita/dotfiles/techboost/stowignore'
 
 [org/gnome/settings-daemon/plugins/color]
-night-light-last-coordinates=(44.08349879826843, 12.5642373)
+night-light-last-coordinates=(44.086708869220082, 12.5642373)
 
 [org/gnome/settings-daemon/plugins/media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
@@ -289,6 +298,7 @@ background-menu=true
 controls-manager-spacing-size=0
 dash=true
 dash-icon-size=0
+dash-separator=true
 double-super-to-appgrid=true
 max-displayed-search-results=0
 osd=true
@@ -297,7 +307,7 @@ panel=true
 panel-in-overview=true
 ripple-box=true
 search=true
-show-apps-button=true
+show-apps-button=false
 startup-status=0
 switcher-popup-delay=false
 theme=true
@@ -357,7 +367,7 @@ date-format='regular'
 location-mode='path-bar'
 show-hidden=false
 sidebar-width=210
-sort-column='name'
+sort-column='type'
 sort-directories-first=false
 sort-order='ascending'
 type-format='category'

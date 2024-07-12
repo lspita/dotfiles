@@ -7,11 +7,26 @@ sudo pacman -R wireplumber # conflict
 sudo pacman -Syu pipewire-media-session
 ```
 
+# Yay
+
+```sh
+pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd ..
+rm -rf yay
+yay -Y --gendb
+yay -Y --devel --save
+yay -Syu
+```
+
 # Gnome
 
 ```sh
 yay -Rs epiphany gnome-maps gnome-connections epiphany # remove bloat
 sudo usermod -aG video $USER # make gnome-camera work
+sudo cp -Lf ~/.config/monitors.xml /var/lib/gdm/.config/monitors.xml # copy monitors config to root
 ```
 
 # Zsh
@@ -30,6 +45,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 ```sh
 sudo systemctl enable --now bluetooth
+systemctl --user enable --now pipewire
 ```
 
 ## User services

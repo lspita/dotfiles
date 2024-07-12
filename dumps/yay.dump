@@ -1,5 +1,7 @@
+alsa-firmware
 alsa-utils
 anydesk-bin
+ast-firmware
 baobab
 base
 base-devel
@@ -81,6 +83,7 @@ loupe
 malcontent
 man-db
 mcontrolcenter-git
+mkinitcpio-firmware
 nano
 nautilus
 nautilus-code
