@@ -99,7 +99,6 @@ orca
 pipewire
 pipewire-alsa
 pipewire-jack
-pipewire-media-session
 pipewire-pulse
 python-pip
 qbittorrent
@@ -152,6 +151,7 @@ vulkan-intel
 vulkan-radeon
 wget
 wireless_tools
+wireplumber
 xdg-desktop-portal-gnome
 xdg-user-dirs-gtk
 xdg-utils

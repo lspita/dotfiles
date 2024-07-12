@@ -124,6 +124,10 @@ sort-order=['firefox.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilu
 [org/gnome/desktop/session]
 idle-delay=uint32 900
 
+[org/gnome/desktop/sound]
+event-sounds=true
+theme-name='__custom'
+
 [org/gnome/desktop/wm/keybindings]
 close=['<Super>q']
 maximize=['<Super>Up']
@@ -175,7 +179,7 @@ ignore-phase2-ca-cert=false
 last-folder-path='/home/lspita/dotfiles/techboost/stowignore'
 
 [org/gnome/settings-daemon/plugins/color]
-night-light-last-coordinates=(44.063751367602585, 12.5642373)
+night-light-last-coordinates=(44.065276394758094, 12.5642373)
 
 [org/gnome/settings-daemon/plugins/media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
