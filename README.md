@@ -1,3 +1,12 @@
+# Pipewire fix
+
+If the audio is not working until you switch device
+
+```sh
+sudo pacman -R wireplumber # conflict
+sudo pacman -Syu pipewire-media-session
+```
+
 # Gnome
 
 ```sh
