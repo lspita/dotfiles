@@ -87,7 +87,6 @@ mkinitcpio-firmware
 nano
 nautilus
 nautilus-code
-neovim
 network-manager-applet
 networkmanager
 nodejs
@@ -95,6 +94,7 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-extra
 npm
+obsidian
 orca
 pipewire
 pipewire-alsa
