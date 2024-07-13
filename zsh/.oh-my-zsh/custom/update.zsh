@@ -1,20 +1,47 @@
+DNF_DUMP_PATH="$DOTFILES_PATH/dumps/dnf.dump"
+FLATPAK_DUMP_PATH="$DOTFILES_PATH/dumps/flatpak.dump"
+GNOME_EXTENSION_DUMP_PATH="$DOTFILES_PATH/dumps/extensions.dump"
+DCONF_DUMP_PATH="$DOTFILES_PATH/dumps/dconf.dump"
+
+
 full-upgrade() {
-    yay-upgrade
-    flatpak-upgrade
+    # dnf
+    sudo dnf upgrade
+    sudo dnf autoremove
+
+    # flatpak
+    flatpak update
+
+    # sdkman
+    sdk upgrade
 }
 
 full-freeze() {
-    yay-freeze
-    flatpak-freeze
-    extensions-freeze
-    dconf-freeze
+    # dnf
+    dnf repoquery --userinstalled > "$DNF_DUMP_PATH"
+
+    # flatpak
+    flatpak list --app --columns=application | xargs echo -n > "$FLATPAK_DUMP_PATH"
+    
+    # gnome-extensions
+    gnome-extensions list --enabled > "$GNOME_EXTENSION_DUMP_PATH"
+
+    # dconf
+    dconf dump / > "$DCONF_DUMP_PATH"
 }
 
 full-restore() {
-    yay-restore
-    flatpak-restore
-    extensions-restore
-    dconf-restore
+    # dnf
+    dnf install $(cat "$DNF_DUMP_PATH")
+
+    # flatpak
+    flatpak install $(cat $"$FLATPAK_DUMP_PATH")
+
+    # gnome-extensions
+    # NOT POSSIBLE
+
+    # dconf
+    dconf load / < "$DCONF_DUMP_PATH"
 }
 
 

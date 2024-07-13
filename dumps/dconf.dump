@@ -66,6 +66,7 @@ primary-color='#3465a4'
 secondary-color='#000000'
 
 [org/gnome/desktop/input-sources]
+current=uint32 0
 sources=[('xkb', 'it')]
 xkb-options=['terminate:ctrl_alt_bksp', 'lv3:ralt_switch']
 
@@ -88,6 +89,9 @@ application-id='firefox.desktop'
 [org/gnome/desktop/notifications/application/gnome-power-panel]
 application-id='gnome-power-panel.desktop'
 
+[org/gnome/desktop/notifications/application/gnome-printers-panel]
+application-id='gnome-printers-panel.desktop'
+
 [org/gnome/desktop/notifications/application/org-gnome-console]
 application-id='org.gnome.Console.desktop'
 
@@ -97,8 +101,14 @@ application-id='org.gnome.Evolution-alarm-notify.desktop'
 [org/gnome/desktop/notifications/application/org-gnome-shell-extensions]
 application-id='org.gnome.Shell.Extensions.desktop'
 
+[org/gnome/desktop/notifications/application/org-gnome-software]
+application-id='org.gnome.Software.desktop'
+
 [org/gnome/desktop/notifications/application/org-gnome-texteditor]
 application-id='org.gnome.TextEditor.desktop'
+
+[org/gnome/desktop/notifications/application/org-mozilla-firefox]
+application-id='org.mozilla.firefox.desktop'
 
 [org/gnome/desktop/notifications/application/spotify]
 application-id='spotify.desktop'
@@ -112,6 +122,7 @@ two-finger-scrolling-enabled=true
 [org/gnome/desktop/privacy]
 old-files-age=uint32 30
 recent-files-max-age=-1
+report-technical-problems=false
 
 [org/gnome/desktop/screensaver]
 color-shading-type='solid'
@@ -159,6 +170,10 @@ window-width=1143
 col-6-visible=true
 col-6-width=0
 
+[org/gnome/login-screen]
+enable-fingerprint-authentication=true
+enable-smartcard-authentication=false
+
 [org/gnome/mutter]
 center-new-windows=true
 edge-tiling=true
@@ -174,8 +189,8 @@ migrated-gtk-settings=true
 search-filter-time-type='last_modified'
 
 [org/gnome/nautilus/window-state]
-initial-size=(1717, 965)
-maximized=false
+initial-size=(1333, 683)
+maximized=true
 
 [org/gnome/nm-applet/eap/b6367a4e-4498-4d9b-bb27-0da2e1912a67]
 ignore-ca-cert=false
@@ -211,7 +226,7 @@ sleep-inactive-ac-type='nothing'
 app-picker-layout=[{'nm-connection-editor.desktop': <{'position': <0>}>, 'anydesk.desktop': <{'position': <1>}>, 'bssh.desktop': <{'position': <2>}>, 'bvnc.desktop': <{'position': <3>}>, 'avahi-discover.desktop': <{'position': <4>}>, 'bitwarden.desktop': <{'position': <5>}>, 'btrfs-assistant.desktop': <{'position': <6>}>, 'org.gnome.Calculator.desktop': <{'position': <7>}>, 'org.gnome.Calendar.desktop': <{'position': <8>}>, 'org.gnome.Snapshot.desktop': <{'position': <9>}>, 'org.gnome.Characters.desktop': <{'position': <10>}>, 'org.gnome.clocks.desktop': <{'position': <11>}>, 'org.gnome.Console.desktop': <{'position': <12>}>, 'org.gnome.Contacts.desktop': <{'position': <13>}>, 'org.gnome.baobab.desktop': <{'position': <14>}>, 'org.gnome.DiskUtility.desktop': <{'position': <15>}>, 'simple-scan.desktop': <{'position': <16>}>, 'org.gnome.Evince.desktop': <{'position': <17>}>, 'me.dusansimic.DynamicWallpaper.desktop': <{'position': <18>}>, 'electron29.desktop': <{'position': <19>}>, 'com.mattjakeman.ExtensionManager.desktop': <{'position': <20>}>, 'org.gnome.Extensions.desktop': <{'position': <21>}>, 'org.gnome.font-viewer.desktop': <{'position': <22>}>, 'google-chrome.desktop': <{'position': <23>}>}, {'yelp.desktop': <{'position': <0>}>, 'htop.desktop': <{'position': <1>}>, 'org.gnome.Loupe.desktop': <{'position': <2>}>, 'org.gnome.Logs.desktop': <{'position': <3>}>, 'cups.desktop': <{'position': <4>}>, 'mcontrolcenter.desktop': <{'position': <5>}>, 'org.gnome.Music.desktop': <{'position': <6>}>, 'nvim.desktop': <{'position': <7>}>, 'jconsole-java11-openjdk.desktop': <{'position': <8>}>, 'jshell-java11-openjdk.desktop': <{'position': <9>}>, 'org.qbittorrent.qBittorrent.desktop': <{'position': <10>}>, 'assistant.desktop': <{'position': <11>}>, 'designer.desktop': <{'position': <12>}>, 'linguist.desktop': <{'position': <13>}>, 'qdbusviewer.desktop': <{'position': <14>}>, 'qv4l2.desktop': <{'position': <15>}>, 'qvidcap.desktop': <{'position': <16>}>, 'org.gnome.Settings.desktop': <{'position': <17>}>, 'org.gnome.Software.desktop': <{'position': <18>}>, 'spotify.desktop': <{'position': <19>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <20>}>, 'org.gnome.TextEditor.desktop': <{'position': <21>}>, 'org.gnome.Tour.desktop': <{'position': <22>}>, 'org.gnome.tweaks.desktop': <{'position': <23>}>}, {'org.gnome.Totem.desktop': <{'position': <0>}>, 'code.desktop': <{'position': <1>}>, 'org.gnome.Weather.desktop': <{'position': <2>}>, 'dev.zed.Zed.desktop': <{'position': <3>}>}]
 disabled-extensions=['workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com']
 enabled-extensions=['light-style@gnome-shell-extensions.gcampax.github.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'AlphabeticalAppGrid@stuarthayhurst', 'user-theme-x@tuberry.github.io', 'nightthemeswitcher@romainvigier.fr', 'app-hider@lynith.dev', 'blur-my-shell@aunetx', 'unite@hardpixel.eu', 'tilingshell@ferrarodomenico.com', 'forge@jmmaranan.com', 'just-perfection-desktop@just-perfection']
-favorite-apps=['firefox.desktop', 'code.desktop', 'org.gnome.Nautilus.desktop', 'spotify.desktop', 'obsidian.desktop']
+favorite-apps=['org.mozilla.firefox.desktop', 'code.desktop', 'org.gnome.Nautilus.desktop', 'spotify.desktop', 'obsidian.desktop']
 welcome-dialog-last-shown-version='46.3.1'
 
 [org/gnome/shell/app-switcher]
@@ -364,6 +379,9 @@ locations=@av []
 check-timestamp=int64 1720772036
 first-run=false
 flatpak-purge-timestamp=int64 1720715875
+install-timestamp=int64 1720903998
+packagekit-historical-updates-timestamp=uint64 1720903998
+update-notification-timestamp=int64 1720904112
 
 [org/gnome/system/location]
 enabled=true
