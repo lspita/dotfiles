@@ -13,6 +13,7 @@ full-upgrade() {
     flatpak update
 
     # sdkman
+    sdk selfupdate
     sdk upgrade
 }
 
