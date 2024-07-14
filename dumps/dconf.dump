@@ -28,9 +28,11 @@ window-width=800
 [org/gnome/TextEditor]
 highlight-current-line=true
 last-save-directory='file:///home/lspita'
+restore-session=false
 show-grid=false
 show-line-numbers=true
 show-map=true
+spellcheck=false
 tab-width=uint32 4
 
 [org/gnome/control-center]
@@ -71,7 +73,7 @@ sources=[('xkb', 'it')]
 xkb-options=['terminate:ctrl_alt_bksp', 'lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
-color-scheme='prefer-dark'
+color-scheme='default'
 document-font-name='Noto Sans 12'
 enable-animations=true
 enable-hot-corners=false
@@ -81,7 +83,10 @@ monospace-font-name='FiraCode Nerd Font 12'
 show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
-application-children=['firefox', 'org-gnome-console', 'org-gnome-texteditor', 'gnome-power-panel', 'spotify', 'org-gnome-shell-extensions', 'org-gnome-evolution-alarm-notify']
+application-children=['firefox', 'org-gnome-console', 'org-gnome-texteditor', 'gnome-power-panel', 'spotify', 'org-gnome-shell-extensions', 'org-gnome-evolution-alarm-notify', 'org-gnome-software', 'com-spotify-client']
+
+[org/gnome/desktop/notifications/application/com-spotify-client]
+application-id='com.spotify.Client.desktop'
 
 [org/gnome/desktop/notifications/application/firefox]
 application-id='firefox.desktop'
@@ -133,7 +138,7 @@ secondary-color='#000000'
 
 [org/gnome/desktop/search-providers]
 disabled=['org.gnome.Contacts.desktop', 'org.gnome.clocks.desktop']
-sort-order=['firefox.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Settings.desktop', 'org.gnome.Software.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Characters.desktop', 'org.gnome.clocks.desktop']
+sort-order=['firefox.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Settings.desktop', 'org.gnome.Software.desktop', 'org.mozilla.firefox.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Characters.desktop', 'org.gnome.clocks.desktop', 'org.gnome.Boxes.desktop']
 
 [org/gnome/desktop/session]
 idle-delay=uint32 900
@@ -189,18 +194,25 @@ migrated-gtk-settings=true
 search-filter-time-type='last_modified'
 
 [org/gnome/nautilus/window-state]
-initial-size=(1333, 683)
-maximized=true
+initial-size=(1431, 854)
+maximized=false
+
+[org/gnome/nm-applet/eap/18ce9e0b-d6b4-4d5a-b4c0-8da1d8b8cb3f]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
 
 [org/gnome/nm-applet/eap/b6367a4e-4498-4d9b-bb27-0da2e1912a67]
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
+[org/gnome/portal/filechooser/md.obsidian.Obsidian]
+last-folder-path='/home/lspita/unibo/notes'
+
 [org/gnome/portal/filechooser/obsidian]
 last-folder-path='/home/lspita/unibo/notes'
 
 [org/gnome/portal/filechooser/org.gnome.Settings]
-last-folder-path='/home/lspita/dotfiles/techboost/stowignore'
+last-folder-path='/home/lspita/projects/techboost'
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-last-coordinates=(44.085321489181787, 12.5642373)
@@ -223,10 +235,10 @@ power-button-action='interactive'
 sleep-inactive-ac-type='nothing'
 
 [org/gnome/shell]
-app-picker-layout=[{'nm-connection-editor.desktop': <{'position': <0>}>, 'anydesk.desktop': <{'position': <1>}>, 'bssh.desktop': <{'position': <2>}>, 'bvnc.desktop': <{'position': <3>}>, 'avahi-discover.desktop': <{'position': <4>}>, 'bitwarden.desktop': <{'position': <5>}>, 'btrfs-assistant.desktop': <{'position': <6>}>, 'org.gnome.Calculator.desktop': <{'position': <7>}>, 'org.gnome.Calendar.desktop': <{'position': <8>}>, 'org.gnome.Snapshot.desktop': <{'position': <9>}>, 'org.gnome.Characters.desktop': <{'position': <10>}>, 'org.gnome.clocks.desktop': <{'position': <11>}>, 'org.gnome.Console.desktop': <{'position': <12>}>, 'org.gnome.Contacts.desktop': <{'position': <13>}>, 'org.gnome.baobab.desktop': <{'position': <14>}>, 'org.gnome.DiskUtility.desktop': <{'position': <15>}>, 'simple-scan.desktop': <{'position': <16>}>, 'org.gnome.Evince.desktop': <{'position': <17>}>, 'me.dusansimic.DynamicWallpaper.desktop': <{'position': <18>}>, 'electron29.desktop': <{'position': <19>}>, 'com.mattjakeman.ExtensionManager.desktop': <{'position': <20>}>, 'org.gnome.Extensions.desktop': <{'position': <21>}>, 'org.gnome.font-viewer.desktop': <{'position': <22>}>, 'google-chrome.desktop': <{'position': <23>}>}, {'yelp.desktop': <{'position': <0>}>, 'htop.desktop': <{'position': <1>}>, 'org.gnome.Loupe.desktop': <{'position': <2>}>, 'org.gnome.Logs.desktop': <{'position': <3>}>, 'cups.desktop': <{'position': <4>}>, 'mcontrolcenter.desktop': <{'position': <5>}>, 'org.gnome.Music.desktop': <{'position': <6>}>, 'nvim.desktop': <{'position': <7>}>, 'jconsole-java11-openjdk.desktop': <{'position': <8>}>, 'jshell-java11-openjdk.desktop': <{'position': <9>}>, 'org.qbittorrent.qBittorrent.desktop': <{'position': <10>}>, 'assistant.desktop': <{'position': <11>}>, 'designer.desktop': <{'position': <12>}>, 'linguist.desktop': <{'position': <13>}>, 'qdbusviewer.desktop': <{'position': <14>}>, 'qv4l2.desktop': <{'position': <15>}>, 'qvidcap.desktop': <{'position': <16>}>, 'org.gnome.Settings.desktop': <{'position': <17>}>, 'org.gnome.Software.desktop': <{'position': <18>}>, 'spotify.desktop': <{'position': <19>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <20>}>, 'org.gnome.TextEditor.desktop': <{'position': <21>}>, 'org.gnome.Tour.desktop': <{'position': <22>}>, 'org.gnome.tweaks.desktop': <{'position': <23>}>}, {'org.gnome.Totem.desktop': <{'position': <0>}>, 'code.desktop': <{'position': <1>}>, 'org.gnome.Weather.desktop': <{'position': <2>}>, 'dev.zed.Zed.desktop': <{'position': <3>}>}]
+app-picker-layout=[{'com.anydesk.Anydesk.desktop': <{'position': <0>}>, 'com.bitwarden.desktop.desktop': <{'position': <1>}>, 'org.gnome.Boxes.desktop': <{'position': <2>}>, 'org.gnome.Calculator.desktop': <{'position': <3>}>, 'org.gnome.Calendar.desktop': <{'position': <4>}>, 'org.gnome.Snapshot.desktop': <{'position': <5>}>, 'org.gnome.Characters.desktop': <{'position': <6>}>, 'org.gnome.clocks.desktop': <{'position': <7>}>, 'org.gnome.Console.desktop': <{'position': <8>}>, 'org.gnome.Contacts.desktop': <{'position': <9>}>, 'ca.desrt.dconf-editor.desktop': <{'position': <10>}>, 'org.gnome.baobab.desktop': <{'position': <11>}>, 'org.gnome.DiskUtility.desktop': <{'position': <12>}>, 'simple-scan.desktop': <{'position': <13>}>, 'org.gnome.Evince.desktop': <{'position': <14>}>, 'com.mattjakeman.ExtensionManager.desktop': <{'position': <15>}>, 'org.fedoraproject.MediaWriter.desktop': <{'position': <16>}>, 'org.gnome.font-viewer.desktop': <{'position': <17>}>, 'google-chrome.desktop': <{'position': <18>}>, 'yelp.desktop': <{'position': <19>}>, 'org.gnome.Loupe.desktop': <{'position': <20>}>, 'org.gnome.Logs.desktop': <{'position': <21>}>, 'org.gnome.Rhythmbox3.desktop': <{'position': <22>}>, 'org.gnome.Settings.desktop': <{'position': <23>}>}, {'org.gnome.Software.desktop': <{'position': <0>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <1>}>, 'org.gnome.TextEditor.desktop': <{'position': <2>}>, 'org.gnome.tweaks.desktop': <{'position': <3>}>, 'org.gnome.Totem.desktop': <{'position': <4>}>, 'org.gnome.Weather.desktop': <{'position': <5>}>}]
 disabled-extensions=['workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com']
 enabled-extensions=['light-style@gnome-shell-extensions.gcampax.github.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'AlphabeticalAppGrid@stuarthayhurst', 'user-theme-x@tuberry.github.io', 'nightthemeswitcher@romainvigier.fr', 'app-hider@lynith.dev', 'blur-my-shell@aunetx', 'unite@hardpixel.eu', 'tilingshell@ferrarodomenico.com', 'forge@jmmaranan.com', 'just-perfection-desktop@just-perfection']
-favorite-apps=['org.mozilla.firefox.desktop', 'code.desktop', 'org.gnome.Nautilus.desktop', 'spotify.desktop', 'obsidian.desktop']
+favorite-apps=['org.mozilla.firefox.desktop', 'code.desktop', 'org.gnome.Nautilus.desktop', 'com.spotify.Client.desktop', 'org.gnome.Console.desktop']
 welcome-dialog-last-shown-version='46.3.1'
 
 [org/gnome/shell/app-switcher]
@@ -376,12 +388,12 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1720772036
+check-timestamp=int64 1720940781
 first-run=false
-flatpak-purge-timestamp=int64 1720715875
-install-timestamp=int64 1720903998
-packagekit-historical-updates-timestamp=uint64 1720903998
-update-notification-timestamp=int64 1720904112
+flatpak-purge-timestamp=int64 1720913472
+install-timestamp=int64 1720941257
+packagekit-historical-updates-timestamp=uint64 1720941257
+update-notification-timestamp=int64 1720941303
 
 [org/gnome/system/location]
 enabled=true
