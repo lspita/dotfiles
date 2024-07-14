@@ -18,7 +18,7 @@ for i in "${ignore_list[@]}"; do
   ignore_map["$i"]=true
 done
 
-for package in */; do
+for package in *; do
   if [[ ${ignore_map["$package"]} == true ]]; then
   	continue
   else

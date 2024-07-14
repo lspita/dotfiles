@@ -66,4 +66,10 @@ sudo dnf check-update
 sudo dnf install code # or code-insiders
 ```
 
+# Tlp
 
+Symlink not working, copy manually
+
+```sh
+sudo cp -r tlp/etc/tlp.conf /etc
+```

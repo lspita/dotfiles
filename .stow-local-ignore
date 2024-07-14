@@ -1,7 +1,9 @@
-.git/
-dumps/
-*/stowignore/
+.git
+dumps
 README.md
 install.sh
 targets.sh
 makefile
+
+# copy manually
+tlp/etc/tlp.conf
