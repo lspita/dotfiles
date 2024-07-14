@@ -79,11 +79,11 @@ enable-animations=true
 enable-hot-corners=false
 font-name='NotoSans Nerd Font 12'
 gtk-enable-primary-paste=false
-monospace-font-name='FiraCode Nerd Font 12'
+monospace-font-name='NotoMono Nerd Font 12'
 show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
-application-children=['firefox', 'org-gnome-console', 'org-gnome-texteditor', 'gnome-power-panel', 'spotify', 'org-gnome-shell-extensions', 'org-gnome-evolution-alarm-notify', 'org-gnome-software', 'com-spotify-client']
+application-children=['firefox', 'org-gnome-console', 'org-gnome-texteditor', 'gnome-power-panel', 'spotify', 'org-gnome-shell-extensions', 'org-gnome-evolution-alarm-notify', 'org-gnome-software', 'com-spotify-client', 'org-gnome-characters']
 
 [org/gnome/desktop/notifications/application/com-spotify-client]
 application-id='com.spotify.Client.desktop'
@@ -96,6 +96,9 @@ application-id='gnome-power-panel.desktop'
 
 [org/gnome/desktop/notifications/application/gnome-printers-panel]
 application-id='gnome-printers-panel.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-characters]
+application-id='org.gnome.Characters.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-console]
 application-id='org.gnome.Console.desktop'
