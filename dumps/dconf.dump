@@ -36,7 +36,7 @@ spellcheck=false
 tab-width=uint32 4
 
 [org/gnome/control-center]
-last-panel='sound'
+last-panel='background'
 window-state=(1357, 909, false)
 
 [org/gnome/desktop/app-folders]
@@ -74,10 +74,10 @@ xkb-options=['terminate:ctrl_alt_bksp', 'lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
 color-scheme='default'
-document-font-name='Noto Sans 12'
+document-font-name='NotoSans Nerd Font 12'
 enable-animations=true
 enable-hot-corners=false
-font-name='Noto Sans 12'
+font-name='NotoSans Nerd Font 12'
 gtk-enable-primary-paste=false
 monospace-font-name='FiraCode Nerd Font 12'
 show-battery-percentage=true
@@ -408,7 +408,7 @@ selected-color=(true, 0.10196078568696976, 0.37254902720451355, 0.70588237047195
 [org/gtk/gtk4/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=false
+show-hidden=true
 sidebar-width=210
 sort-column='type'
 sort-directories-first=false
