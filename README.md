@@ -56,6 +56,12 @@ sudo systemctl enable --now tlp.service NetworkManager-dispatcher.service
 sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 ```
 
+Symlink not working, copy manually
+
+```sh
+sudo cp -r tlp/etc/tlp.conf /etc
+```
+
 # VSCode
 
 ```sh
@@ -64,12 +70,4 @@ echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com
 
 sudo dnf check-update
 sudo dnf install code # or code-insiders
-```
-
-# Tlp
-
-Symlink not working, copy manually
-
-```sh
-sudo cp -r tlp/etc/tlp.conf /etc
 ```
