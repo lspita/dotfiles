@@ -13,12 +13,28 @@ last-used-version='0.5.1'
 show-unsupported=true
 width=1482
 
+[org/fedorahosted/background-logo-extension]
+logo-position='bottom-right'
+
+[org/freedesktop/folks]
+primary-store='eds:f4b989df137a5b65482299c946cfd96a5045fe36'
+
 [org/gnome/Console]
 audible-bell=false
 font-scale=1.2000000000000002
 last-window-maximised=false
 last-window-size=(1745, 903)
 theme='auto'
+
+[org/gnome/Contacts]
+did-initial-setup=true
+window-fullscreen=false
+window-height=787
+window-maximized=false
+window-width=1410
+
+[org/gnome/Loupe]
+show-properties=true
 
 [org/gnome/Snapshot]
 is-maximized=false
@@ -36,7 +52,7 @@ spellcheck=false
 tab-width=uint32 4
 
 [org/gnome/control-center]
-last-panel='display'
+last-panel='notifications'
 window-state=(1357, 909, false)
 
 [org/gnome/desktop/app-folders]
@@ -73,14 +89,16 @@ sources=[('xkb', 'it')]
 xkb-options=['terminate:ctrl_alt_bksp', 'lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
-color-scheme='prefer-dark'
+color-scheme='default'
 document-font-name='NotoSans Nerd Font 12'
 enable-animations=true
 enable-hot-corners=false
 font-name='NotoSans Nerd Font 12'
 gtk-enable-primary-paste=false
+gtk-theme='Adwaita'
 monospace-font-name='NotoMono Nerd Font 12'
 show-battery-percentage=true
+toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
 application-children=['firefox', 'org-gnome-console', 'org-gnome-texteditor', 'gnome-power-panel', 'spotify', 'org-gnome-shell-extensions', 'org-gnome-evolution-alarm-notify', 'org-gnome-software', 'com-spotify-client', 'org-gnome-characters']
@@ -105,6 +123,7 @@ application-id='org.gnome.Console.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-evolution-alarm-notify]
 application-id='org.gnome.Evolution-alarm-notify.desktop'
+enable=false
 
 [org/gnome/desktop/notifications/application/org-gnome-shell-extensions]
 application-id='org.gnome.Shell.Extensions.desktop'
@@ -166,7 +185,10 @@ window-size=(1024, 768)
 migrated=true
 
 [org/gnome/evolution-data-server/calendar]
-reminders-past=['f17400fbfa8e749f8b90671358091794798d2ec0\nc6f3a51483b314a08abd7663feb8abde2273a788\t20240713T140000\n1720785600\n1720872000\n1720875600\nBEGIN:VEVENT\r\nDTSTART;TZID=Europe/Rome:20240713T140000\r\nDTEND;TZID=Europe/Rome:20240713T150000\r\nDTSTAMP:20240712T110525Z\r\nUID:\r\n 6sp3adr560oj4b9j6pi62b9kc9h30b9pckr38b9ichj3cd3361hj0ob66g@google.com\r\nCREATED:20240712T110525Z\r\nX-LIC-ERROR;X-LIC-ERRORTYPE=VALUE-PARSE-ERROR:No value for DESCRIPTION \r\n property. Removing entire property:\r\nLAST-MODIFIED:20240712T110525Z\r\nLOCATION:Viale Litorale Marina\\, 189\\, 47042 Cesenatico FC\\, Italy\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:Mare\r\nTRANSP:OPAQUE\r\nX-EVOLUTION-CALDAV-ETAG:63856465525\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:PT0S\r\nX-EVOLUTION-ALARM-UID:8ea026182dc936c25bebe454f9dfba10731ec8c5\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT1H\r\nX-EVOLUTION-ALARM-UID:c629822f609a7442480696bf372cc331aca80a3d\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P1D\r\nX-EVOLUTION-ALARM-UID:c6f3a51483b314a08abd7663feb8abde2273a788\r\nEND:VALARM\r\nEND:VEVENT\r\n']
+reminders-past=['06406db794e281542afbf95b7580928102f6ff05\nec582acd3eb3ea91e59eda9abb39323af3f928d5\t20240717T133000\n1721129400\n1721215800\n1721219400\nBEGIN:VEVENT\r\nDTSTART;TZID=Europe/Rome:20240717T133000\r\nDTEND;TZID=Europe/Rome:20240717T143000\r\nDTSTAMP:20240716T110218Z\r\nUID:\r\n ccrjep9j74o66bb575ij6b9kc9ijabb1cgqjeb9k64r64e1o6lh3edpjcg@google.com\r\nCREATED:20240716T110218Z\r\nDESCRIPTION:\r\nLAST-MODIFIED:20240716T110218Z\r\nLOCATION:\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:Console\r\nTRANSP:OPAQUE\r\nX-EVOLUTION-CALDAV-ETAG:63856810938\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:PT0S\r\nX-EVOLUTION-ALARM-UID:42a6a80803220b0353e2d7c279822b6447d451a9\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT1H\r\nX-EVOLUTION-ALARM-UID:c1d2c5216599e8a20a9cd56aa14f0a2f51dd846a\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P1D\r\nX-EVOLUTION-ALARM-UID:ec582acd3eb3ea91e59eda9abb39323af3f928d5\r\nEND:VALARM\r\nEND:VEVENT\r\n', 'f17400fbfa8e749f8b90671358091794798d2ec0\nc6f3a51483b314a08abd7663feb8abde2273a788\t20240713T140000\n1720785600\n1720872000\n1720875600\nBEGIN:VEVENT\r\nDTSTART;TZID=Europe/Rome:20240713T140000\r\nDTEND;TZID=Europe/Rome:20240713T150000\r\nDTSTAMP:20240712T110525Z\r\nUID:\r\n 6sp3adr560oj4b9j6pi62b9kc9h30b9pckr38b9ichj3cd3361hj0ob66g@google.com\r\nCREATED:20240712T110525Z\r\nX-LIC-ERROR;X-LIC-ERRORTYPE=VALUE-PARSE-ERROR:No value for DESCRIPTION \r\n property. Removing entire property:\r\nLAST-MODIFIED:20240712T110525Z\r\nLOCATION:Viale Litorale Marina\\, 189\\, 47042 Cesenatico FC\\, Italy\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:Mare\r\nTRANSP:OPAQUE\r\nX-EVOLUTION-CALDAV-ETAG:63856465525\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:PT0S\r\nX-EVOLUTION-ALARM-UID:8ea026182dc936c25bebe454f9dfba10731ec8c5\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT1H\r\nX-EVOLUTION-ALARM-UID:c629822f609a7442480696bf372cc331aca80a3d\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P1D\r\nX-EVOLUTION-ALARM-UID:c6f3a51483b314a08abd7663feb8abde2273a788\r\nEND:VALARM\r\nEND:VEVENT\r\n']
+
+[org/gnome/evolution]
+default-address-book='f4b989df137a5b65482299c946cfd96a5045fe36'
 
 [org/gnome/gnome-system-monitor]
 show-dependencies=false
@@ -217,6 +239,12 @@ ignore-phase2-ca-cert=false
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
+[org/gnome/portal/filechooser/com.github.GradienceTeam.Gradience]
+last-folder-path='/home/lspita/dotfiles/backgrounds/.local/share/backgrounds'
+
+[org/gnome/portal/filechooser/io.github.realmazharhussain.GdmSettings]
+last-folder-path='/home/lspita/dotfiles/backgrounds/.local/share/backgrounds'
+
 [org/gnome/portal/filechooser/md.obsidian.Obsidian]
 last-folder-path='/home/lspita/unibo/notes'
 
@@ -248,8 +276,8 @@ sleep-inactive-ac-type='nothing'
 
 [org/gnome/shell]
 app-picker-layout=[{'com.anydesk.Anydesk.desktop': <{'position': <0>}>, 'com.bitwarden.desktop.desktop': <{'position': <1>}>, 'org.gnome.Boxes.desktop': <{'position': <2>}>, 'org.gnome.Calculator.desktop': <{'position': <3>}>, 'org.gnome.Calendar.desktop': <{'position': <4>}>, 'org.gnome.Snapshot.desktop': <{'position': <5>}>, 'org.gnome.Characters.desktop': <{'position': <6>}>, 'org.gnome.clocks.desktop': <{'position': <7>}>, 'org.gnome.Contacts.desktop': <{'position': <8>}>, 'ca.desrt.dconf-editor.desktop': <{'position': <9>}>, 'org.gnome.baobab.desktop': <{'position': <10>}>, 'org.gnome.DiskUtility.desktop': <{'position': <11>}>, 'simple-scan.desktop': <{'position': <12>}>, 'org.gnome.Evince.desktop': <{'position': <13>}>, 'me.dusansimic.DynamicWallpaper.desktop': <{'position': <14>}>, 'com.mattjakeman.ExtensionManager.desktop': <{'position': <15>}>, 'org.fedoraproject.MediaWriter.desktop': <{'position': <16>}>, 'org.gnome.font-viewer.desktop': <{'position': <17>}>, 'org.geogebra.GeoGebra.desktop': <{'position': <18>}>, 'google-chrome.desktop': <{'position': <19>}>, 'yelp.desktop': <{'position': <20>}>, 'org.gnome.Loupe.desktop': <{'position': <21>}>, 'org.gnome.Logs.desktop': <{'position': <22>}>, 'md.obsidian.Obsidian.desktop': <{'position': <23>}>}, {'org.gnome.Rhythmbox3.desktop': <{'position': <0>}>, 'org.gnome.Settings.desktop': <{'position': <1>}>, 'org.gnome.Software.desktop': <{'position': <2>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <3>}>, 'org.gnome.TextEditor.desktop': <{'position': <4>}>, 'com.github.d4nj1.tlpui.desktop': <{'position': <5>}>, 'org.gnome.tweaks.desktop': <{'position': <6>}>, 'org.gnome.Totem.desktop': <{'position': <7>}>, 'org.gnome.Weather.desktop': <{'position': <8>}>}]
-disabled-extensions=['workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['light-style@gnome-shell-extensions.gcampax.github.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'AlphabeticalAppGrid@stuarthayhurst', 'user-theme-x@tuberry.github.io', 'nightthemeswitcher@romainvigier.fr', 'app-hider@lynith.dev', 'blur-my-shell@aunetx', 'unite@hardpixel.eu', 'tilingshell@ferrarodomenico.com', 'forge@jmmaranan.com', 'just-perfection-desktop@just-perfection']
+disabled-extensions=['workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'blur-my-shell@aunetx', 'background-logo@fedorahosted.org', 'window-list@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['system-monitor@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'AlphabeticalAppGrid@stuarthayhurst', 'user-theme-x@tuberry.github.io', 'app-hider@lynith.dev', 'unite@hardpixel.eu', 'tilingshell@ferrarodomenico.com', 'forge@jmmaranan.com', 'just-perfection-desktop@just-perfection', 'light-style@gnome-shell-extensions.gcampax.github.com', 'nightthemeswitcher@romainvigier.fr', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'overviewbackground@github.com.orbitcorrection']
 favorite-apps=['org.mozilla.firefox.desktop', 'code.desktop', 'org.gnome.Nautilus.desktop', 'com.spotify.Client.desktop', 'org.gnome.Console.desktop']
 welcome-dialog-last-shown-version='46.3.1'
 
@@ -264,6 +292,7 @@ hidden-search-apps=['nm-connection-editor.desktop', 'bssh.desktop', 'bvnc.deskto
 settings-version=2
 
 [org/gnome/shell/extensions/blur-my-shell/appfolder]
+blur=true
 brightness=0.59999999999999998
 sigma=30
 
@@ -274,17 +303,29 @@ pipeline='pipeline_default_rounded'
 sigma=30
 static-blur=true
 style-dash-to-dock=0
+unblur-in-overview=false
+
+[org/gnome/shell/extensions/blur-my-shell/dash-to-panel]
+blur-original-panel=false
+
+[org/gnome/shell/extensions/blur-my-shell/hidetopbar]
+compatibility=true
 
 [org/gnome/shell/extensions/blur-my-shell/lockscreen]
 pipeline='pipeline_default'
 
 [org/gnome/shell/extensions/blur-my-shell/overview]
+blur=true
 pipeline='pipeline_default'
 
 [org/gnome/shell/extensions/blur-my-shell/panel]
 brightness=0.59999999999999998
+force-light-text=false
+override-background-dynamically=true
 pipeline='pipeline_default'
 sigma=30
+style-panel=0
+unblur-in-overview=true
 
 [org/gnome/shell/extensions/blur-my-shell/screenshot]
 pipeline='pipeline_default'
@@ -423,7 +464,7 @@ selected-color=(true, 0.10196078568696976, 0.37254902720451355, 0.70588237047195
 [org/gtk/gtk4/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=false
+show-hidden=true
 sidebar-width=210
 sort-column='type'
 sort-directories-first=false
@@ -435,7 +476,7 @@ window-size=(1373, 805)
 [org/gtk/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=false
+show-hidden=true
 show-size-column=true
 show-type-column=true
 sidebar-width=175

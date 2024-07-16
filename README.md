@@ -1,9 +1,3 @@
-# Gnome
-
-```sh
-sudo cp -Lf ~/.config/monitors.xml /var/lib/gdm/.config/monitors.xml # copy monitors config to root
-```
-
 # Zsh
 
 ```sh

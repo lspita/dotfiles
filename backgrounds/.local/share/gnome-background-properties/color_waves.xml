@@ -2,9 +2,8 @@
 <!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
 <wallpapers>
   <wallpaper deleted="false">
-    <name>Dino</name>
-    <filename>/home/lspita/.local/share/backgrounds/dino/dino-l.png</filename>
-    <filename-dark>/home/lspita/.local/share/backgrounds/dino/dino-d.png</filename-dark>
+    <name>Color Waves</name>
+    <filename>/home/lspita/.local/share/backgrounds/color_waves.png</filename>
     <options>zoom</options>
     <shade_type>solid</shade_type>
     <pcolor>#3465a4</pcolor>
