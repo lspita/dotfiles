@@ -36,7 +36,7 @@ spellcheck=false
 tab-width=uint32 4
 
 [org/gnome/control-center]
-last-panel='sound'
+last-panel='display'
 window-state=(1357, 909, false)
 
 [org/gnome/desktop/app-folders]
@@ -73,7 +73,7 @@ sources=[('xkb', 'it')]
 xkb-options=['terminate:ctrl_alt_bksp', 'lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
-color-scheme='default'
+color-scheme='prefer-dark'
 document-font-name='NotoSans Nerd Font 12'
 enable-animations=true
 enable-hot-corners=false
@@ -140,7 +140,7 @@ primary-color='#3465a4'
 secondary-color='#000000'
 
 [org/gnome/desktop/search-providers]
-disabled=['org.gnome.Contacts.desktop', 'org.gnome.clocks.desktop']
+disabled=['org.gnome.Contacts.desktop', 'org.gnome.clocks.desktop', 'org.gnome.Boxes.desktop', 'org.gnome.Calendar.desktop']
 sort-order=['firefox.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Settings.desktop', 'org.gnome.Software.desktop', 'org.mozilla.firefox.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Characters.desktop', 'org.gnome.clocks.desktop', 'org.gnome.Boxes.desktop']
 
 [org/gnome/desktop/session]
@@ -178,6 +178,11 @@ window-width=1143
 col-6-visible=true
 col-6-width=0
 
+[org/gnome/gnome-system-monitor/proctree]
+columns-order=[0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+sort-col=15
+sort-order=0
+
 [org/gnome/login-screen]
 enable-fingerprint-authentication=true
 enable-smartcard-authentication=false
@@ -205,6 +210,10 @@ ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
 [org/gnome/nm-applet/eap/b6367a4e-4498-4d9b-bb27-0da2e1912a67]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[org/gnome/nm-applet/eap/f761afd8-beb3-45bc-8b7b-d35ad741d4e3]
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
@@ -375,6 +384,9 @@ nightthemeswitcher-ondemand-keybinding=['<Super>F8']
 sunrise=0.0
 sunset=0.0
 
+[org/gnome/shell/extensions/system-monitor]
+show-swap=true
+
 [org/gnome/shell/extensions/tilingshell]
 last-version-name-installed='11'
 layouts-json='[{"id":"Layout 1","tiles":[{"x":0,"y":0,"width":0.22,"height":0.5,"groups":[1,2]},{"x":0,"y":0.5,"width":0.22,"height":0.5,"groups":[1,2]},{"x":0.22,"y":0,"width":0.56,"height":1,"groups":[2,3]},{"x":0.78,"y":0,"width":0.22,"height":0.5,"groups":[3,4]},{"x":0.78,"y":0.5,"width":0.22,"height":0.5,"groups":[3,4]}]},{"id":"Layout 2","tiles":[{"x":0,"y":0,"width":0.22,"height":1,"groups":[1]},{"x":0.22,"y":0,"width":0.56,"height":1,"groups":[1,2]},{"x":0.78,"y":0,"width":0.22,"height":1,"groups":[2]}]},{"id":"Layout 3","tiles":[{"x":0,"y":0,"width":0.33,"height":1,"groups":[1]},{"x":0.33,"y":0,"width":0.67,"height":1,"groups":[1]}]},{"id":"Layout 4","tiles":[{"x":0,"y":0,"width":0.67,"height":1,"groups":[1]},{"x":0.67,"y":0,"width":0.33,"height":1,"groups":[1]}]}]'
@@ -391,9 +403,9 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1721030234
+check-timestamp=int64 1721120437
 first-run=false
-flatpak-purge-timestamp=int64 1720959064
+flatpak-purge-timestamp=int64 1721037281
 install-timestamp=int64 1720941257
 packagekit-historical-updates-timestamp=uint64 1720941257
 update-notification-timestamp=int64 1720941303
