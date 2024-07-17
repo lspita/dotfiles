@@ -32,6 +32,7 @@ google-noto-sans-mono-fonts-0:20240301-2.fc40.noarch
 kdump-utils-0:1.0.42-10.fc40.x86_64
 kernel-0:6.8.5-301.fc40.x86_64
 kernel-0:6.9.8-200.fc40.x86_64
+kernel-0:6.9.9-200.fc40.x86_64
 lazygit-0:0.42.0-1.fc40.x86_64
 livesys-scripts-0:0.6.0-3.fc40.noarch
 mozilla-openh264-0:2.4.1-2.fc40.x86_64

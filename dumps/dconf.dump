@@ -22,7 +22,7 @@ primary-store='eds:f4b989df137a5b65482299c946cfd96a5045fe36'
 [org/gnome/Console]
 audible-bell=false
 font-scale=1.2000000000000002
-last-window-maximised=false
+last-window-maximised=true
 last-window-size=(1745, 903)
 theme='auto'
 
@@ -52,7 +52,7 @@ spellcheck=false
 tab-width=uint32 4
 
 [org/gnome/control-center]
-last-panel='notifications'
+last-panel='background'
 window-state=(1357, 909, false)
 
 [org/gnome/desktop/app-folders]
@@ -276,8 +276,8 @@ sleep-inactive-ac-type='nothing'
 
 [org/gnome/shell]
 app-picker-layout=[{'com.anydesk.Anydesk.desktop': <{'position': <0>}>, 'com.bitwarden.desktop.desktop': <{'position': <1>}>, 'org.gnome.Boxes.desktop': <{'position': <2>}>, 'org.gnome.Calculator.desktop': <{'position': <3>}>, 'org.gnome.Calendar.desktop': <{'position': <4>}>, 'org.gnome.Snapshot.desktop': <{'position': <5>}>, 'org.gnome.Characters.desktop': <{'position': <6>}>, 'org.gnome.clocks.desktop': <{'position': <7>}>, 'org.gnome.Contacts.desktop': <{'position': <8>}>, 'ca.desrt.dconf-editor.desktop': <{'position': <9>}>, 'org.gnome.baobab.desktop': <{'position': <10>}>, 'org.gnome.DiskUtility.desktop': <{'position': <11>}>, 'simple-scan.desktop': <{'position': <12>}>, 'org.gnome.Evince.desktop': <{'position': <13>}>, 'me.dusansimic.DynamicWallpaper.desktop': <{'position': <14>}>, 'com.mattjakeman.ExtensionManager.desktop': <{'position': <15>}>, 'org.fedoraproject.MediaWriter.desktop': <{'position': <16>}>, 'org.gnome.font-viewer.desktop': <{'position': <17>}>, 'org.geogebra.GeoGebra.desktop': <{'position': <18>}>, 'google-chrome.desktop': <{'position': <19>}>, 'yelp.desktop': <{'position': <20>}>, 'org.gnome.Loupe.desktop': <{'position': <21>}>, 'org.gnome.Logs.desktop': <{'position': <22>}>, 'md.obsidian.Obsidian.desktop': <{'position': <23>}>}, {'org.gnome.Rhythmbox3.desktop': <{'position': <0>}>, 'org.gnome.Settings.desktop': <{'position': <1>}>, 'org.gnome.Software.desktop': <{'position': <2>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <3>}>, 'org.gnome.TextEditor.desktop': <{'position': <4>}>, 'com.github.d4nj1.tlpui.desktop': <{'position': <5>}>, 'org.gnome.tweaks.desktop': <{'position': <6>}>, 'org.gnome.Totem.desktop': <{'position': <7>}>, 'org.gnome.Weather.desktop': <{'position': <8>}>}]
-disabled-extensions=['workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'blur-my-shell@aunetx', 'background-logo@fedorahosted.org', 'window-list@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['system-monitor@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'AlphabeticalAppGrid@stuarthayhurst', 'user-theme-x@tuberry.github.io', 'app-hider@lynith.dev', 'unite@hardpixel.eu', 'tilingshell@ferrarodomenico.com', 'forge@jmmaranan.com', 'just-perfection-desktop@just-perfection', 'light-style@gnome-shell-extensions.gcampax.github.com', 'nightthemeswitcher@romainvigier.fr', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'overviewbackground@github.com.orbitcorrection']
+disabled-extensions=['workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'background-logo@fedorahosted.org', 'window-list@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['system-monitor@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'AlphabeticalAppGrid@stuarthayhurst', 'user-theme-x@tuberry.github.io', 'app-hider@lynith.dev', 'unite@hardpixel.eu', 'tilingshell@ferrarodomenico.com', 'forge@jmmaranan.com', 'just-perfection-desktop@just-perfection', 'light-style@gnome-shell-extensions.gcampax.github.com', 'nightthemeswitcher@romainvigier.fr', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'overviewbackground@github.com.orbitcorrection', 'blur-my-shell@aunetx']
 favorite-apps=['org.mozilla.firefox.desktop', 'code.desktop', 'org.gnome.Nautilus.desktop', 'com.spotify.Client.desktop', 'org.gnome.Console.desktop']
 welcome-dialog-last-shown-version='46.3.1'
 
@@ -317,8 +317,10 @@ pipeline='pipeline_default'
 [org/gnome/shell/extensions/blur-my-shell/overview]
 blur=true
 pipeline='pipeline_default'
+style-components=3
 
 [org/gnome/shell/extensions/blur-my-shell/panel]
+blur=false
 brightness=0.59999999999999998
 force-light-text=false
 override-background-dynamically=true
@@ -444,9 +446,9 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1721120437
+check-timestamp=int64 1721201973
 first-run=false
-flatpak-purge-timestamp=int64 1721037281
+flatpak-purge-timestamp=int64 1721144209
 install-timestamp=int64 1720941257
 packagekit-historical-updates-timestamp=uint64 1720941257
 update-notification-timestamp=int64 1720941303
