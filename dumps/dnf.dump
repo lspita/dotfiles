@@ -8,7 +8,7 @@ cargo-0:1.79.0-3.fc40.x86_64
 clang-0:18.1.6-3.fc40.x86_64
 code-0:1.91.1-1720564728.el8.x86_64
 composefs-0:1.0.3-1.fc40.x86_64
-containerd.io-0:1.7.18-3.1.fc40.x86_64
+containerd.io-0:1.7.19-3.1.fc40.x86_64
 cowsay-0:3.7.0-12.fc40.noarch
 dconf-editor-0:45.0.1-4.fc40.x86_64
 docker-buildx-plugin-0:0.15.1-1.fc40.x86_64
@@ -24,7 +24,7 @@ gh-0:2.45.0-1.fc40.x86_64
 gnome-console-0:46.0-2.fc40.x86_64
 gnome-tweaks-0:46.1-1.fc40.noarch
 golang-0:1.22.5-1.fc40.x86_64
-google-chrome-stable-0:126.0.6478.126-1.x86_64
+google-chrome-stable-0:126.0.6478.182-1.x86_64
 google-noto-emoji-fonts-0:20231130-1.fc40.noarch
 google-noto-sans-cjk-fonts-1:2.004-7.fc40.noarch
 google-noto-sans-fonts-0:20240301-2.fc40.noarch
@@ -33,7 +33,7 @@ kdump-utils-0:1.0.42-10.fc40.x86_64
 kernel-0:6.8.5-301.fc40.x86_64
 kernel-0:6.9.8-200.fc40.x86_64
 kernel-0:6.9.9-200.fc40.x86_64
-lazygit-0:0.42.0-1.fc40.x86_64
+lazygit-0:0.43.1-1.fc40.x86_64
 livesys-scripts-0:0.6.0-3.fc40.noarch
 mozilla-openh264-0:2.4.1-2.fc40.x86_64
 neofetch-0:7.1.0-12.fc40.noarch

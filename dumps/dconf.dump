@@ -52,7 +52,7 @@ spellcheck=false
 tab-width=uint32 4
 
 [org/gnome/control-center]
-last-panel='background'
+last-panel='power'
 window-state=(1357, 909, false)
 
 [org/gnome/desktop/app-folders]
@@ -89,7 +89,7 @@ sources=[('xkb', 'it')]
 xkb-options=['terminate:ctrl_alt_bksp', 'lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
-color-scheme='default'
+color-scheme='prefer-dark'
 document-font-name='NotoSans Nerd Font 12'
 enable-animations=true
 enable-hot-corners=false
@@ -449,9 +449,9 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1721201973
+check-timestamp=int64 1721289428
 first-run=false
-flatpak-purge-timestamp=int64 1721144209
+flatpak-purge-timestamp=int64 1721296557
 install-timestamp=int64 1720941257
 packagekit-historical-updates-timestamp=uint64 1720941257
 update-notification-timestamp=int64 1720941303
