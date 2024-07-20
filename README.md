@@ -62,12 +62,6 @@ sudo systemctl enable --now tlp.service NetworkManager-dispatcher.service
 sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 ```
 
-Symlink not working, copy manually
-
-```sh
-sudo cp -r tlp/etc/tlp.conf /etc
-```
-
 # VSCode
 
 ```sh
