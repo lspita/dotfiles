@@ -37,7 +37,7 @@ window-width=1410
 show-properties=true
 
 [org/gnome/Snapshot]
-is-maximized=false
+is-maximized=true
 window-height=640
 window-width=800
 
@@ -52,7 +52,7 @@ spellcheck=false
 tab-width=uint32 4
 
 [org/gnome/control-center]
-last-panel='power'
+last-panel='wifi'
 window-state=(1357, 909, false)
 
 [org/gnome/desktop/app-folders]
@@ -89,7 +89,7 @@ sources=[('xkb', 'it')]
 xkb-options=['terminate:ctrl_alt_bksp', 'lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
-color-scheme='prefer-dark'
+color-scheme='default'
 document-font-name='NotoSans Nerd Font 12'
 enable-animations=true
 enable-hot-corners=false
@@ -449,7 +449,7 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1721289428
+check-timestamp=int64 1721456002
 first-run=false
 flatpak-purge-timestamp=int64 1721296557
 install-timestamp=int64 1720941257
