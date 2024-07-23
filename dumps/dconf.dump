@@ -51,8 +51,172 @@ show-map=true
 spellcheck=false
 tab-width=uint32 4
 
+[org/gnome/boxes]
+first-run=false
+view='icon-view'
+window-maximized=true
+
+[org/gnome/builder]
+format-on-save=true
+window-maximized=true
+window-size=(-1, -1)
+
+[org/gnome/builder/editor]
+font-name='NotoMono Nerd Font 12'
+highlight-current-line=true
+highlight-matching-brackets=true
+style-scheme-name='Adwaita-dark'
+
+[org/gnome/builder/editor/language/automake]
+insert-spaces-instead-of-tabs=false
+insert-trailing-newline=true
+tab-width=8
+
+[org/gnome/builder/editor/language/blueprint]
+auto-indent=true
+insert-matching-brace=true
+insert-spaces-instead-of-tabs=true
+insert-trailing-newline=false
+overwrite-braces=true
+tab-width=2
+
+[org/gnome/builder/editor/language/c-sharp]
+insert-matching-brace=true
+insert-spaces-instead-of-tabs=false
+overwrite-braces=true
+spaces-style=['before-left-paren']
+tab-width=8
+
+[org/gnome/builder/editor/language/c]
+auto-indent=true
+indent-width=2
+insert-matching-brace=true
+insert-spaces-instead-of-tabs=true
+insert-trailing-newline=true
+overwrite-braces=true
+spaces-style=['before-left-paren']
+tab-width=8
+
+[org/gnome/builder/editor/language/chdr]
+auto-indent=true
+indent-width=2
+insert-matching-brace=true
+insert-spaces-instead-of-tabs=true
+insert-trailing-newline=true
+overwrite-braces=true
+spaces-style=['before-left-paren']
+tab-width=8
+
+[org/gnome/builder/editor/language/commonlisp]
+auto-indent=true
+insert-matching-brace=true
+insert-spaces-instead-of-tabs=true
+overwrite-braces=true
+right-margin-position=100
+tab-width=2
+
+[org/gnome/builder/editor/language/cpp]
+auto-indent=true
+insert-matching-brace=true
+insert-spaces-instead-of-tabs=true
+insert-trailing-newline=true
+overwrite-braces=true
+tab-width=4
+
+[org/gnome/builder/editor/language/css]
+insert-matching-brace=true
+insert-spaces-instead-of-tabs=true
+insert-trailing-newline=true
+overwrite-braces=true
+tab-width=2
+
+[org/gnome/builder/editor/language/gradle]
+auto-indent=true
+insert-matching-brace=true
+insert-spaces-instead-of-tabs=true
+overwrite-braces=true
+tab-width=2
+
+[org/gnome/builder/editor/language/html]
+insert-matching-brace=true
+insert-spaces-instead-of-tabs=true
+insert-trailing-newline=true
+overwrite-braces=true
+tab-width=2
+
+[org/gnome/builder/editor/language/java]
+insert-matching-brace=true
+insert-spaces-instead-of-tabs=true
+overwrite-braces=true
+tab-width=2
+
+[org/gnome/builder/editor/language/js]
+insert-matching-brace=true
+insert-spaces-instead-of-tabs=true
+insert-trailing-newline=true
+overwrite-braces=true
+tab-width=2
+
+[org/gnome/builder/editor/language/makefile]
+insert-spaces-instead-of-tabs=false
+insert-trailing-newline=true
+tab-width=8
+
+[org/gnome/builder/editor/language/markdown]
+insert-spaces-instead-of-tabs=true
+insert-trailing-newline=true
+tab-width=4
+trim-trailing-whitespace=false
+
+[org/gnome/builder/editor/language/python]
+insert-matching-brace=true
+insert-spaces-instead-of-tabs=true
+insert-trailing-newline=true
+overwrite-braces=true
+tab-width=4
+
+[org/gnome/builder/editor/language/python3]
+insert-matching-brace=true
+insert-spaces-instead-of-tabs=true
+insert-trailing-newline=true
+overwrite-braces=true
+tab-width=4
+
+[org/gnome/builder/editor/language/ruby]
+insert-matching-brace=true
+insert-spaces-instead-of-tabs=true
+insert-trailing-newline=true
+overwrite-braces=true
+tab-width=2
+
+[org/gnome/builder/editor/language/rust]
+insert-matching-brace=true
+insert-spaces-instead-of-tabs=true
+insert-trailing-newline=true
+overwrite-braces=true
+right-margin-position=100
+tab-width=4
+
+[org/gnome/builder/editor/language/vala]
+insert-matching-brace=true
+insert-spaces-instead-of-tabs=true
+insert-trailing-newline=true
+overwrite-braces=true
+tab-width=4
+
+[org/gnome/builder/editor/language/xml]
+auto-indent=true
+insert-matching-brace=true
+insert-spaces-instead-of-tabs=true
+insert-trailing-newline=true
+overwrite-braces=true
+tab-width=2
+
+[org/gnome/builder/terminal]
+font-name='NotoMono Nerd Font 12'
+
 [org/gnome/control-center]
-last-panel='wifi'
+last-panel='mouse'
 window-state=(1357, 909, false)
 
 [org/gnome/desktop/app-folders]
@@ -101,7 +265,7 @@ show-battery-percentage=true
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['firefox', 'org-gnome-console', 'org-gnome-texteditor', 'gnome-power-panel', 'spotify', 'org-gnome-shell-extensions', 'org-gnome-evolution-alarm-notify', 'org-gnome-software', 'com-spotify-client', 'org-gnome-characters']
+application-children=['firefox', 'org-gnome-console', 'org-gnome-texteditor', 'gnome-power-panel', 'spotify', 'org-gnome-shell-extensions', 'org-gnome-evolution-alarm-notify', 'org-gnome-software', 'com-spotify-client', 'org-gnome-characters', 'org-qbittorrent-qbittorrent']
 
 [org/gnome/desktop/notifications/application/com-spotify-client]
 application-id='com.spotify.Client.desktop'
@@ -136,6 +300,9 @@ application-id='org.gnome.TextEditor.desktop'
 
 [org/gnome/desktop/notifications/application/org-mozilla-firefox]
 application-id='org.mozilla.firefox.desktop'
+
+[org/gnome/desktop/notifications/application/org-qbittorrent-qbittorrent]
+application-id='org.qbittorrent.qBittorrent.desktop'
 
 [org/gnome/desktop/notifications/application/spotify]
 application-id='spotify.desktop'
@@ -185,7 +352,7 @@ window-size=(1024, 768)
 migrated=true
 
 [org/gnome/evolution-data-server/calendar]
-reminders-past=['06406db794e281542afbf95b7580928102f6ff05\n42a6a80803220b0353e2d7c279822b6447d451a9\t20240717T133000\n1721215800\n1721215800\n1721219400\nBEGIN:VEVENT\r\nDTSTART;TZID=Europe/Rome:20240717T133000\r\nDTEND;TZID=Europe/Rome:20240717T143000\r\nDTSTAMP:20240716T110218Z\r\nUID:\r\n ccrjep9j74o66bb575ij6b9kc9ijabb1cgqjeb9k64r64e1o6lh3edpjcg@google.com\r\nCREATED:20240716T110218Z\r\nDESCRIPTION:\r\nLAST-MODIFIED:20240716T110218Z\r\nLOCATION:\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:Console\r\nTRANSP:OPAQUE\r\nX-EVOLUTION-CALDAV-ETAG:63856810938\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:PT0S\r\nX-EVOLUTION-ALARM-UID:42a6a80803220b0353e2d7c279822b6447d451a9\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT1H\r\nX-EVOLUTION-ALARM-UID:c1d2c5216599e8a20a9cd56aa14f0a2f51dd846a\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P1D\r\nX-EVOLUTION-ALARM-UID:ec582acd3eb3ea91e59eda9abb39323af3f928d5\r\nEND:VALARM\r\nEND:VEVENT\r\n', '06406db794e281542afbf95b7580928102f6ff05\nc1d2c5216599e8a20a9cd56aa14f0a2f51dd846a\t20240717T133000\n1721212200\n1721215800\n1721219400\nBEGIN:VEVENT\r\nDTSTART;TZID=Europe/Rome:20240717T133000\r\nDTEND;TZID=Europe/Rome:20240717T143000\r\nDTSTAMP:20240716T110218Z\r\nUID:\r\n ccrjep9j74o66bb575ij6b9kc9ijabb1cgqjeb9k64r64e1o6lh3edpjcg@google.com\r\nCREATED:20240716T110218Z\r\nDESCRIPTION:\r\nLAST-MODIFIED:20240716T110218Z\r\nLOCATION:\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:Console\r\nTRANSP:OPAQUE\r\nX-EVOLUTION-CALDAV-ETAG:63856810938\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:PT0S\r\nX-EVOLUTION-ALARM-UID:42a6a80803220b0353e2d7c279822b6447d451a9\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT1H\r\nX-EVOLUTION-ALARM-UID:c1d2c5216599e8a20a9cd56aa14f0a2f51dd846a\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P1D\r\nX-EVOLUTION-ALARM-UID:ec582acd3eb3ea91e59eda9abb39323af3f928d5\r\nEND:VALARM\r\nEND:VEVENT\r\n', '06406db794e281542afbf95b7580928102f6ff05\nec582acd3eb3ea91e59eda9abb39323af3f928d5\t20240717T133000\n1721129400\n1721215800\n1721219400\nBEGIN:VEVENT\r\nDTSTART;TZID=Europe/Rome:20240717T133000\r\nDTEND;TZID=Europe/Rome:20240717T143000\r\nDTSTAMP:20240716T110218Z\r\nUID:\r\n ccrjep9j74o66bb575ij6b9kc9ijabb1cgqjeb9k64r64e1o6lh3edpjcg@google.com\r\nCREATED:20240716T110218Z\r\nDESCRIPTION:\r\nLAST-MODIFIED:20240716T110218Z\r\nLOCATION:\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:Console\r\nTRANSP:OPAQUE\r\nX-EVOLUTION-CALDAV-ETAG:63856810938\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:PT0S\r\nX-EVOLUTION-ALARM-UID:42a6a80803220b0353e2d7c279822b6447d451a9\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT1H\r\nX-EVOLUTION-ALARM-UID:c1d2c5216599e8a20a9cd56aa14f0a2f51dd846a\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P1D\r\nX-EVOLUTION-ALARM-UID:ec582acd3eb3ea91e59eda9abb39323af3f928d5\r\nEND:VALARM\r\nEND:VEVENT\r\n', 'f17400fbfa8e749f8b90671358091794798d2ec0\nc6f3a51483b314a08abd7663feb8abde2273a788\t20240713T140000\n1720785600\n1720872000\n1720875600\nBEGIN:VEVENT\r\nDTSTART;TZID=Europe/Rome:20240713T140000\r\nDTEND;TZID=Europe/Rome:20240713T150000\r\nDTSTAMP:20240712T110525Z\r\nUID:\r\n 6sp3adr560oj4b9j6pi62b9kc9h30b9pckr38b9ichj3cd3361hj0ob66g@google.com\r\nCREATED:20240712T110525Z\r\nX-LIC-ERROR;X-LIC-ERRORTYPE=VALUE-PARSE-ERROR:No value for DESCRIPTION \r\n property. Removing entire property:\r\nLAST-MODIFIED:20240712T110525Z\r\nLOCATION:Viale Litorale Marina\\, 189\\, 47042 Cesenatico FC\\, Italy\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:Mare\r\nTRANSP:OPAQUE\r\nX-EVOLUTION-CALDAV-ETAG:63856465525\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:PT0S\r\nX-EVOLUTION-ALARM-UID:8ea026182dc936c25bebe454f9dfba10731ec8c5\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT1H\r\nX-EVOLUTION-ALARM-UID:c629822f609a7442480696bf372cc331aca80a3d\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P1D\r\nX-EVOLUTION-ALARM-UID:c6f3a51483b314a08abd7663feb8abde2273a788\r\nEND:VALARM\r\nEND:VEVENT\r\n']
+reminders-past=['06406db794e281542afbf95b7580928102f6ff05\n42a6a80803220b0353e2d7c279822b6447d451a9\t20240717T133000\n1721215800\n1721215800\n1721219400\nBEGIN:VEVENT\r\nDTSTART;TZID=Europe/Rome:20240717T133000\r\nDTEND;TZID=Europe/Rome:20240717T143000\r\nDTSTAMP:20240716T110218Z\r\nUID:\r\n ccrjep9j74o66bb575ij6b9kc9ijabb1cgqjeb9k64r64e1o6lh3edpjcg@google.com\r\nCREATED:20240716T110218Z\r\nDESCRIPTION:\r\nLAST-MODIFIED:20240716T110218Z\r\nLOCATION:\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:Console\r\nTRANSP:OPAQUE\r\nX-EVOLUTION-CALDAV-ETAG:63856810938\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:PT0S\r\nX-EVOLUTION-ALARM-UID:42a6a80803220b0353e2d7c279822b6447d451a9\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT1H\r\nX-EVOLUTION-ALARM-UID:c1d2c5216599e8a20a9cd56aa14f0a2f51dd846a\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P1D\r\nX-EVOLUTION-ALARM-UID:ec582acd3eb3ea91e59eda9abb39323af3f928d5\r\nEND:VALARM\r\nEND:VEVENT\r\n', '06406db794e281542afbf95b7580928102f6ff05\nc1d2c5216599e8a20a9cd56aa14f0a2f51dd846a\t20240717T133000\n1721212200\n1721215800\n1721219400\nBEGIN:VEVENT\r\nDTSTART;TZID=Europe/Rome:20240717T133000\r\nDTEND;TZID=Europe/Rome:20240717T143000\r\nDTSTAMP:20240716T110218Z\r\nUID:\r\n ccrjep9j74o66bb575ij6b9kc9ijabb1cgqjeb9k64r64e1o6lh3edpjcg@google.com\r\nCREATED:20240716T110218Z\r\nDESCRIPTION:\r\nLAST-MODIFIED:20240716T110218Z\r\nLOCATION:\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:Console\r\nTRANSP:OPAQUE\r\nX-EVOLUTION-CALDAV-ETAG:63856810938\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:PT0S\r\nX-EVOLUTION-ALARM-UID:42a6a80803220b0353e2d7c279822b6447d451a9\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT1H\r\nX-EVOLUTION-ALARM-UID:c1d2c5216599e8a20a9cd56aa14f0a2f51dd846a\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P1D\r\nX-EVOLUTION-ALARM-UID:ec582acd3eb3ea91e59eda9abb39323af3f928d5\r\nEND:VALARM\r\nEND:VEVENT\r\n', '06406db794e281542afbf95b7580928102f6ff05\nec582acd3eb3ea91e59eda9abb39323af3f928d5\t20240717T133000\n1721129400\n1721215800\n1721219400\nBEGIN:VEVENT\r\nDTSTART;TZID=Europe/Rome:20240717T133000\r\nDTEND;TZID=Europe/Rome:20240717T143000\r\nDTSTAMP:20240716T110218Z\r\nUID:\r\n ccrjep9j74o66bb575ij6b9kc9ijabb1cgqjeb9k64r64e1o6lh3edpjcg@google.com\r\nCREATED:20240716T110218Z\r\nDESCRIPTION:\r\nLAST-MODIFIED:20240716T110218Z\r\nLOCATION:\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:Console\r\nTRANSP:OPAQUE\r\nX-EVOLUTION-CALDAV-ETAG:63856810938\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:PT0S\r\nX-EVOLUTION-ALARM-UID:42a6a80803220b0353e2d7c279822b6447d451a9\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT1H\r\nX-EVOLUTION-ALARM-UID:c1d2c5216599e8a20a9cd56aa14f0a2f51dd846a\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P1D\r\nX-EVOLUTION-ALARM-UID:ec582acd3eb3ea91e59eda9abb39323af3f928d5\r\nEND:VALARM\r\nEND:VEVENT\r\n']
 
 [org/gnome/evolution]
 default-address-book='f4b989df137a5b65482299c946cfd96a5045fe36'
@@ -449,12 +616,12 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1721456002
+check-timestamp=int64 1721662750
 first-run=false
-flatpak-purge-timestamp=int64 1721296557
-install-timestamp=int64 1720941257
-packagekit-historical-updates-timestamp=uint64 1720941257
-update-notification-timestamp=int64 1720941303
+flatpak-purge-timestamp=int64 1721670056
+install-timestamp=int64 1721673020
+packagekit-historical-updates-timestamp=uint64 1721673020
+update-notification-timestamp=int64 1721719773
 
 [org/gnome/system/location]
 enabled=true
@@ -469,7 +636,7 @@ selected-color=(true, 0.10196078568696976, 0.37254902720451355, 0.70588237047195
 [org/gtk/gtk4/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=true
+show-hidden=false
 sidebar-width=210
 sort-column='type'
 sort-directories-first=false
