@@ -216,7 +216,7 @@ tab-width=2
 font-name='NotoMono Nerd Font 12'
 
 [org/gnome/control-center]
-last-panel='power'
+last-panel='display'
 window-state=(1357, 909, false)
 
 [org/gnome/desktop/app-folders]
