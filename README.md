@@ -38,21 +38,6 @@ Prevent Fedora from changing default home page
 sudo rm -f /usr/lib64/firefox/browser/defaults/preferences/firefox-redhat-default-prefs.js
 ```
 
-
-# User dirs
-
-```sh
-cd $HOME
-mv Desktop desktop
-mv Downloads downloads
-mv Templates templates
-mv Public public
-mv Documents documents
-mv Music music
-mv Pictures pictures
-mv Videos videos
-```
-
 # Tlp
 
 ```sh
