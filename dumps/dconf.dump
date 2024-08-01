@@ -265,7 +265,10 @@ show-battery-percentage=true
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['firefox', 'org-gnome-console', 'org-gnome-texteditor', 'gnome-power-panel', 'spotify', 'org-gnome-shell-extensions', 'org-gnome-evolution-alarm-notify', 'org-gnome-software', 'com-spotify-client', 'org-gnome-characters', 'org-qbittorrent-qbittorrent']
+application-children=['firefox', 'org-gnome-console', 'org-gnome-texteditor', 'gnome-power-panel', 'spotify', 'org-gnome-shell-extensions', 'org-gnome-evolution-alarm-notify', 'org-gnome-software', 'com-spotify-client', 'org-gnome-characters', 'org-qbittorrent-qbittorrent', 'com-mattjakeman-extensionmanager']
+
+[org/gnome/desktop/notifications/application/com-mattjakeman-extensionmanager]
+application-id='com.mattjakeman.ExtensionManager.desktop'
 
 [org/gnome/desktop/notifications/application/com-spotify-client]
 application-id='com.spotify.Client.desktop'
@@ -617,9 +620,9 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1722240363
+check-timestamp=int64 1722499497
 first-run=false
-flatpak-purge-timestamp=int64 1721670056
+flatpak-purge-timestamp=int64 1722334162
 install-timestamp=int64 1721673020
 packagekit-historical-updates-timestamp=uint64 1721673020
 update-notification-timestamp=int64 1721719773
