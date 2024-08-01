@@ -31,13 +31,6 @@ sudo dnf config-manager --set-enabled google-chrome
 sudo dnf install google-chrome-stable
 ```
 
-# Firefox (Fedora)
-
-Prevent Fedora from changing default home page
-```sh
-sudo rm -f /usr/lib64/firefox/browser/defaults/preferences/firefox-redhat-default-prefs.js
-```
-
 # Tlp
 
 ```sh
