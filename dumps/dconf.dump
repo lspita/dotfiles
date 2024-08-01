@@ -216,7 +216,7 @@ tab-width=2
 font-name='NotoMono Nerd Font 12'
 
 [org/gnome/control-center]
-last-panel='display'
+last-panel='online-accounts'
 window-state=(1357, 909, false)
 
 [org/gnome/desktop/a11y/applications]

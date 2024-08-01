@@ -1,6 +1,6 @@
 # -- custom --
 
-export DOTFILES_PATH="$HOME/dotfiles"
+export DOTFILES_PATH="$HOME/Projects/dotfiles"
 export PATH="$HOME/.local/bin:$PATH"
 
 # -- p10k--
