@@ -49,3 +49,11 @@ echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com
 sudo dnf check-update
 sudo dnf install code # or code-insiders
 ```
+
+# Firefox
+
+Prevent fedora from changing start page
+
+```sh
+sudo dnf remove fedora-bookmarks
+```
