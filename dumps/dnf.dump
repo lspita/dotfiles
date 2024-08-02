@@ -5,7 +5,7 @@ anaconda-install-env-deps-0:40.22.3-1.fc40.x86_64
 anaconda-live-0:40.22.3-1.fc40.noarch
 caca-utils-0:0.99-0.73.beta20.fc40.x86_64
 cargo-0:1.80.0-1.fc40.x86_64
-code-0:1.91.1-1720564728.el8.x86_64
+code-0:1.92.0-1722473109.el8.x86_64
 composefs-0:1.0.3-1.fc40.x86_64
 containerd.io-0:1.7.19-3.1.fc40.x86_64
 cowsay-0:3.7.0-12.fc40.noarch

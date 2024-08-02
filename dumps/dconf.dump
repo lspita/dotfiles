@@ -373,8 +373,8 @@ default-address-book='f4b989df137a5b65482299c946cfd96a5045fe36'
 current-tab='resources'
 show-dependencies=false
 show-whose-processes='user'
-window-height=659
-window-width=1143
+window-height=890
+window-width=1423
 
 [org/gnome/gnome-system-monitor/disktreenew]
 col-6-visible=true
@@ -631,7 +631,7 @@ locations=@av []
 [org/gnome/software]
 check-timestamp=int64 1722587537
 first-run=false
-flatpak-purge-timestamp=int64 1722506618
+flatpak-purge-timestamp=int64 1722594671
 install-timestamp=int64 1722515155
 packagekit-historical-updates-timestamp=uint64 1722515155
 update-notification-timestamp=int64 1722515442
