@@ -22,7 +22,7 @@ primary-store='eds:f4b989df137a5b65482299c946cfd96a5045fe36'
 [org/gnome/Console]
 audible-bell=false
 font-scale=1.2000000000000002
-last-window-maximised=true
+last-window-maximised=false
 last-window-size=(1745, 903)
 theme='auto'
 
@@ -216,7 +216,7 @@ tab-width=2
 font-name='NotoMono Nerd Font 12'
 
 [org/gnome/control-center]
-last-panel='display'
+last-panel='background'
 window-state=(1357, 909, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -321,6 +321,9 @@ application-id='spotify.desktop'
 
 [org/gnome/desktop/peripherals/keyboard]
 numlock-state=true
+
+[org/gnome/desktop/peripherals/mouse]
+speed=-0.40000000000000002
 
 [org/gnome/desktop/peripherals/touchpad]
 two-finger-scrolling-enabled=true
@@ -629,7 +632,7 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1722862049
+check-timestamp=int64 1722950196
 first-run=false
 flatpak-purge-timestamp=int64 1722594671
 install-timestamp=int64 1722515155
