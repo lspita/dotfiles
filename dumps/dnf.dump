@@ -18,7 +18,6 @@ docker-compose-plugin-0:2.29.1-1.fc40.x86_64
 dracut-live-0:102-2.fc40.x86_64
 ffmpeg-free-0:6.1.1-19.fc40.x86_64
 firefox-0:128.0.3-1.fc40.x86_64
-firefox-langpacks-0:128.0.3-1.fc40.x86_64
 gh-0:2.45.0-1.fc40.x86_64
 gnome-console-0:46.0-2.fc40.x86_64
 gnome-tweaks-0:46.1-1.fc40.noarch
@@ -53,6 +52,7 @@ python3.11-0:3.11.9-2.fc40.x86_64
 rust-0:1.80.0-1.fc40.x86_64
 rust-analyzer-0:1.80.0-1.fc40.x86_64
 stow-0:2.4.0-1.fc40.noarch
+telnet-1:0.17-92.fc40.x86_64
 tlp-0:1.6.0-2.fc40.noarch
 tlp-rdw-0:1.6.0-2.fc40.noarch
 w3m-img-0:0.5.3-63.git20230121.fc40.x86_64
