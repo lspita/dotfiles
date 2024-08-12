@@ -215,8 +215,13 @@ tab-width=2
 [org/gnome/builder/terminal]
 font-name='NotoMono Nerd Font 12'
 
+[org/gnome/calendar]
+active-view='month'
+window-maximized=true
+window-size=(768, 600)
+
 [org/gnome/control-center]
-last-panel='background'
+last-panel='power'
 window-state=(1357, 909, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -461,10 +466,10 @@ power-button-action='interactive'
 sleep-inactive-ac-type='nothing'
 
 [org/gnome/shell]
-app-picker-layout=[{'com.anydesk.Anydesk.desktop': <{'position': <0>}>, 'com.bitwarden.desktop.desktop': <{'position': <1>}>, 'org.gnome.Boxes.desktop': <{'position': <2>}>, 'org.gnome.Calculator.desktop': <{'position': <3>}>, 'org.gnome.Calendar.desktop': <{'position': <4>}>, 'org.gnome.Snapshot.desktop': <{'position': <5>}>, 'org.gnome.Characters.desktop': <{'position': <6>}>, 'org.gnome.clocks.desktop': <{'position': <7>}>, 'ca.desrt.dconf-editor.desktop': <{'position': <8>}>, 'org.gnome.baobab.desktop': <{'position': <9>}>, 'org.gnome.DiskUtility.desktop': <{'position': <10>}>, 'simple-scan.desktop': <{'position': <11>}>, 'org.gnome.Evince.desktop': <{'position': <12>}>, 'com.mattjakeman.ExtensionManager.desktop': <{'position': <13>}>, 'org.gnome.font-viewer.desktop': <{'position': <14>}>, 'io.github.realmazharhussain.GdmSettings.desktop': <{'position': <15>}>, 'google-chrome.desktop': <{'position': <16>}>, 'yelp.desktop': <{'position': <17>}>, 'org.gnome.Loupe.desktop': <{'position': <18>}>, 'org.gnome.Logs.desktop': <{'position': <19>}>, 'md.obsidian.Obsidian.desktop': <{'position': <20>}>, 'org.gnome.PowerStats.desktop': <{'position': <21>}>, 'org.freedesktop.GnomeAbrt.desktop': <{'position': <22>}>, 'org.qbittorrent.qBittorrent.desktop': <{'position': <23>}>}, {'org.gnome.Rhythmbox3.desktop': <{'position': <0>}>, 'org.gnome.Settings.desktop': <{'position': <1>}>, 'org.gnome.Software.desktop': <{'position': <2>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <3>}>, 'org.gnome.TextEditor.desktop': <{'position': <4>}>, 'com.github.d4nj1.tlpui.desktop': <{'position': <5>}>, 'org.gnome.tweaks.desktop': <{'position': <6>}>, 'Utilities': <{'position': <7>}>, 'org.gnome.Totem.desktop': <{'position': <8>}>, 'org.gnome.Weather.desktop': <{'position': <9>}>}]
+app-picker-layout=[{'com.anydesk.Anydesk.desktop': <{'position': <0>}>, 'com.bitwarden.desktop.desktop': <{'position': <1>}>, 'org.gnome.Boxes.desktop': <{'position': <2>}>, 'org.gnome.Calculator.desktop': <{'position': <3>}>, 'org.gnome.Calendar.desktop': <{'position': <4>}>, 'org.gnome.Snapshot.desktop': <{'position': <5>}>, 'org.gnome.Characters.desktop': <{'position': <6>}>, 'org.gnome.clocks.desktop': <{'position': <7>}>, 'ca.desrt.dconf-editor.desktop': <{'position': <8>}>, 'com.discordapp.Discord.desktop': <{'position': <9>}>, 'org.gnome.baobab.desktop': <{'position': <10>}>, 'org.gnome.DiskUtility.desktop': <{'position': <11>}>, 'simple-scan.desktop': <{'position': <12>}>, 'org.gnome.Evince.desktop': <{'position': <13>}>, 'com.mattjakeman.ExtensionManager.desktop': <{'position': <14>}>, 'org.gnome.font-viewer.desktop': <{'position': <15>}>, 'io.github.realmazharhussain.GdmSettings.desktop': <{'position': <16>}>, 'google-chrome.desktop': <{'position': <17>}>, 'yelp.desktop': <{'position': <18>}>, 'org.gnome.Loupe.desktop': <{'position': <19>}>, 'org.gnome.Logs.desktop': <{'position': <20>}>, 'org.gnome.PowerStats.desktop': <{'position': <21>}>, 'org.freedesktop.GnomeAbrt.desktop': <{'position': <22>}>, 'org.qbittorrent.qBittorrent.desktop': <{'position': <23>}>}, {'org.gnome.Rhythmbox3.desktop': <{'position': <0>}>, 'org.gnome.Settings.desktop': <{'position': <1>}>, 'org.gnome.Software.desktop': <{'position': <2>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <3>}>, 'org.gnome.TextEditor.desktop': <{'position': <4>}>, 'com.github.d4nj1.tlpui.desktop': <{'position': <5>}>, 'org.gnome.tweaks.desktop': <{'position': <6>}>, 'org.gnome.Totem.desktop': <{'position': <7>}>, 'org.gnome.Weather.desktop': <{'position': <8>}>}]
 disabled-extensions=['workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'background-logo@fedorahosted.org', 'window-list@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com']
 enabled-extensions=['system-monitor@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'AlphabeticalAppGrid@stuarthayhurst', 'user-theme-x@tuberry.github.io', 'app-hider@lynith.dev', 'unite@hardpixel.eu', 'tilingshell@ferrarodomenico.com', 'forge@jmmaranan.com', 'just-perfection-desktop@just-perfection', 'light-style@gnome-shell-extensions.gcampax.github.com', 'nightthemeswitcher@romainvigier.fr', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'overviewbackground@github.com.orbitcorrection', 'blur-my-shell@aunetx']
-favorite-apps=['org.mozilla.firefox.desktop', 'code.desktop', 'org.gnome.Nautilus.desktop', 'com.spotify.Client.desktop', 'org.gnome.Console.desktop']
+favorite-apps=['org.mozilla.firefox.desktop', 'code.desktop', 'md.obsidian.Obsidian.desktop', 'org.gnome.Nautilus.desktop', 'com.spotify.Client.desktop', 'org.gnome.Console.desktop']
 welcome-dialog-last-shown-version='46.3.1'
 
 [org/gnome/shell/app-switcher]
@@ -632,7 +637,7 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1723381827
+check-timestamp=int64 1723470300
 first-run=false
 flatpak-purge-timestamp=int64 1723283415
 install-timestamp=int64 1722515155
