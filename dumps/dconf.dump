@@ -23,7 +23,7 @@ primary-store='eds:f4b989df137a5b65482299c946cfd96a5045fe36'
 audible-bell=false
 font-scale=1.2000000000000002
 last-window-maximised=false
-last-window-size=(1656, 854)
+last-window-size=(1680, 973)
 theme='auto'
 
 [org/gnome/Contacts]
@@ -643,9 +643,9 @@ locations=@av []
 check-timestamp=int64 1723616887
 first-run=false
 flatpak-purge-timestamp=int64 1723540169
-install-timestamp=int64 1722515155
-packagekit-historical-updates-timestamp=uint64 1722515155
-update-notification-timestamp=int64 1722515442
+install-timestamp=int64 1723617023
+packagekit-historical-updates-timestamp=uint64 1723617023
+update-notification-timestamp=int64 1723617152
 
 [org/gnome/system/location]
 enabled=true
