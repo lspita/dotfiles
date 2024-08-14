@@ -7,7 +7,7 @@ caca-utils-0:0.99-0.73.beta20.fc40.x86_64
 cargo-0:1.80.0-1.fc40.x86_64
 code-0:1.92.1-1723066391.el8.x86_64
 composefs-0:1.0.3-1.fc40.x86_64
-containerd.io-0:1.7.19-3.1.fc40.x86_64
+containerd.io-0:1.7.20-3.1.fc40.x86_64
 cowsay-0:3.7.0-12.fc40.noarch
 dconf-editor-0:45.0.1-4.fc40.x86_64
 docker-buildx-plugin-0:0.16.1-1.fc40.x86_64
