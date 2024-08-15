@@ -22,7 +22,7 @@ primary-store='eds:f4b989df137a5b65482299c946cfd96a5045fe36'
 [org/gnome/Console]
 audible-bell=false
 font-scale=1.2000000000000002
-last-window-maximised=false
+last-window-maximised=true
 last-window-size=(1680, 973)
 theme='auto'
 
@@ -65,7 +65,7 @@ window-size=(-1, -1)
 font-name='NotoMono Nerd Font 12'
 highlight-current-line=true
 highlight-matching-brackets=true
-style-scheme-name='Adwaita-dark'
+style-scheme-name='Adwaita'
 
 [org/gnome/builder/editor/language/automake]
 insert-spaces-instead-of-tabs=false
@@ -221,7 +221,7 @@ window-maximized=true
 window-size=(768, 600)
 
 [org/gnome/control-center]
-last-panel='power'
+last-panel='wifi'
 window-state=(1357, 909, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -378,7 +378,7 @@ reminders-past=@as []
 default-address-book='f4b989df137a5b65482299c946cfd96a5045fe36'
 
 [org/gnome/gnome-system-monitor]
-current-tab='resources'
+current-tab='processes'
 show-dependencies=false
 show-whose-processes='user'
 window-height=890
@@ -640,9 +640,9 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1723616887
+check-timestamp=int64 1723709925
 first-run=false
-flatpak-purge-timestamp=int64 1723540169
+flatpak-purge-timestamp=int64 1723625799
 install-timestamp=int64 1723617023
 packagekit-historical-updates-timestamp=uint64 1723617023
 update-notification-timestamp=int64 1723617152
