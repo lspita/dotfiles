@@ -221,7 +221,7 @@ window-maximized=true
 window-size=(768, 600)
 
 [org/gnome/control-center]
-last-panel='wifi'
+last-panel='mouse'
 window-state=(1357, 909, false)
 
 [org/gnome/desktop/a11y/applications]
