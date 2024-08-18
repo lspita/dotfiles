@@ -22,7 +22,7 @@ primary-store='eds:f4b989df137a5b65482299c946cfd96a5045fe36'
 [org/gnome/Console]
 audible-bell=false
 font-scale=1.2000000000000002
-last-window-maximised=true
+last-window-maximised=false
 last-window-size=(1680, 973)
 theme='auto'
 
@@ -640,7 +640,7 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1723709925
+check-timestamp=int64 1723979420
 first-run=false
 flatpak-purge-timestamp=int64 1723625799
 install-timestamp=int64 1723617023
