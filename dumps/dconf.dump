@@ -22,7 +22,7 @@ primary-store='eds:f4b989df137a5b65482299c946cfd96a5045fe36'
 [org/gnome/Console]
 audible-bell=false
 font-scale=1.2000000000000002
-last-window-maximised=false
+last-window-maximised=true
 last-window-size=(1680, 973)
 theme='auto'
 
@@ -261,7 +261,7 @@ sources=[('xkb', 'it')]
 xkb-options=['terminate:ctrl_alt_bksp', 'lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
-color-scheme='default'
+color-scheme='prefer-dark'
 cursor-size=24
 cursor-theme='Adwaita'
 document-font-name='NotoSans Nerd Font 12'
