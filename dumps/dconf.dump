@@ -23,7 +23,7 @@ primary-store='eds:f4b989df137a5b65482299c946cfd96a5045fe36'
 audible-bell=false
 font-scale=1.2000000000000002
 last-window-maximised=false
-last-window-size=(1430, 798)
+last-window-size=(1589, 888)
 theme='auto'
 
 [org/gnome/Contacts]
@@ -449,7 +449,7 @@ last-folder-path='/home/lspita/unibo/notes'
 last-folder-path='/home/lspita/projects/techboost'
 
 [org/gnome/portal/filechooser/org.mozilla.firefox]
-last-folder-path='/home/lspita/Downloads'
+last-folder-path='/home/lspita/Pictures/Screenshots'
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-last-coordinates=(44.085321489181787, 12.5642373)
@@ -643,7 +643,7 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1724316758
+check-timestamp=int64 1724398162
 first-run=false
 flatpak-purge-timestamp=int64 1723625799
 install-timestamp=int64 1723617023
