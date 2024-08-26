@@ -1,6 +1,6 @@
 [ca/desrt/dconf-editor]
 saved-pathbar-path='/org/gnome/shell/extensions/blur-my-shell/'
-saved-view='/org/gnome/shell/extensions/'
+saved-view='/'
 show-warning=false
 window-height=500
 window-is-maximized=true
@@ -237,7 +237,7 @@ window-maximized=true
 window-size=(768, 600)
 
 [org/gnome/control-center]
-last-panel='privacy'
+last-panel='mouse'
 window-state=(1357, 909, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -347,7 +347,7 @@ application-id='spotify.desktop'
 numlock-state=true
 
 [org/gnome/desktop/peripherals/mouse]
-speed=-0.40000000000000002
+speed=-0.60833333333333339
 
 [org/gnome/desktop/peripherals/touchpad]
 two-finger-scrolling-enabled=true
