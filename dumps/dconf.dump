@@ -215,13 +215,29 @@ tab-width=2
 [org/gnome/builder/terminal]
 font-name='NotoMono Nerd Font 12'
 
+[org/gnome/calculator]
+accuracy=9
+angle-units='degrees'
+base=10
+button-mode='basic'
+number-format='automatic'
+show-thousands=false
+show-zeroes=false
+source-currency=''
+source-units='degree'
+target-currency=''
+target-units='radian'
+window-maximized=false
+window-size=(361, 501)
+word-size=64
+
 [org/gnome/calendar]
 active-view='month'
 window-maximized=true
 window-size=(768, 600)
 
 [org/gnome/control-center]
-last-panel='system'
+last-panel='privacy'
 window-state=(1357, 909, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -619,7 +635,7 @@ world-clock=false
 
 [org/gnome/shell/extensions/nightthemeswitcher/time]
 location=(44.055719134899768, 12.5642373)
-manual-schedule=true
+manual-schedule=false
 nightthemeswitcher-ondemand-keybinding=['<Super>F8']
 sunrise=0.0
 sunset=0.0
@@ -643,9 +659,9 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1724398162
+check-timestamp=int64 1724655325
 first-run=false
-flatpak-purge-timestamp=int64 1723625799
+flatpak-purge-timestamp=int64 1724405499
 install-timestamp=int64 1723617023
 packagekit-historical-updates-timestamp=uint64 1723617023
 update-notification-timestamp=int64 1723617152
