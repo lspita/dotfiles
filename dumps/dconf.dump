@@ -237,7 +237,7 @@ window-maximized=true
 window-size=(768, 600)
 
 [org/gnome/control-center]
-last-panel='mouse'
+last-panel='background'
 window-state=(1357, 909, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -391,7 +391,7 @@ window-size=(1024, 768)
 migrated=true
 
 [org/gnome/evolution-data-server/calendar]
-reminders-past=@as []
+reminders-past=["06406db794e281542afbf95b7580928102f6ff05\n53e74a543b074ea3f80942d93c7946e2ef579f76\t20240829T163000\n1724855400\n1724941800\n1724945400\nBEGIN:VEVENT\r\nDTSTART;TZID=Europe/Rome:20240829T163000\r\nDTEND;TZID=Europe/Rome:20240829T173000\r\nDTSTAMP:20240827T081554Z\r\nUID:\r\n 64rj0ob36gsjeb9l6ks64b9k75i34b9p6op3ab9i6pim4chl6lj68d9i64@google.com\r\nCREATED:20240827T081554Z\r\nDESCRIPTION:\r\nLAST-MODIFIED:20240827T081554Z\r\nLOCATION:Stile Mirho'\\, 47853 Cerasolo Province of Rimini\\, Italy\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:Capelli\r\nTRANSP:OPAQUE\r\nX-EVOLUTION-CALDAV-ETAG:63860429754\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:PT0S\r\nX-EVOLUTION-ALARM-UID:8800725b30f72b39a1e22c4d9ee194c66b6b23e9\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT1H\r\nX-EVOLUTION-ALARM-UID:47a0a65f84becacc2623949373f32a2b0b3d26ab\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P1D\r\nX-EVOLUTION-ALARM-UID:53e74a543b074ea3f80942d93c7946e2ef579f76\r\nEND:VALARM\r\nEND:VEVENT\r\n"]
 
 [org/gnome/evolution]
 default-address-book='f4b989df137a5b65482299c946cfd96a5045fe36'
@@ -449,6 +449,9 @@ ignore-phase2-ca-cert=false
 [org/gnome/portal/filechooser/com.github.GradienceTeam.Gradience]
 last-folder-path='/home/lspita/dotfiles/backgrounds/.local/share/backgrounds'
 
+[org/gnome/portal/filechooser/com.visualstudio.code]
+last-folder-path='/home/lspita/Projects/TechBoost/partenopeare/server'
+
 [org/gnome/portal/filechooser/google-chrome]
 last-folder-path='/home/lspita/Projects/TechBoost/partenopeare/extension-old'
 
@@ -488,7 +491,7 @@ power-button-action='interactive'
 sleep-inactive-ac-type='nothing'
 
 [org/gnome/shell]
-app-picker-layout=[{'com.anydesk.Anydesk.desktop': <{'position': <0>}>, 'com.bitwarden.desktop.desktop': <{'position': <1>}>, 'org.gnome.Boxes.desktop': <{'position': <2>}>, 'org.gnome.Calculator.desktop': <{'position': <3>}>, 'org.gnome.Calendar.desktop': <{'position': <4>}>, 'org.gnome.Snapshot.desktop': <{'position': <5>}>, 'org.gnome.Characters.desktop': <{'position': <6>}>, 'org.gnome.clocks.desktop': <{'position': <7>}>, 'ca.desrt.dconf-editor.desktop': <{'position': <8>}>, 'com.discordapp.Discord.desktop': <{'position': <9>}>, 'org.gnome.baobab.desktop': <{'position': <10>}>, 'org.gnome.DiskUtility.desktop': <{'position': <11>}>, 'simple-scan.desktop': <{'position': <12>}>, 'org.gnome.Evince.desktop': <{'position': <13>}>, 'com.mattjakeman.ExtensionManager.desktop': <{'position': <14>}>, 'org.gnome.font-viewer.desktop': <{'position': <15>}>, 'io.github.realmazharhussain.GdmSettings.desktop': <{'position': <16>}>, 'google-chrome.desktop': <{'position': <17>}>, 'yelp.desktop': <{'position': <18>}>, 'org.gnome.Loupe.desktop': <{'position': <19>}>, 'org.gnome.Logs.desktop': <{'position': <20>}>, 'org.gnome.PowerStats.desktop': <{'position': <21>}>, 'org.freedesktop.GnomeAbrt.desktop': <{'position': <22>}>, 'org.qbittorrent.qBittorrent.desktop': <{'position': <23>}>}, {'org.gnome.Rhythmbox3.desktop': <{'position': <0>}>, 'org.gnome.Settings.desktop': <{'position': <1>}>, 'org.gnome.Software.desktop': <{'position': <2>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <3>}>, 'org.gnome.TextEditor.desktop': <{'position': <4>}>, 'com.github.d4nj1.tlpui.desktop': <{'position': <5>}>, 'org.gnome.tweaks.desktop': <{'position': <6>}>, 'org.gnome.Totem.desktop': <{'position': <7>}>, 'org.gnome.Weather.desktop': <{'position': <8>}>}]
+app-picker-layout=[{'com.anydesk.Anydesk.desktop': <{'position': <0>}>, 'com.bitwarden.desktop.desktop': <{'position': <1>}>, 'org.gnome.Boxes.desktop': <{'position': <2>}>, 'org.gnome.Calculator.desktop': <{'position': <3>}>, 'org.gnome.Calendar.desktop': <{'position': <4>}>, 'org.gnome.Snapshot.desktop': <{'position': <5>}>, 'org.gnome.Characters.desktop': <{'position': <6>}>, 'org.gnome.clocks.desktop': <{'position': <7>}>, 'ca.desrt.dconf-editor.desktop': <{'position': <8>}>, 'org.gnome.baobab.desktop': <{'position': <9>}>, 'org.gnome.DiskUtility.desktop': <{'position': <10>}>, 'simple-scan.desktop': <{'position': <11>}>, 'org.gnome.Evince.desktop': <{'position': <12>}>, 'com.mattjakeman.ExtensionManager.desktop': <{'position': <13>}>, 'org.gnome.font-viewer.desktop': <{'position': <14>}>, 'io.github.realmazharhussain.GdmSettings.desktop': <{'position': <15>}>, 'google-chrome.desktop': <{'position': <16>}>, 'yelp.desktop': <{'position': <17>}>, 'org.gnome.Loupe.desktop': <{'position': <18>}>, 'org.gnome.Logs.desktop': <{'position': <19>}>, 'org.gnome.PowerStats.desktop': <{'position': <20>}>, 'org.freedesktop.GnomeAbrt.desktop': <{'position': <21>}>, 'org.qbittorrent.qBittorrent.desktop': <{'position': <22>}>, 'org.gnome.Rhythmbox3.desktop': <{'position': <23>}>}, {'org.gnome.Settings.desktop': <{'position': <0>}>, 'org.gnome.Software.desktop': <{'position': <1>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <2>}>, 'org.gnome.TextEditor.desktop': <{'position': <3>}>, 'com.github.d4nj1.tlpui.desktop': <{'position': <4>}>, 'org.gnome.tweaks.desktop': <{'position': <5>}>, 'org.gnome.Totem.desktop': <{'position': <6>}>, 'code.desktop': <{'position': <7>}>, 'org.gnome.Weather.desktop': <{'position': <8>}>}]
 disabled-extensions=['workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'background-logo@fedorahosted.org', 'window-list@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com']
 enabled-extensions=['system-monitor@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'AlphabeticalAppGrid@stuarthayhurst', 'user-theme-x@tuberry.github.io', 'app-hider@lynith.dev', 'unite@hardpixel.eu', 'tilingshell@ferrarodomenico.com', 'forge@jmmaranan.com', 'just-perfection-desktop@just-perfection', 'light-style@gnome-shell-extensions.gcampax.github.com', 'nightthemeswitcher@romainvigier.fr', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'overviewbackground@github.com.orbitcorrection', 'blur-my-shell@aunetx']
 favorite-apps=['org.mozilla.firefox.desktop', 'code.desktop', 'md.obsidian.Obsidian.desktop', 'org.gnome.Nautilus.desktop', 'com.spotify.Client.desktop', 'org.gnome.Console.desktop']
@@ -637,8 +640,8 @@ world-clock=false
 location=(44.055719134899768, 12.5642373)
 manual-schedule=false
 nightthemeswitcher-ondemand-keybinding=['<Super>F8']
-sunrise=6.8433812611305385
-sunset=19.53920738513159
+sunrise=6.8676746812967373
+sunset=19.502611559896266
 
 [org/gnome/shell/extensions/system-monitor]
 show-swap=true
@@ -659,12 +662,12 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1724745233
+check-timestamp=int64 1724919051
 first-run=false
-flatpak-purge-timestamp=int64 1724662456
+flatpak-purge-timestamp=int64 1724772720
 install-timestamp=int64 1723617023
 packagekit-historical-updates-timestamp=uint64 1723617023
-update-notification-timestamp=int64 1723617152
+update-notification-timestamp=int64 1724919103
 
 [org/gnome/system/location]
 enabled=true

@@ -10,7 +10,7 @@ clang-0:18.1.6-3.fc40.x86_64
 code-0:1.92.2-1723661076.el8.x86_64
 composefs-0:1.0.3-1.fc40.x86_64
 containerd.io-0:1.7.20-3.1.fc40.x86_64
-cowsay-0:3.8.2-1.fc40.noarch
+cowsay-0:3.8.3-1.fc40.noarch
 dconf-editor-0:45.0.1-4.fc40.x86_64
 docker-buildx-plugin-0:0.16.2-1.fc40.x86_64
 docker-ce-3:27.1.2-1.fc40.x86_64
