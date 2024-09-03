@@ -640,8 +640,8 @@ world-clock=false
 location=(44.055719134899768, 12.5642373)
 manual-schedule=false
 nightthemeswitcher-ondemand-keybinding=['<Super>F8']
-sunrise=6.9634826753666772
-sunset=19.355189124071728
+sunrise=6.9770157942070909
+sunset=19.334009419718541
 
 [org/gnome/shell/extensions/system-monitor]
 show-swap=true
@@ -664,7 +664,7 @@ locations=@av []
 [org/gnome/software]
 check-timestamp=int64 1725259029
 first-run=false
-flatpak-purge-timestamp=int64 1725204416
+flatpak-purge-timestamp=int64 1725269573
 install-timestamp=int64 1724930501
 packagekit-historical-updates-timestamp=uint64 1724930501
 update-notification-timestamp=int64 1725095204
@@ -682,7 +682,7 @@ selected-color=(true, 0.10196078568696976, 0.37254902720451355, 0.70588237047195
 [org/gtk/gtk4/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=false
+show-hidden=true
 sidebar-width=210
 sort-column='type'
 sort-directories-first=false
