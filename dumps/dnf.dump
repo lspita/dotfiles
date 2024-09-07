@@ -7,7 +7,7 @@ caca-utils-0:0.99-0.73.beta20.fc40.x86_64
 cargo-0:1.80.1-1.fc40.x86_64
 check-devel-0:0.15.2-15.fc40.x86_64
 clang-0:18.1.6-3.fc40.x86_64
-code-0:1.92.2-1723661076.el8.x86_64
+code-0:1.93.0-1725459174.el8.x86_64
 composefs-0:1.0.3-1.fc40.x86_64
 containerd.io-0:1.7.21-3.1.fc40.x86_64
 cowsay-0:3.8.3-1.fc40.noarch
@@ -18,7 +18,7 @@ docker-ce-cli-1:27.2.0-1.fc40.x86_64
 docker-compose-0:1.29.2-12.fc40.noarch
 docker-compose-plugin-0:2.29.2-1.fc40.x86_64
 dracut-live-0:102-2.fc40.x86_64
-ffmpeg-free-0:6.1.1-19.fc40.x86_64
+ffmpeg-free-0:6.1.2-1.fc40.x86_64
 gh-0:2.45.0-1.fc40.x86_64
 gnome-console-0:46.0-2.fc40.x86_64
 gnome-tweaks-0:46.1-1.fc40.noarch

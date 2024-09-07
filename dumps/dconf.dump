@@ -391,7 +391,7 @@ window-size=(1024, 768)
 migrated=true
 
 [org/gnome/evolution-data-server/calendar]
-reminders-past=['e0fa22a6bc04abad6467f4f52179a25524c736a0\nd7a839ec4babda327d2ef109340abfe50317e486\t20240905T190000\n1725469200\n1725555600\n1725559200\nBEGIN:VEVENT\r\nDTSTART;TZID=Europe/Rome:20240905T190000\r\nDTEND;TZID=Europe/Rome:20240905T200000\r\nEXDATE;TZID=Europe/Rome:20240909T190000\r\nEXDATE;TZID=Europe/Rome:20240912T190000\r\nEXDATE;TZID=Europe/Rome:20240916T190000\r\nEXDATE;TZID=Europe/Rome:20240919T190000\r\nRRULE:FREQ=WEEKLY;UNTIL=20240930T215959Z;BYDAY=MO,TH\r\nDTSTAMP:20240903T073504Z\r\nUID:\r\n c5i3gc1hc8sj2bb669h3gb9k75gjgb9o6hhjgb9m6cpj8d1oclh3apb5cg@google.com\r\nCREATED:20240824T091905Z\r\nDESCRIPTION:\r\nLAST-MODIFIED:20240903T073504Z\r\nLOCATION:Palestra Alma Gym Rimini by CUSB\\, Piazza Malatesta\\, 30\\, 47923 \r\n Rimini RN\\, Italy\r\nSEQUENCE:3\r\nSTATUS:CONFIRMED\r\nSUMMARY:Pallavolo\r\nTRANSP:OPAQUE\r\nX-EVOLUTION-CALDAV-ETAG:63861032104\r\nRECURRENCE-ID;TZID=Europe/Rome:20240905T190000\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT30M\r\nX-EVOLUTION-ALARM-UID:be5435b26ff20ecb13a4f408f057d86f97b23dd7\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT1H\r\nX-EVOLUTION-ALARM-UID:f32ce61314fd6a1b6698b0bbba7508829e3b42c5\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P1D\r\nX-EVOLUTION-ALARM-UID:d7a839ec4babda327d2ef109340abfe50317e486\r\nEND:VALARM\r\nEND:VEVENT\r\n', "06406db794e281542afbf95b7580928102f6ff05\n53e74a543b074ea3f80942d93c7946e2ef579f76\t20240829T163000\n1724855400\n1724941800\n1724945400\nBEGIN:VEVENT\r\nDTSTART;TZID=Europe/Rome:20240829T163000\r\nDTEND;TZID=Europe/Rome:20240829T173000\r\nDTSTAMP:20240827T081554Z\r\nUID:\r\n 64rj0ob36gsjeb9l6ks64b9k75i34b9p6op3ab9i6pim4chl6lj68d9i64@google.com\r\nCREATED:20240827T081554Z\r\nDESCRIPTION:\r\nLAST-MODIFIED:20240827T081554Z\r\nLOCATION:Stile Mirho'\\, 47853 Cerasolo Province of Rimini\\, Italy\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:Capelli\r\nTRANSP:OPAQUE\r\nX-EVOLUTION-CALDAV-ETAG:63860429754\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:PT0S\r\nX-EVOLUTION-ALARM-UID:8800725b30f72b39a1e22c4d9ee194c66b6b23e9\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT1H\r\nX-EVOLUTION-ALARM-UID:47a0a65f84becacc2623949373f32a2b0b3d26ab\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P1D\r\nX-EVOLUTION-ALARM-UID:53e74a543b074ea3f80942d93c7946e2ef579f76\r\nEND:VALARM\r\nEND:VEVENT\r\n"]
+reminders-past=['e0fa22a6bc04abad6467f4f52179a25524c736a0\nd7a839ec4babda327d2ef109340abfe50317e486\t20240905T190000\n1725469200\n1725555600\n1725559200\nBEGIN:VEVENT\r\nDTSTART;TZID=Europe/Rome:20240905T190000\r\nDTEND;TZID=Europe/Rome:20240905T200000\r\nEXDATE;TZID=Europe/Rome:20240909T190000\r\nEXDATE;TZID=Europe/Rome:20240912T190000\r\nEXDATE;TZID=Europe/Rome:20240916T190000\r\nEXDATE;TZID=Europe/Rome:20240919T190000\r\nRRULE:FREQ=WEEKLY;UNTIL=20240930T215959Z;BYDAY=MO,TH\r\nDTSTAMP:20240903T073504Z\r\nUID:\r\n c5i3gc1hc8sj2bb669h3gb9k75gjgb9o6hhjgb9m6cpj8d1oclh3apb5cg@google.com\r\nCREATED:20240824T091905Z\r\nDESCRIPTION:\r\nLAST-MODIFIED:20240903T073504Z\r\nLOCATION:Palestra Alma Gym Rimini by CUSB\\, Piazza Malatesta\\, 30\\, 47923 \r\n Rimini RN\\, Italy\r\nSEQUENCE:3\r\nSTATUS:CONFIRMED\r\nSUMMARY:Pallavolo\r\nTRANSP:OPAQUE\r\nX-EVOLUTION-CALDAV-ETAG:63861032104\r\nRECURRENCE-ID;TZID=Europe/Rome:20240905T190000\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT30M\r\nX-EVOLUTION-ALARM-UID:be5435b26ff20ecb13a4f408f057d86f97b23dd7\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT1H\r\nX-EVOLUTION-ALARM-UID:f32ce61314fd6a1b6698b0bbba7508829e3b42c5\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P1D\r\nX-EVOLUTION-ALARM-UID:d7a839ec4babda327d2ef109340abfe50317e486\r\nEND:VALARM\r\nEND:VEVENT\r\n']
 
 [org/gnome/evolution]
 default-address-book='f4b989df137a5b65482299c946cfd96a5045fe36'
@@ -453,7 +453,7 @@ last-folder-path='/home/lspita/dotfiles/backgrounds/.local/share/backgrounds'
 last-folder-path='/home/lspita/Projects/TechBoost/partenopeare/server'
 
 [org/gnome/portal/filechooser/google-chrome]
-last-folder-path='/home/lspita/Projects/TechBoost/partenopeare/extension-old'
+last-folder-path='/home/lspita/Projects/TechBoost/partenopeare/extension'
 
 [org/gnome/portal/filechooser/io.github.realmazharhussain.GdmSettings]
 last-folder-path='/home/lspita/dotfiles/backgrounds/.local/share/backgrounds'
@@ -640,8 +640,8 @@ world-clock=false
 location=(44.055719134899768, 12.5642373)
 manual-schedule=false
 nightthemeswitcher-ondemand-keybinding=['<Super>F8']
-sunrise=7.0166397241990985
-sunset=19.271562541330979
+sunrise=7.0584271765267523
+sunset=19.205084562384791
 
 [org/gnome/shell/extensions/system-monitor]
 show-swap=true
@@ -664,7 +664,7 @@ locations=@av []
 [org/gnome/software]
 check-timestamp=int64 1725607798
 first-run=false
-flatpak-purge-timestamp=int64 1725439085
+flatpak-purge-timestamp=int64 1725614924
 install-timestamp=int64 1724930501
 packagekit-historical-updates-timestamp=uint64 1724930501
 update-notification-timestamp=int64 1725095204
