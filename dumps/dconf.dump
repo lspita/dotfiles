@@ -391,7 +391,7 @@ window-size=(1024, 768)
 migrated=true
 
 [org/gnome/evolution-data-server/calendar]
-reminders-past=['e0fa22a6bc04abad6467f4f52179a25524c736a0\nd7a839ec4babda327d2ef109340abfe50317e486\t20240905T190000\n1725469200\n1725555600\n1725559200\nBEGIN:VEVENT\r\nDTSTART;TZID=Europe/Rome:20240905T190000\r\nDTEND;TZID=Europe/Rome:20240905T200000\r\nEXDATE;TZID=Europe/Rome:20240909T190000\r\nEXDATE;TZID=Europe/Rome:20240912T190000\r\nEXDATE;TZID=Europe/Rome:20240916T190000\r\nEXDATE;TZID=Europe/Rome:20240919T190000\r\nRRULE:FREQ=WEEKLY;UNTIL=20240930T215959Z;BYDAY=MO,TH\r\nDTSTAMP:20240903T073504Z\r\nUID:\r\n c5i3gc1hc8sj2bb669h3gb9k75gjgb9o6hhjgb9m6cpj8d1oclh3apb5cg@google.com\r\nCREATED:20240824T091905Z\r\nDESCRIPTION:\r\nLAST-MODIFIED:20240903T073504Z\r\nLOCATION:Palestra Alma Gym Rimini by CUSB\\, Piazza Malatesta\\, 30\\, 47923 \r\n Rimini RN\\, Italy\r\nSEQUENCE:3\r\nSTATUS:CONFIRMED\r\nSUMMARY:Pallavolo\r\nTRANSP:OPAQUE\r\nX-EVOLUTION-CALDAV-ETAG:63861032104\r\nRECURRENCE-ID;TZID=Europe/Rome:20240905T190000\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT30M\r\nX-EVOLUTION-ALARM-UID:be5435b26ff20ecb13a4f408f057d86f97b23dd7\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT1H\r\nX-EVOLUTION-ALARM-UID:f32ce61314fd6a1b6698b0bbba7508829e3b42c5\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P1D\r\nX-EVOLUTION-ALARM-UID:d7a839ec4babda327d2ef109340abfe50317e486\r\nEND:VALARM\r\nEND:VEVENT\r\n']
+reminders-past=@as []
 
 [org/gnome/evolution]
 default-address-book='f4b989df137a5b65482299c946cfd96a5045fe36'
@@ -662,7 +662,7 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1725780579
+check-timestamp=int64 1726845961
 first-run=false
 flatpak-purge-timestamp=int64 1725787715
 install-timestamp=int64 1724930501
