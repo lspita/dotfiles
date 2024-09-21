@@ -237,7 +237,7 @@ window-maximized=true
 window-size=(768, 600)
 
 [org/gnome/control-center]
-last-panel='wifi'
+last-panel='system'
 window-state=(1357, 909, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -277,7 +277,7 @@ sources=[('xkb', 'it')]
 xkb-options=['terminate:ctrl_alt_bksp', 'lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
-color-scheme='prefer-dark'
+color-scheme='default'
 cursor-size=24
 cursor-theme='Adwaita'
 document-font-name='NotoSans Nerd Font 12'
@@ -662,12 +662,12 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1726845961
+check-timestamp=int64 1726909787
 first-run=false
 flatpak-purge-timestamp=int64 1725787715
-install-timestamp=int64 1724930501
-packagekit-historical-updates-timestamp=uint64 1724930501
-update-notification-timestamp=int64 1725095204
+install-timestamp=int64 1726909863
+packagekit-historical-updates-timestamp=uint64 1726909863
+update-notification-timestamp=int64 1726911338
 
 [org/gnome/system/location]
 enabled=true
@@ -682,7 +682,7 @@ selected-color=(true, 0.10196078568696976, 0.37254902720451355, 0.70588237047195
 [org/gtk/gtk4/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=true
+show-hidden=false
 sidebar-width=210
 sort-column='type'
 sort-directories-first=false
