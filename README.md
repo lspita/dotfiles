@@ -1,3 +1,10 @@
+# Copr
+
+```sh
+sudo dnf copr enable atim/lazygit
+sudo dnf copr enable dedon/libinput-config fedora39-x86_64
+```
+
 # System
 
 ```sh
