@@ -1,3 +1,9 @@
+# System
+
+```sh
+sudo systemctl disable NetworkManager-wait-online.service # prevent check connection on boot
+```
+
 # Zsh
 
 ```sh
