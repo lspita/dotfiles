@@ -237,7 +237,7 @@ window-maximized=true
 window-size=(768, 600)
 
 [org/gnome/control-center]
-last-panel='applications'
+last-panel='wifi'
 window-state=(1357, 909, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -295,7 +295,7 @@ toolbar-style='text'
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['firefox', 'org-gnome-console', 'org-gnome-texteditor', 'gnome-power-panel', 'spotify', 'org-gnome-shell-extensions', 'org-gnome-evolution-alarm-notify', 'org-gnome-software', 'com-spotify-client', 'org-gnome-characters', 'org-qbittorrent-qbittorrent', 'com-mattjakeman-extensionmanager', 'org-mozilla-firefox', 'org-gnome-nautilus']
+application-children=['firefox', 'org-gnome-console', 'org-gnome-texteditor', 'gnome-power-panel', 'spotify', 'org-gnome-shell-extensions', 'org-gnome-evolution-alarm-notify', 'org-gnome-software', 'com-spotify-client', 'org-gnome-characters', 'org-qbittorrent-qbittorrent', 'com-mattjakeman-extensionmanager', 'org-mozilla-firefox', 'org-gnome-nautilus', 'gnome-printers-panel']
 
 [org/gnome/desktop/notifications/application/com-mattjakeman-extensionmanager]
 application-id='com.mattjakeman.ExtensionManager.desktop'
@@ -435,6 +435,10 @@ initial-size=(1431, 854)
 maximized=false
 
 [org/gnome/nm-applet/eap/18ce9e0b-d6b4-4d5a-b4c0-8da1d8b8cb3f]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[org/gnome/nm-applet/eap/3c31288f-2080-48ae-9b64-1254d3874ca5]
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
@@ -640,8 +644,8 @@ world-clock=false
 location=(44.055719134899768, 12.5642373)
 manual-schedule=false
 nightthemeswitcher-ondemand-keybinding=['<Super>F8']
-sunrise=7.3620623628469914
-sunset=18.714038833625963
+sunrise=7.3770977303254028
+sunset=18.689864371604699
 
 [org/gnome/shell/extensions/system-monitor]
 show-swap=true
@@ -662,9 +666,9 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1727073384
+check-timestamp=int64 1727161792
 first-run=false
-flatpak-purge-timestamp=int64 1726998666
+flatpak-purge-timestamp=int64 1727080514
 install-timestamp=int64 1726909863
 packagekit-historical-updates-timestamp=uint64 1726909863
 update-notification-timestamp=int64 1726911338
