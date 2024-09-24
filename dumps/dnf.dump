@@ -58,6 +58,7 @@ python3.11-0:3.11.10-1.fc40.x86_64
 rust-0:1.81.0-1.fc40.x86_64
 rust-analyzer-0:1.81.0-1.fc40.x86_64
 stow-0:2.4.0-1.fc40.noarch
+strace-0:6.10-1.fc40.x86_64
 systemd-devel-0:255.12-1.fc40.x86_64
 telnet-1:0.17-92.fc40.x86_64
 tlp-0:1.6.0-2.fc40.noarch
