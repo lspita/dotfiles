@@ -43,6 +43,7 @@ kernel-modules-core-0:6.10.6-200.fc40.x86_64
 kernel-modules-core-0:6.10.7-200.fc40.x86_64
 lazygit-0:0.44.0-1.fc40.x86_64
 libevdev-devel-0:1.13.3-1.fc40.x86_64
+libinput-utils-0:1.26.2-1.fc40.x86_64
 libwacom-devel-0:2.11.0-1.fc40.x86_64
 livesys-scripts-0:0.6.0-3.fc40.noarch
 meson-0:1.4.1-1.fc40.noarch
