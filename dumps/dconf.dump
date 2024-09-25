@@ -237,7 +237,7 @@ window-maximized=true
 window-size=(768, 600)
 
 [org/gnome/control-center]
-last-panel='wifi'
+last-panel='mouse'
 window-state=(1357, 909, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -644,8 +644,8 @@ world-clock=false
 location=(44.055719134899768, 12.5642373)
 manual-schedule=false
 nightthemeswitcher-ondemand-keybinding=['<Super>F8']
-sunrise=7.3770977303254028
-sunset=18.689864371604699
+sunrise=7.3991355777147945
+sunset=18.654537727338443
 
 [org/gnome/shell/extensions/system-monitor]
 show-swap=true
@@ -668,10 +668,10 @@ locations=@av []
 [org/gnome/software]
 check-timestamp=int64 1727161792
 first-run=false
-flatpak-purge-timestamp=int64 1727080514
-install-timestamp=int64 1726909863
-packagekit-historical-updates-timestamp=uint64 1726909863
-update-notification-timestamp=int64 1726911338
+flatpak-purge-timestamp=int64 1727182776
+install-timestamp=int64 1727192399
+packagekit-historical-updates-timestamp=uint64 1727192399
+update-notification-timestamp=int64 1727239254
 
 [org/gnome/system/location]
 enabled=true
