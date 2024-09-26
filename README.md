@@ -97,8 +97,3 @@ echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com
 sudo dnf check-update
 sudo dnf install code # or code-insiders
 ```
-
-# Syncthing
-```sh
-systemctl --user enable --now syncthing.service
-```
