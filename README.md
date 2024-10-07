@@ -13,6 +13,7 @@ sudo libinput measure touchpad-size <new W>x<new H>
 ```
 
 Copy output to specified file. Example:
+
 ```sh
 -8<-------------------------- # copy content between
 # Laptop model description (e.g. Lenovo X1 Carbon 5th)
@@ -29,6 +30,7 @@ Instructions on what to do with this snippet are in /usr/lib/udev/hwdb.d/60-evde
 
 
 Run this commands, restart and adjust pointer speed to match
+
 ```sh
 sudo systemd-hwdb update
 sudo udevadm trigger /dev/input/event*
@@ -97,3 +99,10 @@ echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com
 sudo dnf check-update
 sudo dnf install code # or code-insiders
 ```
+
+# Zerotier
+
+```sh
+curl -s https://install.zerotier.com | sudo bash
+```
+
