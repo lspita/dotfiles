@@ -1,8 +1,6 @@
 [credential "https://github.com"]
-	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [user]
 	name = Ludovico Spitaleri
@@ -15,13 +13,3 @@
 	rebase = false
 [core]
 	editor = nano
-	pager = delta
-[interactive]
-	diffFilter = delta --color-only
-[delta]
-	navigate = true
-[merge]
-	conflictstyle = diff3
-[diff]
-	colorMoved = default
-
