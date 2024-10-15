@@ -1,1 +1,1 @@
-export GOPATH="$HOME/.local/share/go"
+export GOPATH="${HOME}/.local/share/go"

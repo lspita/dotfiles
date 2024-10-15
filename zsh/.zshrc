@@ -1,7 +1,7 @@
 # -- custom --
 
-export DOTFILES_PATH="$HOME/Projects/dotfiles"
-export PATH="$HOME/.local/bin:$PATH"
+export DOTFILES_PATH="${HOME}/Projects/dotfiles"
+export PATH="${HOME}/.local/bin:${PATH}"
 
 # -- p10k--
 
@@ -26,7 +26,8 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-EDITOR='vim'
+
+EDITOR="nano"
 
 # -- zsh --
 
