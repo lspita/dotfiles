@@ -18,6 +18,7 @@ docker-compose-0:1.29.2-12.fc40.noarch
 docker-compose-plugin-0:2.29.7-1.fc40.x86_64
 dracut-live-0:102-2.fc40.x86_64
 ffmpeg-free-0:6.1.2-1.fc40.x86_64
+fortune-mod-0:3.20.0-4.fc40.x86_64
 gh-0:2.45.0-1.fc40.x86_64
 gnome-console-0:46.0-2.fc40.x86_64
 gnome-tweaks-0:46.1-1.fc40.noarch
