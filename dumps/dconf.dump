@@ -671,7 +671,7 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1729151004
+check-timestamp=int64 1729232521
 first-run=false
 flatpak-purge-timestamp=int64 1728998807
 install-timestamp=int64 1728991282
