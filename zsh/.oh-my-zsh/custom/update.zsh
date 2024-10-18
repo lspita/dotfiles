@@ -56,7 +56,7 @@ system-sync() {
     full-upgrade
     full-freeze
 
-    git status
+    git -C "${DOTFILES_PATH}" status
     git -C "${DOTFILES_PATH}" add "${DOTFILES_PATH}"
     git -C "${DOTFILES_PATH}" commit -am "${message}"
     git -C  "${DOTFILES_PATH}" push
