@@ -46,7 +46,7 @@ full-restore() {
 }
 
 
-system-sync() {
+system-upgrade() {
     message="Backup $(date +"%Y-%m-%d %H:%M:%S %Z")"
 
     if [[ ${#} > 0 ]]; then
