@@ -6,6 +6,7 @@ caca-utils-0:0.99-0.73.beta20.fc40.x86_64
 cargo-0:1.81.0-4.fc40.x86_64
 check-devel-0:0.15.2-15.fc40.x86_64
 clang-0:18.1.8-1.fc40.x86_64
+clang-tools-extra-0:18.1.8-1.fc40.x86_64
 cmake-0:3.28.2-1.fc40.x86_64
 code-0:1.94.2-1728494086.el8.x86_64
 composefs-0:1.0.3-1.fc40.x86_64

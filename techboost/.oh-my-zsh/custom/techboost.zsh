@@ -1,1 +1,1 @@
-alias ssh-techboost="ssh techboost@debian.com"
+alias ssh-techboost="ssh techboost@techboostlocal.dev"
