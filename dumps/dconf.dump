@@ -698,8 +698,8 @@ world-clock=false
 location=(44.055719134899768, 12.5642373)
 manual-schedule=false
 nightthemeswitcher-ondemand-keybinding=['<Super>F8']
-sunrise=8.0475612006693353
-sunset=17.740387876449013
+sunrise=8.0484648343223171
+sunset=17.739345374520028
 
 [org/gnome/shell/extensions/system-monitor]
 show-swap=true
@@ -722,7 +722,7 @@ locations=@av []
 [org/gnome/software]
 check-timestamp=int64 1729927732
 first-run=false
-flatpak-purge-timestamp=int64 1729886197
+flatpak-purge-timestamp=int64 1729934858
 install-timestamp=int64 1728991282
 packagekit-historical-updates-timestamp=uint64 1728991282
 update-notification-timestamp=int64 1728991349
