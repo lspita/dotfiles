@@ -245,7 +245,7 @@ window-maximized=true
 window-size=(768, 600)
 
 [org/gnome/control-center]
-last-panel='applications'
+last-panel='background'
 window-state=(1357, 909, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -285,7 +285,7 @@ sources=[('xkb', 'it')]
 xkb-options=['terminate:ctrl_alt_bksp', 'lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
-color-scheme='default'
+color-scheme='prefer-dark'
 cursor-size=24
 cursor-theme='Adwaita'
 document-font-name='NotoSans Nerd Font 12'
@@ -698,8 +698,8 @@ world-clock=false
 location=(44.055719134899768, 12.5642373)
 manual-schedule=false
 nightthemeswitcher-ondemand-keybinding=['<Super>F8']
-sunrise=8.037163239128283
-sunset=17.752437107583667
+sunrise=8.0475612006693353
+sunset=17.740387876449013
 
 [org/gnome/shell/extensions/system-monitor]
 show-swap=true
@@ -720,7 +720,7 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1729837189
+check-timestamp=int64 1729927732
 first-run=false
 flatpak-purge-timestamp=int64 1729886197
 install-timestamp=int64 1728991282
