@@ -245,7 +245,7 @@ window-maximized=true
 window-size=(768, 600)
 
 [org/gnome/control-center]
-last-panel='applications'
+last-panel='system'
 window-state=(1357, 909, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -279,12 +279,20 @@ picture-uri-dark='file:///home/lspita/.local/share/backgrounds/dino/dino-d.png'
 primary-color='#3465a4'
 secondary-color='#000000'
 
+[org/gnome/desktop/calendar]
+show-weekdate=false
+
+[org/gnome/desktop/datetime]
+automatic-timezone=true
+
 [org/gnome/desktop/input-sources]
 current=uint32 0
 sources=[('xkb', 'it')]
 xkb-options=['terminate:ctrl_alt_bksp', 'lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
+clock-show-seconds=false
+clock-show-weekday=true
 color-scheme='default'
 cursor-size=24
 cursor-theme='Adwaita'
@@ -303,7 +311,7 @@ toolbar-style='text'
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['firefox', 'org-gnome-console', 'org-gnome-texteditor', 'gnome-power-panel', 'spotify', 'org-gnome-shell-extensions', 'org-gnome-evolution-alarm-notify', 'org-gnome-software', 'com-spotify-client', 'org-gnome-characters', 'org-qbittorrent-qbittorrent', 'com-mattjakeman-extensionmanager', 'org-mozilla-firefox', 'org-gnome-nautilus', 'gnome-printers-panel', 'org-gnome-boxes', 'org-mozilla-thunderbird', 'google-chrome']
+application-children=['firefox', 'org-gnome-console', 'org-gnome-texteditor', 'gnome-power-panel', 'spotify', 'org-gnome-shell-extensions', 'org-gnome-evolution-alarm-notify', 'org-gnome-software', 'com-spotify-client', 'org-gnome-characters', 'org-qbittorrent-qbittorrent', 'com-mattjakeman-extensionmanager', 'org-mozilla-firefox', 'org-gnome-nautilus', 'gnome-printers-panel', 'org-gnome-boxes', 'org-mozilla-thunderbird', 'google-chrome', 'org-freedesktop-problems-applet']
 
 [org/gnome/desktop/notifications/application/com-mattjakeman-extensionmanager]
 application-id='com.mattjakeman.ExtensionManager.desktop'
@@ -322,6 +330,9 @@ application-id='gnome-printers-panel.desktop'
 
 [org/gnome/desktop/notifications/application/google-chrome]
 application-id='google-chrome.desktop'
+
+[org/gnome/desktop/notifications/application/org-freedesktop-problems-applet]
+application-id='org.freedesktop.problems.applet.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-boxes]
 application-id='org.gnome.Boxes.desktop'
@@ -555,13 +566,15 @@ name='Launch Explorer'
 
 [org/gnome/settings-daemon/plugins/power]
 power-button-action='interactive'
+power-saver-profile-on-low-battery=true
 sleep-inactive-ac-type='nothing'
 
 [org/gnome/shell]
 app-picker-layout=[{'com.anydesk.Anydesk.desktop': <{'position': <0>}>, 'com.bitwarden.desktop.desktop': <{'position': <1>}>, 'org.gnome.Boxes.desktop': <{'position': <2>}>, 'org.gnome.Calculator.desktop': <{'position': <3>}>, 'org.gnome.Calendar.desktop': <{'position': <4>}>, 'org.gnome.Snapshot.desktop': <{'position': <5>}>, 'org.gnome.Characters.desktop': <{'position': <6>}>, 'org.gnome.clocks.desktop': <{'position': <7>}>, 'ca.desrt.dconf-editor.desktop': <{'position': <8>}>, 'org.gnome.baobab.desktop': <{'position': <9>}>, 'org.gnome.DiskUtility.desktop': <{'position': <10>}>, 'simple-scan.desktop': <{'position': <11>}>, 'org.gnome.Evince.desktop': <{'position': <12>}>, 'com.mattjakeman.ExtensionManager.desktop': <{'position': <13>}>, 'org.fedoraproject.MediaWriter.desktop': <{'position': <14>}>, 'org.mozilla.firefox.desktop': <{'position': <15>}>, 'org.gnome.font-viewer.desktop': <{'position': <16>}>, 'io.github.realmazharhussain.GdmSettings.desktop': <{'position': <17>}>, 'yelp.desktop': <{'position': <18>}>, 'org.gnome.Loupe.desktop': <{'position': <19>}>, 'org.gnome.Logs.desktop': <{'position': <20>}>, 'mcontrolcenter.desktop': <{'position': <21>}>, 'md.obsidian.Obsidian.desktop': <{'position': <22>}>, 'com.parsecgaming.parsec.desktop': <{'position': <23>}>}, {'org.gnome.PowerStats.desktop': <{'position': <0>}>, 'org.freedesktop.GnomeAbrt.desktop': <{'position': <1>}>, 'org.qbittorrent.qBittorrent.desktop': <{'position': <2>}>, 'org.remmina.Remmina.desktop': <{'position': <3>}>, 'org.gnome.Rhythmbox3.desktop': <{'position': <4>}>, 'org.gnome.Settings.desktop': <{'position': <5>}>, 'org.gnome.Software.desktop': <{'position': <6>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <7>}>, 'org.gnome.TextEditor.desktop': <{'position': <8>}>, 'com.github.d4nj1.tlpui.desktop': <{'position': <9>}>, 'org.gnome.tweaks.desktop': <{'position': <10>}>, 'org.gnome.Totem.desktop': <{'position': <11>}>, 'org.gnome.Weather.desktop': <{'position': <12>}>}]
-disabled-extensions=['workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'background-logo@fedorahosted.org', 'window-list@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['system-monitor@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'AlphabeticalAppGrid@stuarthayhurst', 'user-theme-x@tuberry.github.io', 'app-hider@lynith.dev', 'unite@hardpixel.eu', 'tilingshell@ferrarodomenico.com', 'forge@jmmaranan.com', 'just-perfection-desktop@just-perfection', 'light-style@gnome-shell-extensions.gcampax.github.com', 'nightthemeswitcher@romainvigier.fr', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'overviewbackground@github.com.orbitcorrection', 'blur-my-shell@aunetx']
+disabled-extensions=['workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'background-logo@fedorahosted.org', 'apps-menu@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['system-monitor@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'AlphabeticalAppGrid@stuarthayhurst', 'user-theme-x@tuberry.github.io', 'app-hider@lynith.dev', 'unite@hardpixel.eu', 'tilingshell@ferrarodomenico.com', 'forge@jmmaranan.com', 'light-style@gnome-shell-extensions.gcampax.github.com', 'nightthemeswitcher@romainvigier.fr', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'blur-my-shell@aunetx', 'just-perfection-desktop@just-perfection', 'overviewbackground@github.com.orbitcorrection']
 favorite-apps=['google-chrome.desktop', 'code.desktop', 'org.gnome.Nautilus.desktop', 'com.spotify.Client.desktop', 'org.gnome.Console.desktop']
+last-selected-power-profile='power-saver'
 welcome-dialog-last-shown-version='46.3.1'
 
 [org/gnome/shell/app-switcher]
@@ -711,7 +724,8 @@ sunrise=8.0605835565043975
 sunset=17.725436063020425
 
 [org/gnome/shell/extensions/system-monitor]
-show-swap=true
+show-swap=false
+show-upload=true
 
 [org/gnome/shell/extensions/tilingshell]
 last-version-name-installed='11'
@@ -729,7 +743,7 @@ x-wallpaper=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1729927732
+check-timestamp=int64 1730020804
 first-run=false
 flatpak-purge-timestamp=int64 1729934858
 install-timestamp=int64 1728991282
@@ -771,6 +785,3 @@ sort-order='ascending'
 type-format='category'
 window-position=(26, 23)
 window-size=(1338, 982)
-
-[system/locale]
-region='en_IE.UTF-8'
