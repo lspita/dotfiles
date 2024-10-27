@@ -1,3 +1,5 @@
+all: delete restow
+
 restow:
 	STOW_FLAG="-R" ./install.sh
 
