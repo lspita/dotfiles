@@ -4,7 +4,7 @@ anaconda-0:40.22.3-1.fc40.x86_64
 anaconda-live-0:40.22.3-1.fc40.noarch
 bear-0:3.1.5-1.fc40.x86_64
 caca-utils-0:0.99-0.73.beta20.fc40.x86_64
-cargo-0:1.81.0-4.fc40.x86_64
+cargo-0:1.82.0-1.fc40.x86_64
 check-devel-0:0.15.2-15.fc40.x86_64
 clang-0:18.1.8-1.fc40.x86_64
 clang-tools-extra-0:18.1.8-1.fc40.x86_64
@@ -62,13 +62,14 @@ python3-pip-0:23.3.2-2.fc40.noarch
 python3-pyasn1-0:0.6.0-1.fc40.noarch
 python3-rpm-macros-0:3.12-8.fc40.noarch
 python3.11-0:3.11.10-1.fc40.x86_64
-rust-0:1.81.0-4.fc40.x86_64
-rust-analyzer-0:1.81.0-4.fc40.x86_64
-rustfmt-0:1.81.0-4.fc40.x86_64
+rust-0:1.82.0-1.fc40.x86_64
+rust-analyzer-0:1.82.0-1.fc40.x86_64
+rustfmt-0:1.82.0-1.fc40.x86_64
 stow-0:2.4.0-1.fc40.noarch
 strace-0:6.10-1.fc40.x86_64
 systemd-devel-0:255.13-1.fc40.x86_64
 telnet-1:0.17-92.fc40.x86_64
+texlive-scheme-basic-11:svn54191-71.fc40.noarch
 valgrind-1:3.23.0-4.fc40.x86_64
 vim-enhanced-2:9.1.785-1.fc40.x86_64
 w3m-img-0:0.5.3-63.git20230121.fc40.x86_64
