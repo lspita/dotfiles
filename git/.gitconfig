@@ -1,8 +1,6 @@
 [user]
 	name = Ludovico Spitaleri
 	email = ludovico.spitaleri@gmail.com
-[credential]
-	helper = store
 [init]
 	defaultBranch = main
 [pull]
