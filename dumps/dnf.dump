@@ -18,7 +18,6 @@ dconf-editor-0:45.0.1-4.fc40.x86_64
 docker-buildx-plugin-0:0.17.1-1.fc40.x86_64
 docker-ce-3:27.3.1-1.fc40.x86_64
 docker-ce-cli-1:27.3.1-1.fc40.x86_64
-docker-compose-0:1.29.2-12.fc40.noarch
 docker-compose-plugin-0:2.29.7-1.fc40.x86_64
 doxygen-2:1.10.0-3.fc40.x86_64
 dracut-live-0:102-2.fc40.x86_64
