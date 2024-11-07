@@ -103,7 +103,7 @@ docker-ce-cli-1:27.3.1-1.fc41.x86_64
 docker-compose-plugin-0:2.29.7-1.fc41.x86_64
 dos2unix-0:7.5.2-2.fc41.x86_64
 dosfstools-0:4.2-13.fc41.x86_64
-doxygen-2:1.12.0-1.fc41.x86_64
+doxygen-2:1.12.0-2.fc41.x86_64
 dracut-config-rescue-0:102-3.fc41.x86_64
 dracut-live-0:102-3.fc41.x86_64
 dracut-network-0:102-3.fc41.x86_64
@@ -115,7 +115,7 @@ evince-djvu-0:46.3.1-2.fc41.x86_64
 exfatprogs-0:1.2.5-1.fc41.x86_64
 fedora-chromium-config-0:3.0-5.fc41.noarch
 fedora-flathub-remote-0:1-9.fc41.noarch
-fedora-release-workstation-0:41-26.noarch
+fedora-release-workstation-0:41-27.noarch
 fedora-workstation-backgrounds-0:1.6-6.fc41.noarch
 fedora-workstation-repositories-0:38-6.fc41.x86_64
 ffmpeg-free-0:7.0.2-7.fc41.x86_64
@@ -168,7 +168,7 @@ gnome-user-share-0:47.0-1.fc41.x86_64
 gnome-weather-0:47.0-1.fc41.noarch
 gnupg2-0:2.4.5-3.fc41.x86_64
 golang-0:1.23.2-2.fc41.x86_64
-google-chrome-stable-0:130.0.6723.91-1.x86_64
+google-chrome-stable-0:130.0.6723.116-1.x86_64
 google-droid-sans-fonts-0:20200215-21.fc41.noarch
 google-noto-emoji-fonts-0:20241008-1.fc41.noarch
 google-noto-sans-bengali-vf-fonts-0:20240701-2.fc41.noarch
@@ -237,7 +237,7 @@ ibus-hangul-0:1.5.5-6.fc41.x86_64
 ibus-libpinyin-0:1.15.8-1.fc41.x86_64
 ibus-libzhuyin-0:1.10.3-2.fc41.x86_64
 ibus-m17n-0:1.4.33-1.fc41.x86_64
-ibus-typing-booster-0:2.26.6-1.fc41.noarch
+ibus-typing-booster-0:2.26.8-1.fc41.noarch
 initscripts-0:10.26-1.fc41.x86_64
 intel-audio-firmware-0:20241017-2.fc41.noarch
 intel-gpu-firmware-0:20241017-2.fc41.noarch
