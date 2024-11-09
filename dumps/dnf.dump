@@ -61,7 +61,7 @@ clang-0:19.1.0-1.fc41.x86_64
 clang-resource-filesystem-0:19.1.0-1.fc41.x86_64
 clang-tools-extra-0:19.1.0-1.fc41.x86_64
 cmake-0:3.30.5-1.fc41.x86_64
-code-0:1.95.1-1730355393.el8.x86_64
+code-0:1.95.2-1730981571.el8.x86_64
 colord-0:1.4.7-5.fc41.x86_64
 compiler-rt18-0:18.1.8-3.fc41.x86_64
 composefs-0:1.0.6-1.fc41.x86_64
@@ -310,7 +310,7 @@ neofetch-0:7.1.0-12.fc40.noarch
 net-tools-0:2.0-0.71.20160912git.fc41.x86_64
 nfs-utils-1:2.8.1-0.fc41.x86_64
 nmap-ncat-4:7.92-3.fc41.x86_64
-nodejs-1:22.4.1-2.fc41.x86_64
+nodejs-1:22.11.0-1.fc41.x86_64
 nss-mdns-0:0.15.1-12.fc41.x86_64
 ntfs-3g-2:2022.10.3-6.fc41.x86_64
 ntfsprogs-2:2022.10.3-6.fc41.x86_64
