@@ -42,12 +42,6 @@ sudo udevadm trigger /dev/input/event*
 sudo dnf copr enable atim/lazygit
 ```
 
-# System
-
-```sh
-sudo systemctl disable NetworkManager-wait-online.service # prevent check connection on boot
-```
-
 # Zsh
 
 ```sh
@@ -79,15 +73,6 @@ newgrp docker
 sudo dnf install fedora-workstation-repositories
 sudo dnf config-manager --set-enabled google-chrome
 sudo dnf install google-chrome-stable
-```
-
-# Tlp
-
-```sh
-sudo dnf remove power-profiles-daemon
-sudo dnf install tlp tlp-rdw
-sudo systemctl enable --now tlp.service NetworkManager-dispatcher.service
-sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 ```
 
 # VSCode
