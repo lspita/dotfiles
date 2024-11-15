@@ -67,7 +67,7 @@ compiler-rt18-0:18.1.8-3.fc41.x86_64
 composefs-0:1.0.6-1.fc41.x86_64
 compsize-0:1.5-9.fc41.x86_64
 containerd.io-0:1.7.23-3.1.fc41.x86_64
-coreutils-0:9.5-10.fc41.x86_64
+coreutils-0:9.5-11.fc41.x86_64
 cowsay-0:3.8.3-1.fc41.noarch
 cpio-0:2.15-2.fc41.x86_64
 cryptsetup-0:2.7.5-1.fc41.x86_64
@@ -95,7 +95,7 @@ deltarpm-0:3.6.5-1.fc41.x86_64
 desktop-backgrounds-gnome-0:41.0.0-1.fc41.noarch
 dhcp-client-12:4.4.3-14.P1.fc41.x86_64
 dnf-plugins-core-0:4.9.0-1.fc41.noarch
-dnf5-plugins-0:5.2.6.2-1.fc41.x86_64
+dnf5-plugins-0:5.2.7.0-1.fc41.x86_64
 dnsmasq-0:2.90-3.fc41.x86_64
 docker-buildx-plugin-0:0.17.1-1.fc41.x86_64
 docker-ce-3:27.3.1-1.fc41.x86_64
@@ -299,7 +299,7 @@ mdadm-0:4.3-4.fc41.x86_64
 mesa-dri-drivers-0:24.2.6-1.fc41.x86_64
 mesa-libEGL-0:24.2.6-1.fc41.x86_64
 meson-0:1.5.1-1.fc41.noarch
-microcode_ctl-2:2.1-65.fc41.x86_64
+microcode_ctl-2:2.1-66.fc41.x86_64
 mozilla-openh264-0:2.4.1-2.fc41.x86_64
 mpage-0:2.5.7-20.fc41.x86_64
 mt7xxx-firmware-0:20241110-1.fc41.noarch
@@ -309,7 +309,7 @@ nautilus-0:47.0-1.fc41.x86_64
 ncurses-0:6.5-2.20240629.fc41.x86_64
 neofetch-0:7.1.0-12.fc40.noarch
 net-tools-0:2.0-0.71.20160912git.fc41.x86_64
-nfs-utils-1:2.8.1-0.fc41.x86_64
+nfs-utils-1:2.8.1-1.rc1.fc41.x86_64
 nmap-ncat-4:7.92-3.fc41.x86_64
 nodejs-1:22.11.0-1.fc41.x86_64
 nss-mdns-0:0.15.1-12.fc41.x86_64
