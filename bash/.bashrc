@@ -120,6 +120,6 @@ fi
 
 export DOTFILES_PATH="${HOME}/Projects/dotfiles"
 export BASH_SCRIPTS_PATH="${HOME}/.bash_scripts"
-for script in "${BASH_SCRIPTS_PATH}/*.sh"; do
+for script in ${BASH_SCRIPTS_PATH}/*.sh; do
     source "${script}"
 done
