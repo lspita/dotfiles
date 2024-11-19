@@ -1,7 +1,7 @@
 full-upgrade() {
     # apt
     sudo apt update && sudo apt full-upgrade
-    sudo dnf autoremove
+    sudo apt autoremove
 
     # snap
     sudo snap refresh
