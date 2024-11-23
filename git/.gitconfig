@@ -7,3 +7,4 @@
 	rebase = false
 [core]
 	editor = nano
+	attributesfile = .gitattributes
