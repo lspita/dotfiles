@@ -1,6 +1,6 @@
 # Utils
 
-## Touchpad scroll speed
+## GNOME touchpad scroll speed
 
 See measure of touchpad under "Kernel specified touchpad size"
 
