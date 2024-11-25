@@ -31,8 +31,7 @@ for package_dir in ${PACKAGES_DIR}/*; do
 		SUDO_PREFIX="sudo "
 	fi
 
-	command="${SUDO_PREFIX}stow -d ${PACKAGES_DIR} -t ${TARGET_PATH} \
-	${STOW_ACTION} ${PACKAGE}"
+	command="${SUDO_PREFIX}stow -d ${PACKAGES_DIR} -t ${TARGET_PATH} ${STOW_ACTION} ${PACKAGE}"
 	echo ${command}
 	eval ${command}
 done
