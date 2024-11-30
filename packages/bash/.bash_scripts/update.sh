@@ -1,6 +1,6 @@
 full-upgrade() {
     # apt
-    sudo apt update && sudo apt full-upgrade
+    sudo apt update && sudo apt full-upgrade -y
     sudo apt autoremove
 
     # snap
