@@ -1,8 +1,8 @@
 #! /bin/bash
 
 PACKAGES_DIR="packages"
-if [[ -z "${STOW_ACTION}" ]]; then
-	STOW_ACTION="-R" # restow by default
+if [[ -z "${STOW_FLAGS}" ]]; then
+	STOW_FLAGS="-R" # restow by default
 fi
 
 source ./packages.sh # load package attributes
@@ -31,7 +31,7 @@ for package_dir in ${PACKAGES_DIR}/*; do
 		SUDO_PREFIX="sudo "
 	fi
 
-	command="${SUDO_PREFIX}stow -d ${PACKAGES_DIR} -t ${TARGET_PATH} ${STOW_ACTION} ${PACKAGE}"
+	command="${SUDO_PREFIX}stow -d ${PACKAGES_DIR} -t ${TARGET_PATH} ${STOW_FLAGS} ${PACKAGE}"
 	echo ${command}
 	eval ${command}
 done

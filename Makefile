@@ -1,7 +1,7 @@
 all: restow
 
 restow:
-	STOW_ACTION="-R" ./main.sh
+	STOW_FLAGS="-R" ./main.sh
 
 delete:
-	STOW_ACTION="-D" ./main.sh
+	STOW_FLAGS="-D" ./main.sh
