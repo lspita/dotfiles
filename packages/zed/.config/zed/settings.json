@@ -31,9 +31,6 @@
     "html": true,
     "toml": true
   },
-  "collaboration_panel": {
-    "dock": "right"
-  },
   "outline_panel": {
     "dock": "right"
   }
