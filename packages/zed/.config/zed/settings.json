@@ -28,8 +28,20 @@
     "dark": "Catppuccin Mocha (sapphire)"
   },
   "auto_install_extensions": {
+    "catppuccin": true,
+    "csv": true,
+    "dockerfile": true,
+    "git-firefly": true,
     "html": true,
-    "toml": true
+    "java": true,
+    "latex": true,
+    "log": true,
+    "make": true,
+    "mermaid": true,
+    "nix": true,
+    "sql": true,
+    "toml": true,
+    "zig": true
   },
   "outline_panel": {
     "dock": "right"
