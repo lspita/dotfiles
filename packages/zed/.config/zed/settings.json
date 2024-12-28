@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "features": {
+    "inline_completion_provider": "none"
+  },
   "ssh_connections": [
     {
       "nickname": "TechBoost",
@@ -27,6 +30,10 @@
     "light": "Catppuccin Latte (sapphire)",
     "dark": "Catppuccin Mocha (sapphire)"
   },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "format_on_save": "language_server",
   "auto_install_extensions": {
     "catppuccin": true,
     "csv": true,
@@ -42,8 +49,5 @@
     "sql": true,
     "toml": true,
     "zig": true
-  },
-  "outline_panel": {
-    "dock": "right"
   }
 }
