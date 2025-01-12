@@ -117,7 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 # -- CUSTOM --
-export PATH="${PATH}:${HOME}/.local/bin"
+export PATH=${PATH}:${HOME}/.local/bin
 for script in ${HOME}/.bash_scripts/*.sh; do
     source "${script}"
 done
