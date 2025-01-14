@@ -5,4 +5,8 @@ full-upgrade() {
 
     # snap
     sudo snap refresh
+
+    # sdkman
+    sdk selfupdate
+    sdk update
 }
