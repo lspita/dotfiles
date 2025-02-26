@@ -3,10 +3,10 @@ full-upgrade() {
     sudo apt update && sudo apt full-upgrade -y
     sudo apt autoremove
 
-    # snap
-    sudo snap refresh
+    # # snap
+    # sudo snap refresh
 
-    # sdkman
-    sdk selfupdate
-    sdk update
+    # # sdkman
+    # sdk selfupdate
+    # sdk update
 }
