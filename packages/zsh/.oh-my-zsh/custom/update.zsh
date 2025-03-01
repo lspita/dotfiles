@@ -18,11 +18,10 @@ full-upgrade() {
 
 full-restore() {
     # homebrew
-    xargs brew install < $BREW_DUMP
+    xargs brew install --quiet < $BREW_DUMP
 }
 
 system-sync() {
-    make -C $DOTFILES_ROOT delete 
     git -C $DOTFILES_ROOT pull
     make -C $DOTFILES_ROOT restow
     
