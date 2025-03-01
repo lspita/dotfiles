@@ -14,17 +14,23 @@ full-upgrade() {
 
     # dump
     brew leaves -r > $BREW_DUMP
-
-    # commit & push
-    message=${1:-"Backup $(date +"%Y-%m-%d %H:%M:%S %Z")"}
-
-    git -C "${DOTFILES_ROOT}" add "${DOTFILES_ROOT}"
-    git -C "${DOTFILES_ROOT}" status
-    git -C "${DOTFILES_ROOT}" commit -m "${message}"
-    git -C "${DOTFILES_ROOT}" push
 }
 
 full-restore() {
     # homebrew
     xargs brew install < $BREW_DUMP
+}
+
+system-sync() {
+    git -C $DOTFILES_ROOT pull
+    
+    full-restore
+    full-upgrade
+
+    message=${1:-"Backup $(date +"%Y-%m-%d %H:%M:%S %Z")"}
+
+    git -C $DOTFILES_ROOT add $DOTFILES_ROOT
+    git -C $DOTFILES_ROOT status
+    git -C $DOTFILES_ROOT commit -m $message
+    git -C $DOTFILES_ROOT push
 }
