@@ -5,6 +5,25 @@
 
 # Utils
 
+## WSL Hello sudo
+
+http://github.com/nullpo-head/WSL-Hello-sudo/
+
+```sh
+cd $HOME
+wget http://github.com/nullpo-head/WSL-Hello-sudo/releases/latest/download/release.tar.gz
+tar xvf release.tar.gz
+mv release wsl-hello-sudo
+cd wsl-hello-sudo
+./install.sh
+```
+
+## SSH private key permissions
+
+```sh
+sudo chmod 600 id_ed25519
+```
+
 ## Set ZSH as default shell
 
 ```sh
