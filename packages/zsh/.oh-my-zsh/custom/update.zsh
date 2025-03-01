@@ -11,27 +11,20 @@ full-upgrade() {
     # homebrew
     brew update
     brew upgrade
-}
 
-full-freeze() {
-    # homebrew
+    # dump
     brew leaves -r > $BREW_DUMP
-}
 
-full-restore() {
-    # homebrew
-    xargs brew reinstall < $BREW_DUMP
-}
-
-
-system-upgrade() {
+    # commit & push
     message=${1:-"Backup $(date +"%Y-%m-%d %H:%M:%S %Z")"}
-    
-    full-upgrade
-    full-freeze
 
     git -C "${DOTFILES_ROOT}" add "${DOTFILES_ROOT}"
     git -C "${DOTFILES_ROOT}" status
     git -C "${DOTFILES_ROOT}" commit -m "${message}"
     git -C "${DOTFILES_ROOT}" push
+}
+
+full-restore() {
+    # homebrew
+    xargs brew reinstall < $BREW_DUMP
 }
