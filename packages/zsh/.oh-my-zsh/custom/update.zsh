@@ -1,6 +1,8 @@
 DUMP_ROOT="$DOTFILES_ROOT/dumps"
 BREW_DUMP="$DUMP_ROOT/brew.dump"
 
+mkdir -p $DUMP_ROOT
+
 full-upgrade() {
     # apt
     sudo apt update && sudo apt full-upgrade -y
