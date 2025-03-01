@@ -1,9 +1,11 @@
 gcc
 gh
 git
-node
+go
+jupyterlab
 powerlevel10k
 stow
+zig
 zsh
 zsh-autosuggestions
 zsh-completions
