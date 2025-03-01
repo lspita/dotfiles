@@ -4,12 +4,9 @@ git
 go
 gradle
 jupyterlab
-neofetch
 openjdk@21
 powerlevel10k
-rust
 stow
-wget
 zig
 zsh
 zsh-autosuggestions
