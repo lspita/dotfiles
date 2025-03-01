@@ -26,5 +26,5 @@ full-upgrade() {
 
 full-restore() {
     # homebrew
-    xargs brew reinstall < $BREW_DUMP
+    xargs brew install < $BREW_DUMP
 }
