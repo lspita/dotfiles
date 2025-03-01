@@ -22,7 +22,9 @@ full-restore() {
 }
 
 system-sync() {
+    make -C $DOTFILES_ROOT delete 
     git -C $DOTFILES_ROOT pull
+    make -C $DOTFILES_ROOT restow
     
     full-restore
     full-upgrade
