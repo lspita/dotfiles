@@ -2,7 +2,9 @@ gcc
 gh
 git
 go
+gradle
 jupyterlab
+openjdk@21
 powerlevel10k
 stow
 zig
