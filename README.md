@@ -5,6 +5,13 @@
 
 # Utils
 
+## Set ZSH as default shell
+
+```sh
+command -v zsh | sudo tee -a /etc/shells # prevent zsh invalid shell with brew
+chsh -s $(which zsh) # set zsh as default
+```
+
 ## GNOME touchpad scroll speed
 
 See measure of touchpad under "Kernel specified touchpad size"
