@@ -9,6 +9,7 @@ openjdk@21
 powerlevel10k
 rust
 stow
+texlive
 wget
 zig
 zsh
