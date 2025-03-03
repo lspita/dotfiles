@@ -1,11 +1,15 @@
 cmake
+codespell
+cppcheck
 dotnet
+doxygen
 gcc
 gh
 git
 go
 gradle
 jupyterlab
+lcov
 neofetch
 openjdk@21
 powerlevel10k
