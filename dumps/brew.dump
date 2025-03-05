@@ -11,6 +11,7 @@ go
 gradle
 jupyterlab
 lcov
+postgresql@14
 powerlevel10k
 rust
 stow
