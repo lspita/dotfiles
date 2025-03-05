@@ -28,7 +28,8 @@ full-upgrade() {
 
 full-restore() {
     # homebrew
-    xargs brew install --quiet < $BREW_DUMP
+    brew leaves -r | comm -23 - $BREW_DUMP | xargs -I {} brew uninstall {} # uninstall extra
+    brew leaves -r | comm -13 - $BREW_DUMP | xargs -I {} brew install {} # install missing
 }
 
 system-sync() {
