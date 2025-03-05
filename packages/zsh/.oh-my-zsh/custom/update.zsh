@@ -3,7 +3,7 @@ BREW_DUMP="$DUMP_ROOT/brew.dump"
 
 mkdir -p $DUMP_ROOT
 
-full-freeze() {
+system-freeze() {
     # homebrew
     brew leaves -r > $BREW_DUMP
 
@@ -16,7 +16,7 @@ full-freeze() {
     git -C $DOTFILES_ROOT push
 }
 
-full-upgrade() {
+system-upgrade() {
     # apt
     sudo apt update && sudo apt full-upgrade -y
     sudo apt autoremove
@@ -26,7 +26,7 @@ full-upgrade() {
     brew upgrade
 }
 
-full-restore() {
+system-restore() {
     # homebrew
     brew leaves -r | comm -23 - $BREW_DUMP | xargs -I {} brew uninstall {} # uninstall extra
     brew leaves -r | comm -13 - $BREW_DUMP | xargs -I {} brew install {} # install missing
@@ -36,7 +36,7 @@ system-sync() {
     git -C $DOTFILES_ROOT pull
     make -C $DOTFILES_ROOT restow
     
-    full-restore
-    full-upgrade
-    full-freeze
+    system-restore
+    system-upgrade
+    system-freeze
 }
