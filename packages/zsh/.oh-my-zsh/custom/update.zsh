@@ -9,20 +9,17 @@ system-freeze() {
 }
 
 system-backup() {
+    git -C $DOTFILES_ROOT add $DOTFILES_ROOT
     git -C $DOTFILES_ROOT status
 
-    read "??? Are You sure [Y/n]" -n 1 REPLY
-    if [[ $REPLY =~ ^[Nn]$ ]]; then
-        echo "!!! Canceled by user."
-        exit 1
+    read -p "Continue with backup? [Y/n] " YESNO
+    YESNO=${YESNO:-"y"}
+    if [[ $YESNO =~ ^[Yy]$ ]]; then
+        # push changes
+        message=${1:-"Backup $(date +"%Y-%m-%d %H:%M:%S %Z")"}
+        git -C $DOTFILES_ROOT commit -m $message
+        git -C $DOTFILES_ROOT push
     fi
-
-    # push changes
-    message=${1:-"Backup $(date +"%Y-%m-%d %H:%M:%S %Z")"}
-
-    git -C $DOTFILES_ROOT add $DOTFILES_ROOT
-    git -C $DOTFILES_ROOT commit -m $message
-    git -C $DOTFILES_ROOT push
 }
 
 system-upgrade() {
