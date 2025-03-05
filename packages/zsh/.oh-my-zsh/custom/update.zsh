@@ -12,7 +12,7 @@ system-backup() {
     git -C $DOTFILES_ROOT add $DOTFILES_ROOT
     git -C $DOTFILES_ROOT status
 
-    read -p "Continue with backup? [Y/n] " YESNO
+    read "Continue with backup? [Y/n] " YESNO
     YESNO=${YESNO:-"y"}
     if [[ $YESNO =~ ^[Yy]$ ]]; then
         # push changes
