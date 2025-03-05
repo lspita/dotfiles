@@ -3,6 +3,19 @@ BREW_DUMP="$DUMP_ROOT/brew.dump"
 
 mkdir -p $DUMP_ROOT
 
+full-freeze() {
+    # homebrew
+    brew leaves -r > $BREW_DUMP
+
+    # push changes
+    message=${1:-"Backup $(date +"%Y-%m-%d %H:%M:%S %Z")"}
+
+    git -C $DOTFILES_ROOT add $DOTFILES_ROOT
+    git -C $DOTFILES_ROOT status
+    git -C $DOTFILES_ROOT commit -m $message
+    git -C $DOTFILES_ROOT push
+}
+
 full-upgrade() {
     # apt
     sudo apt update && sudo apt full-upgrade -y
@@ -11,9 +24,6 @@ full-upgrade() {
     # homebrew
     brew update
     brew upgrade
-
-    # dump
-    brew leaves -r > $BREW_DUMP
 }
 
 full-restore() {
@@ -27,11 +37,5 @@ system-sync() {
     
     full-restore
     full-upgrade
-
-    message=${1:-"Backup $(date +"%Y-%m-%d %H:%M:%S %Z")"}
-
-    git -C $DOTFILES_ROOT add $DOTFILES_ROOT
-    git -C $DOTFILES_ROOT status
-    git -C $DOTFILES_ROOT commit -m $message
-    git -C $DOTFILES_ROOT push
+    full-freeze
 }

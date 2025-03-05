@@ -11,8 +11,6 @@ go
 gradle
 jupyterlab
 lcov
-neofetch
-openjdk@21
 powerlevel10k
 rust
 stow
