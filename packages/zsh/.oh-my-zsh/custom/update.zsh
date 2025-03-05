@@ -6,12 +6,21 @@ mkdir -p $DUMP_ROOT
 system-freeze() {
     # homebrew
     brew leaves -r > $BREW_DUMP
+}
+
+system-backup() {
+    git -C $DOTFILES_ROOT status
+
+    read -p "??? Are You sure [Y/n]" -n 1
+    if [[ $REPLY =~ ^[Nn]$ ]]; then
+        echo "!!! Canceled by user."
+        exit 1
+    fi
 
     # push changes
     message=${1:-"Backup $(date +"%Y-%m-%d %H:%M:%S %Z")"}
 
     git -C $DOTFILES_ROOT add $DOTFILES_ROOT
-    git -C $DOTFILES_ROOT status
     git -C $DOTFILES_ROOT commit -m $message
     git -C $DOTFILES_ROOT push
 }
@@ -39,4 +48,5 @@ system-sync() {
     system-restore
     system-upgrade
     system-freeze
+    system-backup $1
 }
