@@ -11,7 +11,7 @@ system-freeze() {
 system-backup() {
     git -C $DOTFILES_ROOT status
 
-    read -p "??? Are You sure [Y/n]" -n 1 REPLY
+    read "??? Are You sure [Y/n]" -n 1 REPLY
     if [[ $REPLY =~ ^[Nn]$ ]]; then
         echo "!!! Canceled by user."
         exit 1
