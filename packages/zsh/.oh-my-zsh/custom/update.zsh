@@ -12,6 +12,10 @@ system-backup() {
     git -C $DOTFILES_ROOT add $DOTFILES_ROOT
     git -C $DOTFILES_ROOT status
 
+    if [[ $(git -C $DOTFILES_ROOT status --porcelain | wc -l) -eq 0 ]]; then
+        return # no changes
+    fi
+
     echo -n "Continue with backup? [Y/n] "
     read YESNO
     YESNO=${YESNO:-"y"}
