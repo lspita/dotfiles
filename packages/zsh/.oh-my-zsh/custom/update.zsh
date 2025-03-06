@@ -41,7 +41,6 @@ system-restore() {
 
 system-sync() {
     git -C $DOTFILES_ROOT pull
-    make -C $DOTFILES_ROOT restow
     
     system-restore
     system-upgrade
