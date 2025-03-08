@@ -2,10 +2,11 @@ DUMP_ROOT="$DOTFILES_ROOT/dumps"
 BREW_DUMP="$DUMP_ROOT/brew.dump"
 
 mkdir -p $DUMP_ROOT
+touch $BREW_DUMP
 
 system-freeze() {
     # homebrew
-    brew leaves -r > $BREW_DUMP
+    brew list --installed-on-request > $BREW_DUMP
 }
 
 system-backup() {
@@ -39,8 +40,8 @@ system-upgrade() {
 
 system-restore() {
     # homebrew
-    brew leaves -r | comm -23 - $BREW_DUMP | xargs -I {} brew uninstall {} # uninstall extra
-    brew leaves -r | comm -13 - $BREW_DUMP | xargs -I {} brew install {} # install missing
+    brew list --installed-on-request | comm -23 - $BREW_DUMP | xargs -I {} brew uninstall {} # uninstall extra
+    brew list --installed-on-request | comm -13 - $BREW_DUMP | xargs -I {} brew install {} # install missing
 }
 
 system-sync() {

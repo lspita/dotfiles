@@ -11,11 +11,15 @@ go
 gradle
 jupyterlab
 lcov
+node
+openjdk
 postgresql@14
 powerlevel10k
+python@3.13
 rust
 stow
 texlive
+valgrind
 wget
 zig
 zsh
