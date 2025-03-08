@@ -5,7 +5,7 @@ if [[ -z "${STOW_FLAGS}" ]]; then
 	STOW_FLAGS="-R" # restow by default
 fi
 
-source ./packages.sh # load package attributes
+source ./overrides.sh # load package attributes
 default_target=${HOME}
 default_sudo=0
 
