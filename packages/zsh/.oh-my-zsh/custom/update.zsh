@@ -1,5 +1,17 @@
 UPDATE_SCRIPTS=$SCRIPTS_ROOT/update
 
+section() {
+    init_colors
+    echo "${TEXT_BOLD}${TEXT_BLUE}$1${TEXT_RESET}"
+    unset_colors
+}
+
+sub-section() {
+    init_colors
+    echo "${TEXT_BOLD}${TEXT_CYAN}$1${TEXT_RESET}"
+    unset_colors
+}
+
 get_name() {
     echo `basename ${1%.*}`
 }
@@ -11,10 +23,10 @@ get_dump_file() {
 }
 
 foreach_script() {
-    echo "-- $1 --"
+    section $1
     for script in $UPDATE_SCRIPTS/*; do
         local name=`get_name $script`
-        echo "- $name"
+        sub-section $name
         local dump_file=`get_dump_file $name`
         source $script
         script_action
@@ -22,16 +34,15 @@ foreach_script() {
         unset -f upgrade-packages
         unset -f uninstall-packages
         unset -f install-packages
-        echo ""
     done
     unset -f script_action
 }
 
-system-freeze() {
+system-dump() {
     script_action() {
         list-packages > $dump_file
     }
-    foreach_script "freeze"
+    foreach_script "Dumping packages"
 }
 
 system-backup() {
@@ -42,10 +53,13 @@ system-backup() {
         return # no changes
     fi
 
-    echo -n "Continue with backup? [Y/n] "
+    init_colors
+    echo -n "${TEXT_BOLD}Continue with backup? [Y/n] ${TEXT_RESET}"
+    unset_colors
     read YESNO
     YESNO=${YESNO:-"y"}
     if [[ $YESNO =~ ^[Yy]$ ]]; then
+        section "Pushing changes"
         # push changes
         message=${1:-"Backup $(date +"%Y-%m-%d %H:%M:%S %Z")"}
         git -C $DOTFILES_ROOT commit -m $message
@@ -57,7 +71,7 @@ system-upgrade() {
     script_action() {
         upgrade-packages
     }
-    foreach_script "upgrade"
+    foreach_script "Upgrading packages"
 }
 
 system-restore() {
@@ -65,10 +79,11 @@ system-restore() {
         list-packages | comm -23 - $dump_file | uninstall-packages # uninstall extra
         list-packages | comm -13 - $dump_file | install-packages # install missing
     }
-    foreach_script "restore"
+    foreach_script "Restoring packages"
 }
 
 system-sync() {
+    section "Pulling remote"
     git -C $DOTFILES_ROOT pull
     
     system-restore

@@ -5,6 +5,45 @@ export DUMPS_ROOT="$DOTFILES_ROOT/dumps"
 mkdir -p $SCRIPTS_ROOT
 mkdir -p $DUMPS_ROOT
 
+# https://unix.stackexchange.com/questions/9957/how-to-check-if-bash-can-print-colors
+
+init_colors() {
+    # check if stdout is a terminal
+    if test -t 1; then
+        # see if it supports colors
+        ncolors=$(tput colors)
+        if test -n "$ncolors" && test $ncolors -ge 8; then
+            TEXT_BOLD="$(tput bold)"
+            TEXT_UNDERLINE="$(tput smul)"
+            TEXT_STANDOUT="$(tput smso)"
+            TEXT_RESET="$(tput sgr0)"
+            TEXT_BLACK="$(tput setaf 0)"
+            TEXT_RED="$(tput setaf 1)"
+            TEXT_GREEN="$(tput setaf 2)"
+            TEXT_YELLOW="$(tput setaf 3)"
+            TEXT_BLUE="$(tput setaf 4)"
+            TEXT_MAGENTA="$(tput setaf 5)"
+            TEXT_CYAN="$(tput setaf 6)"
+            TEXT_WHITE="$(tput setaf 7)"
+        fi
+    fi
+}
+
+unset_colors() {
+    unset TEXT_BOLD
+    unset TEXT_UNDERLINE
+    unset TEXT_STANDOUT
+    unset TEXT_RESET
+    unset TEXT_BLACK
+    unset TEXT_RED
+    unset TEXT_GREEN
+    unset TEXT_YELLOW
+    unset TEXT_BLUE
+    unset TEXT_MAGENTA
+    unset TEXT_CYAN
+    unset TEXT_WHITE
+}
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 

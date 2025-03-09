@@ -2,7 +2,7 @@
 # https://github.com/Homebrew/homebrew-bundle/issues/1226
 
 list-packages() {
-    brew list -1 --formulae --installed-on-request
+    brew list -1 --installed-on-request
 }
 
 upgrade-packages() {
