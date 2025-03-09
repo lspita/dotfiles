@@ -1,12 +1,37 @@
-DUMP_ROOT="$DOTFILES_ROOT/dumps"
-BREW_DUMP="$DUMP_ROOT/brew.dump"
+UPDATE_SCRIPTS=$SCRIPTS_ROOT/update
 
-mkdir -p $DUMP_ROOT
-touch $BREW_DUMP
+get_name() {
+    echo `basename ${1%.*}`
+}
+
+get_dump_file() {
+    local file=$DUMPS_ROOT/$1.dump
+    touch $file
+    echo $file
+}
+
+foreach_script() {
+    echo "-- $1 --"
+    for script in $UPDATE_SCRIPTS/*; do
+        local name=`get_name $script`
+        echo "- $name"
+        local dump_file=`get_dump_file $name`
+        source $script
+        script_action
+        unset -f list-packages
+        unset -f upgrade-packages
+        unset -f uninstall-packages
+        unset -f install-packages
+        echo ""
+    done
+    unset -f script_action
+}
 
 system-freeze() {
-    # homebrew
-    brew list --installed-on-request > $BREW_DUMP
+    script_action() {
+        list-packages > $dump_file
+    }
+    foreach_script "freeze"
 }
 
 system-backup() {
@@ -29,19 +54,18 @@ system-backup() {
 }
 
 system-upgrade() {
-    # apt
-    sudo apt update && sudo apt full-upgrade -y
-    sudo apt autoremove
-
-    # homebrew
-    brew update
-    brew upgrade
+    script_action() {
+        upgrade-packages
+    }
+    foreach_script "upgrade"
 }
 
 system-restore() {
-    # homebrew
-    brew list --installed-on-request | comm -23 - $BREW_DUMP | xargs -I {} brew uninstall {} # uninstall extra
-    brew list --installed-on-request | comm -13 - $BREW_DUMP | xargs -I {} brew install {} # install missing
+    script_action() {
+        list-packages | comm -23 - $dump_file | uninstall-packages # uninstall extra
+        list-packages | comm -13 - $dump_file | install-packages # install missing
+    }
+    foreach_script "restore"
 }
 
 system-sync() {

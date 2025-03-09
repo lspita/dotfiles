@@ -1,8 +1,5 @@
 cmake
-codespell
-cppcheck
 dotnet
-doxygen
 fastfetch
 gcc
 gh
@@ -10,7 +7,6 @@ git
 go
 gradle
 jupyterlab
-lcov
 node
 openjdk
 postgresql@14

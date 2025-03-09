@@ -1,4 +1,9 @@
 DOTFILES_ROOT="$HOME/dotfiles"
+export SCRIPTS_ROOT=$HOME/.scripts
+export DUMPS_ROOT="$DOTFILES_ROOT/dumps"
+
+mkdir -p $SCRIPTS_ROOT
+mkdir -p $DUMPS_ROOT
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
