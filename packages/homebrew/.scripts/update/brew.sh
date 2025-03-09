@@ -1,19 +1,19 @@
 # brew bundle dump not working in wsl2
 # https://github.com/Homebrew/homebrew-bundle/issues/1226
 
-list-packages() {
+__list-packages() {
     brew list -1 --installed-on-request
 }
 
-upgrade-packages() {
+__upgrade-packages() {
     brew update
     brew upgrade
 }
 
-install-packages() {
+__install-packages() {
     xargs -I {} brew install {}
 }
 
-uninstall-packages() {
+__uninstall-packages() {
     xargs -I {} brew uninstall {}
 }

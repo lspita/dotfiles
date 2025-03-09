@@ -1,17 +1,17 @@
-list-packages() {
+__list-packages() {
     apt-mark showmanual
 }
 
-upgrade-packages() {
+__upgrade-packages() {
     sudo apt update
     sudo apt full-upgrade
     sudo apt autoremove
 }
 
-install-packages() {
+__install-packages() {
     xargs -I {} sudo apt install {}
 }
 
-uninstall-packages() {
+__uninstall-packages() {
     xargs -I {} sudo apt purge {}
 }
