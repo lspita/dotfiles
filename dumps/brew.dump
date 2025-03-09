@@ -1,4 +1,5 @@
 cmake
+curl
 dotnet
 fastfetch
 gcc
@@ -7,6 +8,7 @@ git
 go
 gradle
 jupyterlab
+llvm
 node
 openjdk
 postgresql@14
