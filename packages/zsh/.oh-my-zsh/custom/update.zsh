@@ -55,7 +55,7 @@ system-backup() {
     fi
 
     __init-colors
-    echo -n "${TEXT_BOLD}Continue with backup? [Y/n] ${TEXT_RESET}"
+    echo -n "${TEXT_BOLD}Commit and push? [Y/n] ${TEXT_RESET}"
     __unset-colors
     read YESNO
     YESNO=${YESNO:-"y"}
