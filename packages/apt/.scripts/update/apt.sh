@@ -1,3 +1,7 @@
+__list-requirements() {
+    echo apt
+}
+
 __list-packages() {
     apt-mark showmanual
 }

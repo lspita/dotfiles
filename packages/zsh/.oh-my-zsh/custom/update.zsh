@@ -26,10 +26,14 @@ __run-script-action() {
     __section $1
     for script in $UPDATE_SCRIPTS/*; do
         local name=`__script-name $script`
-        __sub-section $name
         local dump_file=`__dump-file $name`
         source $script
+        if ! command -v `__list-requirements` > /dev/null; then
+            continue
+        fi
+        __sub-section $name
         __script-action
+        unset -f __list-requirements
         unset -f __list-packages
         unset -f __upgrade-packages
         unset -f __uninstall-packages
