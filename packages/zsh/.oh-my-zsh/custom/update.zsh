@@ -40,7 +40,7 @@ foreach_script() {
 
 system-dump() {
     script_action() {
-        list-packages > $dump_file
+        list-packages | sort > $dump_file
     }
     foreach_script "Dumping packages"
 }
@@ -76,8 +76,8 @@ system-upgrade() {
 
 system-restore() {
     script_action() {
-        list-packages | comm -23 - $dump_file | uninstall-packages # uninstall extra
-        list-packages | comm -13 - $dump_file | install-packages # install missing
+        list-packages | sort | comm -23 - $dump_file | uninstall-packages # uninstall extra
+        list-packages | sort | comm -13 - $dump_file | install-packages # install missing
     }
     foreach_script "Restoring packages"
 }
