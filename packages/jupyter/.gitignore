@@ -1,2 +1,2 @@
-.jupyter/*
-!.jupyter/jupyter_lab_config.py
+.jupyter/migrated
+.jupyter/lab/workspaces
