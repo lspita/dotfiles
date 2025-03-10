@@ -1,5 +1,5 @@
 DOTFILES_ROOT="$HOME/dotfiles"
-export SCRIPTS_ROOT=$HOME/.scripts
+export SCRIPTS_ROOT="$HOME/.scripts"
 export DUMPS_ROOT="$DOTFILES_ROOT/dumps"
 
 mkdir -p $SCRIPTS_ROOT
