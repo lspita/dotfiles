@@ -79,6 +79,8 @@ system-upgrade() {
 }
 
 system-restore() {
+    echo "TEST RESOURCE"
+    
     __script-action() {
         __list-packages | sort | comm -23 - $dump_file | __uninstall-packages # uninstall extra
         __list-packages | sort | comm -13 - $dump_file | __install-packages # install missing
