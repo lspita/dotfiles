@@ -86,10 +86,18 @@ system-restore() {
     __run-script-action "Restoring packages"
 }
 
+__git-sha() {
+    echo `git -C $DOTFILES_ROOT rev-parse HEAD`
+}
+
 system-pull() {
     __section "Pulling remote"
+    local old_sha=`__git-sha`
     git -C $DOTFILES_ROOT pull
-    source $HOME/.zshrc
+    if [[ `__git-sha` != $old_sha ]]; then
+        __section "Sourcing .zshrc"
+        source $HOME/.zshrc
+    fi
 }
 
 system-sync() {
