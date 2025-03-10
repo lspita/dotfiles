@@ -89,6 +89,7 @@ system-restore() {
 system-pull() {
     __section "Pulling remote"
     git -C $DOTFILES_ROOT pull
+    source $HOME/.zshrc
 }
 
 system-sync() {
