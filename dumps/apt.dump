@@ -168,6 +168,7 @@ sysvinit-utils
 tar
 tasksel
 tasksel-data
+tree
 tzdata
 udev
 usr-is-merged
