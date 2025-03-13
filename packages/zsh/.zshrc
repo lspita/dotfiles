@@ -6,7 +6,6 @@ mkdir -p $SCRIPTS_ROOT
 mkdir -p $DUMPS_ROOT
 
 # https://unix.stackexchange.com/questions/9957/how-to-check-if-bash-can-print-colors
-
 __init-colors() {
     # check if stdout is a terminal
     if test -t 1; then
