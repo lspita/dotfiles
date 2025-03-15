@@ -6,7 +6,7 @@ __list-requirements() {
 }
 
 __list-packages() {
-    brew list -1 --installed-on-request
+    brew list -1 --installed-on-request --full-name
 }
 
 __upgrade-packages() {
