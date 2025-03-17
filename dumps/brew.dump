@@ -12,7 +12,6 @@ jupyterlab
 llvm
 node
 openjdk
-postgresql@14
 powerlevel10k
 python@3.13
 rust
