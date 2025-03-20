@@ -12,6 +12,7 @@ jupyterlab
 llvm
 node
 openjdk
+openjdk@21
 powerlevel10k
 python@3.13
 rust
