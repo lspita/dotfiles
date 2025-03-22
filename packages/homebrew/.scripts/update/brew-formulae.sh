@@ -15,9 +15,9 @@ __upgrade-packages() {
 }
 
 __install-packages() {
-    xargs -I {} brew install {}
+    xargs -I {} brew install --formula {}
 }
 
 __uninstall-packages() {
-    xargs -I {} brew uninstall {}
+    xargs -I {} brew uninstall --formula {}
 }

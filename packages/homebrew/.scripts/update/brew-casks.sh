@@ -19,5 +19,5 @@ __install-packages() {
 }
 
 __uninstall-packages() {
-    xargs -I {} brew uninstall {}
+    xargs -I {} brew uninstall --cask {}
 }
