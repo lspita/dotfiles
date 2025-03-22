@@ -6,16 +6,16 @@ __list-requirements() {
 }
 
 __list-packages() {
-    brew list -1 --installed-on-request --full-name
+    brew list -1 --casks --full-name
 }
 
 __upgrade-packages() {
     brew update
-    brew upgrade
+    brew upgrade --casks
 }
 
 __install-packages() {
-    xargs -I {} brew install {}
+    xargs -I {} brew install --cask {}
 }
 
 __uninstall-packages() {
