@@ -18,6 +18,7 @@ python@3.13
 rust
 stow
 texlive
+tree-sitter
 valgrind
 wget
 zig
