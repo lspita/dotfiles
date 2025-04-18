@@ -6,9 +6,12 @@ __list-packages() {
     apt-mark showmanual
 }
 
-__upgrade-packages() {
+__upgrade() {
     sudo apt update
     sudo apt full-upgrade -y
+}
+
+__clean() {
     sudo apt autoremove -y
 }
 

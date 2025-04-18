@@ -1,5 +1,3 @@
-UPDATE_SCRIPTS=$SCRIPTS_ROOT/update
-
 __section() {
     __init-colors
     echo "${TEXT_BOLD}${TEXT_BLUE}$1${TEXT_RESET}"
@@ -12,41 +10,44 @@ __sub-section() {
     __unset-colors
 }
 
-__script-name() {
-    echo `basename ${1%.*}`
+__unset-func() {
+    if declare -f "$1" > /dev/null; then
+        unset -f "$1"
+    fi
 }
 
 __dump-file() {
-    local file=$DUMPS_ROOT/$1.dump
-    touch $file
-    echo $file
+    echo $DOTFILES_DUMPS/$1.dump
 }
 
 __run-script-action() {
     __section $1
-    for script in $UPDATE_SCRIPTS/*; do
-        local name=`__script-name $script`
-        local dump_file=`__dump-file $name`
+    for script in $DOTFILES_SCRIPTS/update/*.sh; do
+        local name=`basename ${script%.*}`
         source $script
-        if ! command -v `__list-requirements` > /dev/null; then
-            continue
+        if 
+            declare -f __list-requirements > /dev/null && 
+            command -v `__list-requirements` > /dev/null &&
+            { [ $# -eq 1 ] || declare -f ${@:2} > /dev/null };
+        then
+            __sub-section $name
+            __script-action
         fi
-        __sub-section $name
-        __script-action
-        unset -f __list-requirements
-        unset -f __list-packages
-        unset -f __upgrade-packages
-        unset -f __uninstall-packages
-        unset -f __install-packages
+        __unset-func __list-requirements
+        __unset-func __list-packages
+        __unset-func __upgrade
+        __unset-func __clean
+        __unset-func __uninstall-packages
+        __unset-func __install-packages
     done
-    unset -f __script-action
+    __unset-func __script-action
 }
 
 system-dump() {
     __script-action() {
-        __list-packages | sort > $dump_file
+        __list-packages | sort > `__dump-file $name`
     }
-    __run-script-action "Dumping packages"
+    __run-script-action "Dumping packages" __list-packages
 }
 
 system-backup() {
@@ -73,29 +74,38 @@ system-backup() {
 
 system-upgrade() {
     __script-action() {
-        __upgrade-packages
+        __upgrade
     }
-    __run-script-action "Upgrading packages"
+    __run-script-action "Upgrading packages" __upgrade
+}
+
+system-clean() {
+    __script-action() {
+        __clean
+    }
+    __run-script-action "Cleaning up" __clean
 }
 
 system-restore() {
     __script-action() {
-        __list-packages | sort | comm -23 - $dump_file | __uninstall-packages # uninstall extra
-        __list-packages | sort | comm -13 - $dump_file | __install-packages # install missing
+        local dump=`__dump-file $name`
+        __list-packages | sort | comm -23 - $dump | __uninstall-packages # uninstall extra
+        __list-packages | sort | comm -13 - $dump | __install-packages # install missing
     }
-    __run-script-action "Restoring packages"
+    __run-script-action "Restoring packages" __list-packages __uninstall-packages __install-packages
 }
 
-__git-sha() {
+__dotfiles-git-sha() {
     echo `git -C $DOTFILES_ROOT rev-parse HEAD`
 }
 
 system-pull() {
     __section "Pulling remote"
-    local old_sha=`__git-sha`
+    local old_sha=`__dotfiles-git-sha`
     git -C $DOTFILES_ROOT pull
-    if [[ `__git-sha` != $old_sha ]]; then
-        __section "Sourcing .zshrc"
+    if [[ `__dotfiles-git-sha` != $old_sha ]]; then
+        __section "Reloading"
+        make -C $DOTFILES_ROOT restow
         source $HOME/.zshrc
     fi
 }
@@ -104,6 +114,7 @@ system-sync() {
     system-pull
     system-restore
     system-upgrade
+    system-clean
     system-dump
     system-backup $1
 }

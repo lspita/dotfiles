@@ -1,9 +1,9 @@
 DOTFILES_ROOT="$HOME/dotfiles"
-export SCRIPTS_ROOT="$HOME/.scripts"
-export DUMPS_ROOT="$DOTFILES_ROOT/dumps"
+DOTFILES_SCRIPTS="$HOME/.scripts"
+DOTFILES_DUMPS="$DOTFILES_ROOT/dumps"
 
-mkdir -p $SCRIPTS_ROOT
-mkdir -p $DUMPS_ROOT
+mkdir -p $DOTFILES_SCRIPTS
+mkdir -p $DOTFILES_DUMPS
 
 # https://unix.stackexchange.com/questions/9957/how-to-check-if-bash-can-print-colors
 __init-colors() {
@@ -42,6 +42,10 @@ __unset-colors() {
     unset TEXT_CYAN
     unset TEXT_WHITE
 }
+
+for script in $DOTFILES_SCRIPTS/init/*.sh; do
+    source $script
+done
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
@@ -148,6 +152,3 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

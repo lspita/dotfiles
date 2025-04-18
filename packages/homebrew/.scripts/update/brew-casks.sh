@@ -9,8 +9,7 @@ __list-packages() {
     brew list -1 --casks --full-name
 }
 
-__upgrade-packages() {
-    brew update
+__upgrade() {
     brew upgrade --casks
 }
 
