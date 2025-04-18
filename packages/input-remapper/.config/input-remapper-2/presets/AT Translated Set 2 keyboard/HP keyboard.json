@@ -1,0 +1,19 @@
+[
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 100,
+                "origin_hash": "a72e58402a3ca90395439a59615f68b8"
+            },
+            {
+                "type": 1,
+                "code": 38,
+                "origin_hash": "a72e58402a3ca90395439a59615f68b8"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "KEY_102ND",
+        "mapping_type": "key_macro"
+    }
+]
