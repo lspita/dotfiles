@@ -1,6 +1,3 @@
-# brew bundle dump not working in wsl2
-# https://github.com/Homebrew/homebrew-bundle/issues/1226
-
 __check-requirements() {
     __command-exists brew
 }
