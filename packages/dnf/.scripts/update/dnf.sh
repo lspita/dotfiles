@@ -58,10 +58,3 @@ __install() {
 __uninstall() {
     xargs -I {} sudo dnf remove -y {}
 }
-
-__post-install() {
-    if __command-exists input-remapper-gtk && ! systemctl is-active --quiet input-remapper; then
-        __sub-sub-section input-remapper
-        sudo systemctl enable --now input-remapper
-    fi
-}

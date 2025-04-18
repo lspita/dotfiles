@@ -1,35 +1,3 @@
-__section() {
-    __init-colors
-    echo "${TEXT_BOLD}${TEXT_BLUE}$1${TEXT_RESET}"
-    __unset-colors
-}
-
-__sub-section() {
-    __init-colors
-    echo "${TEXT_BOLD}${TEXT_CYAN}$1${TEXT_RESET}"
-    __unset-colors
-}
-
-__sub-sub-section() {
-    __init-colors
-    echo "${TEXT_BOLD}${TEXT_MAGENTA}$1${TEXT_RESET}"
-    __unset-colors
-}
-
-__unset-func() {
-    if declare -f "$1" > /dev/null; then
-        unset -f "$1"
-    fi
-}
-
-__command-exists() {
-    command -v $@ > /dev/null
-}
-
-__function-exists() {
-    declare -f $@ > /dev/null
-}
-
 __dump-file() {
     echo $DOTFILES_DUMPS/$1.dump
 }
@@ -54,7 +22,6 @@ __run-script-action() {
         __unset-func __clean
         __unset-func __install
         __unset-func __uninstall
-        __unset-func __post-install
     done
     __unset-func __script-action
 }
@@ -87,9 +54,6 @@ system-restore() {
         local dump=`__dump-file $name`
         __dump-packages | sort | comm -23 - $dump | __uninstall # uninstall extra
         __dump-packages | sort | comm -13 - $dump | __install # install missing
-        if __function-exists __post-install; then
-            __post-install
-        fi
     }
     __run-script-action "Restoring packages" __dump-packages __uninstall __install
 }

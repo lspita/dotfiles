@@ -43,6 +43,38 @@ __unset-colors() {
     unset TEXT_WHITE
 }
 
+__section() {
+    __init-colors
+    echo "${TEXT_BOLD}${TEXT_BLUE}$1${TEXT_RESET}"
+    __unset-colors
+}
+
+__sub-section() {
+    __init-colors
+    echo "${TEXT_BOLD}${TEXT_CYAN}$1${TEXT_RESET}"
+    __unset-colors
+}
+
+__sub-sub-section() {
+    __init-colors
+    echo "${TEXT_BOLD}${TEXT_MAGENTA}$1${TEXT_RESET}"
+    __unset-colors
+}
+
+__unset-func() {
+    if declare -f "$1" > /dev/null; then
+        unset -f "$1"
+    fi
+}
+
+__command-exists() {
+    command -v $@ > /dev/null
+}
+
+__function-exists() {
+    declare -f $@ > /dev/null
+}
+
 for script in $DOTFILES_SCRIPTS/init/*.sh; do
     source $script
 done
