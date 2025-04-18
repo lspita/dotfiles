@@ -39,7 +39,7 @@ __init() {
     fi
 }
 
-__dump() {
+__dump-packages() {
     dnf repoquery --userinstalled --qf "%{name}\n"
 }
 

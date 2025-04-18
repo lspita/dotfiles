@@ -49,7 +49,7 @@ __run-script-action() {
         fi
         __unset-func __check-requirements
         __unset-func __init
-        __unset-func __dump
+        __unset-func __dump-packages
         __unset-func __upgrade
         __unset-func __clean
         __unset-func __install
@@ -85,13 +85,13 @@ system-init() {
 system-restore() {
     __script-action() {
         local dump=`__dump-file $name`
-        __dump | sort | comm -23 - $dump | __uninstall # uninstall extra
-        __dump | sort | comm -13 - $dump | __install # install missing
+        __dump-packages | sort | comm -23 - $dump | __uninstall # uninstall extra
+        __dump-packages | sort | comm -13 - $dump | __install # install missing
         if __function-exists __post-install; then
             __post-install
         fi
     }
-    __run-script-action "Restoring" __dump __uninstall __install
+    __run-script-action "Restoring packages" __dump-packages __uninstall __install
 }
 
 system-upgrade() {
@@ -110,9 +110,9 @@ system-clean() {
 
 system-dump() {
     __script-action() {
-        __dump | sort > `__dump-file $name`
+        __dump-packages | sort > `__dump-file $name`
     }
-    __run-script-action "Dumping" __dump
+    __run-script-action "Dumping packages" __dump-packages
 }
 
 system-backup() {

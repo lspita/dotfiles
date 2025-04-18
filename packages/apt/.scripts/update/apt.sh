@@ -40,7 +40,7 @@ __init() {
 
 }
 
-__dump() {
+__dump-packages() {
     apt-mark showmanual
 }
 
