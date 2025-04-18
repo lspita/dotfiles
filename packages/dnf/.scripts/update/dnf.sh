@@ -6,7 +6,7 @@ __init() {
     # docker repo
     # https://docs.docker.com/engine/install/fedora/#install-using-the-repository
     if ! __command-exists docker; then
-        __sub-sub-section docker
+        __h3 docker
         sudo dnf remove docker \
                   docker-client \
                   docker-client-latest \
@@ -30,7 +30,7 @@ __init() {
         sudo usermod -aG docker $USER
     fi
     if ! __command-exists code; then
-        __sub-sub-section code
+        __h3 code
         sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
         echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 

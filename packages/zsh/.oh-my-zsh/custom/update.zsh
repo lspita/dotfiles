@@ -3,25 +3,26 @@ __dump-file() {
 }
 
 __run-script-action() {
-    __section $1
     for script in $DOTFILES_SCRIPTS/update/*.sh; do
         local name=`basename ${script%.*}`
         source $script
         if 
             __function-exists __check-requirements && 
             __check-requirements &&
-            { [ $# -eq 1 ] || __function-exists ${@:2} };
+            { [ $# -eq 0 ] || __function-exists $@ };
         then
-            __sub-section $name
+            __h2 $name
             __script-action
         fi
         __unset-func __check-requirements
         __unset-func __init
         __unset-func __dump-packages
+        __unset-func __dump-total
         __unset-func __upgrade
         __unset-func __clean
         __unset-func __install
         __unset-func __uninstall
+        __unset-func __restore-total
     done
     __unset-func __script-action
 }
@@ -31,56 +32,69 @@ __dotfiles-git-sha() {
 }
 
 system-pull() {
-    __section "Pulling remote"
+    __h1 "Pulling remote"
     local old_sha=`__dotfiles-git-sha`
     make -C $DOTFILES_ROOT delete
     git -C $DOTFILES_ROOT pull
     make -C $DOTFILES_ROOT restow
     if [[ `__dotfiles-git-sha` != $old_sha ]]; then
-        __section "Reloading"
+        __h1 "Reloading"
         source $HOME/.zshrc
     fi
 }
 
 system-init() {
+    __h1 "Initializing"
     __script-action() {
         __init
     }
-    __run-script-action "Initializing" __init
+    __run-script-action __init
 }
 
 system-restore() {
+    __h1 "Restoring"
     __script-action() {
         local dump=`__dump-file $name`
         __dump-packages | sort | comm -23 - $dump | __uninstall # uninstall extra
         __dump-packages | sort | comm -13 - $dump | __install # install missing
     }
-    __run-script-action "Restoring packages" __dump-packages __uninstall __install
+    __run-script-action __dump-packages __uninstall __install
+    __script-action() {
+        __restore-total < `__dump-file $name`
+    }
+    __run-script-action __restore-total
 }
 
 system-upgrade() {
+    __h1 "Upgrading"
     __script-action() {
         __upgrade
     }
-    __run-script-action "Upgrading" __upgrade
+    __run-script-action __upgrade
 }
 
 system-clean() {
+    __h1 "Cleaning up"
     __script-action() {
         __clean
     }
-    __run-script-action "Cleaning up" __clean
+    __run-script-action __clean
 }
 
 system-dump() {
+    __h1 "Dumping"
     __script-action() {
         __dump-packages | sort > `__dump-file $name`
     }
-    __run-script-action "Dumping packages" __dump-packages
+    __run-script-action __dump-packages
+    __script-action() {
+        __dump-total > `__dump-file $name`
+    }
+    __run-script-action __dump-total
 }
 
 system-backup() {
-    __section "Pushing changes"
+    __h1 "Pushing changes"
     git -C $DOTFILES_ROOT add $DOTFILES_ROOT
     git -C $DOTFILES_ROOT status
 

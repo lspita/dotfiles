@@ -43,19 +43,19 @@ __unset-colors() {
     unset TEXT_WHITE
 }
 
-__section() {
+__h1() {
     __init-colors
     echo "${TEXT_BOLD}${TEXT_BLUE}$1${TEXT_RESET}"
     __unset-colors
 }
 
-__sub-section() {
+__h2() {
     __init-colors
     echo "${TEXT_BOLD}${TEXT_CYAN}$1${TEXT_RESET}"
     __unset-colors
 }
 
-__sub-sub-section() {
+__h3() {
     __init-colors
     echo "${TEXT_BOLD}${TEXT_MAGENTA}$1${TEXT_RESET}"
     __unset-colors
