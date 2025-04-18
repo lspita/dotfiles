@@ -36,7 +36,6 @@ __init() {
         echo "Test with hello world"
         docker run hello-world
     fi
-
 }
 
 __list-packages() {

@@ -34,6 +34,7 @@ __run-script-action() {
             __script-action
         fi
         __unset-func __list-requirements
+        __unset-func __init
         __unset-func __list-packages
         __unset-func __upgrade
         __unset-func __clean
@@ -41,6 +42,51 @@ __run-script-action() {
         __unset-func __install-packages
     done
     __unset-func __script-action
+}
+
+__dotfiles-git-sha() {
+    echo `git -C $DOTFILES_ROOT rev-parse HEAD`
+}
+
+system-pull() {
+    __section "Pulling remote"
+    local old_sha=`__dotfiles-git-sha`
+    git -C $DOTFILES_ROOT pull
+    if [[ `__dotfiles-git-sha` != $old_sha ]]; then
+        __section "Reloading"
+        make -C $DOTFILES_ROOT restow
+        source $HOME/.zshrc
+    fi
+}
+
+system-init() {
+    __script-action() {
+        __init
+    }
+    __run-script-action "Initializing" __init
+}
+
+system-restore() {
+    __script-action() {
+        local dump=`__dump-file $name`
+        __list-packages | sort | comm -23 - $dump | __uninstall-packages # uninstall extra
+        __list-packages | sort | comm -13 - $dump | __install-packages # install missing
+    }
+    __run-script-action "Restoring packages" __list-packages __uninstall-packages __install-packages
+}
+
+system-upgrade() {
+    __script-action() {
+        __upgrade
+    }
+    __run-script-action "Upgrading" __upgrade
+}
+
+system-clean() {
+    __script-action() {
+        __clean
+    }
+    __run-script-action "Cleaning up" __clean
 }
 
 system-dump() {
@@ -72,46 +118,9 @@ system-backup() {
     fi
 }
 
-system-upgrade() {
-    __script-action() {
-        __upgrade
-    }
-    __run-script-action "Upgrading packages" __upgrade
-}
-
-system-clean() {
-    __script-action() {
-        __clean
-    }
-    __run-script-action "Cleaning up" __clean
-}
-
-system-restore() {
-    __script-action() {
-        local dump=`__dump-file $name`
-        __list-packages | sort | comm -23 - $dump | __uninstall-packages # uninstall extra
-        __list-packages | sort | comm -13 - $dump | __install-packages # install missing
-    }
-    __run-script-action "Restoring packages" __list-packages __uninstall-packages __install-packages
-}
-
-__dotfiles-git-sha() {
-    echo `git -C $DOTFILES_ROOT rev-parse HEAD`
-}
-
-system-pull() {
-    __section "Pulling remote"
-    local old_sha=`__dotfiles-git-sha`
-    git -C $DOTFILES_ROOT pull
-    if [[ `__dotfiles-git-sha` != $old_sha ]]; then
-        __section "Reloading"
-        make -C $DOTFILES_ROOT restow
-        source $HOME/.zshrc
-    fi
-}
-
 system-sync() {
     system-pull
+    system-init
     system-restore
     system-upgrade
     system-clean
