@@ -66,10 +66,11 @@ __dotfiles-git-sha() {
 system-pull() {
     __section "Pulling remote"
     local old_sha=`__dotfiles-git-sha`
+    make -C $DOTFILES_ROOT delete
     git -C $DOTFILES_ROOT pull
+    make -C $DOTFILES_ROOT restow
     if [[ `__dotfiles-git-sha` != $old_sha ]]; then
         __section "Reloading"
-        make -C $DOTFILES_ROOT restow
         source $HOME/.zshrc
     fi
 }
