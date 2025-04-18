@@ -1,4 +1,4 @@
-__list-requirements() {
+__check-requirements() {
     __command-exists brew
 }
 

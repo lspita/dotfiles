@@ -1,4 +1,4 @@
-__list-requirements() {
+__check-requirements() {
     __command-exists apt
 }
 
@@ -40,7 +40,7 @@ __init() {
 
 }
 
-__list-packages() {
+__dump() {
     apt-mark showmanual
 }
 
@@ -53,10 +53,10 @@ __clean() {
     sudo apt autoremove -y
 }
 
-__install-packages() {
+__install() {
     xargs -I {} sudo apt install -y {}
 }
 
-__uninstall-packages() {
+__uninstall() {
     xargs -I {} sudo apt purge -y {}
 }

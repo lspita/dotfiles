@@ -43,13 +43,13 @@ __run-script-action() {
             __sub-section $name
             __script-action
         fi
-        __unset-func __list-requirements
+        __unset-func __check-requirements
         __unset-func __init
-        __unset-func __list-packages
+        __unset-func __dump
         __unset-func __upgrade
         __unset-func __clean
-        __unset-func __uninstall-packages
-        __unset-func __install-packages
+        __unset-func __uninstall
+        __unset-func __install
     done
     __unset-func __script-action
 }
@@ -82,7 +82,7 @@ system-restore() {
         __list-packages | sort | comm -23 - $dump | __uninstall-packages # uninstall extra
         __list-packages | sort | comm -13 - $dump | __install-packages # install missing
     }
-    __run-script-action "Restoring packages" __list-packages __uninstall-packages __install-packages
+    __run-script-action "Restoring" __list-packages __uninstall-packages __install-packages
 }
 
 system-upgrade() {
@@ -103,7 +103,7 @@ system-dump() {
     __script-action() {
         __list-packages | sort > `__dump-file $name`
     }
-    __run-script-action "Dumping packages" __list-packages
+    __run-script-action "Dumping" __list-packages
 }
 
 system-backup() {

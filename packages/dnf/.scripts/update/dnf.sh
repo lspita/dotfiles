@@ -1,4 +1,4 @@
-__list-requirements() {
+__check-requirements() {
     __command-exists dnf
 }
 
@@ -39,7 +39,7 @@ __init() {
     fi
 }
 
-__list-packages() {
+__dump() {
     dnf repoquery --userinstalled --qf "%{name}\n"
 }
 
@@ -51,10 +51,10 @@ __clean() {
     sudo dnf autoremove
 }
 
-__install-packages() {
+__install() {
     xargs -I {} sudo dnf install -y {}
 }
 
-__uninstall-packages() {
+__uninstall() {
     xargs -I {} sudo dnf remove -y {}
 }
