@@ -30,17 +30,3 @@ cd wsl-hello-sudo
 ```sh
 sudo chmod 600 id_ed25519
 ```
-
-## Sudo timeout
-
-Open the sudoers file
-
-```sh
-sudo visudo
-```
-
-And add this (replace `<user>` and `<minutes>`)
-
-```
-Defaults:<user> timestamp_timeout=<minutes>
-```
