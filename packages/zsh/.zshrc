@@ -61,6 +61,12 @@ __h3() {
     __unset-colors
 }
 
+__error() {
+    __init-colors
+    echo "${TEXT_BOLD}${TEXT_RED}$1${TEXT_RESET}"
+    __unset-colors
+}
+
 __unset-func() {
     if declare -f "$1" > /dev/null; then
         unset -f "$1"
