@@ -1,5 +1,5 @@
 __list-requirements() {
-    echo brew
+    __command-exists brew
 }
 
 __upgrade() {

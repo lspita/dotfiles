@@ -1,12 +1,12 @@
 __list-requirements() {
-    echo dnf
+    __command-exists dnf
 }
 
 __init() {
     # docker repo
     # https://docs.docker.com/engine/install/fedora/#install-using-the-repository
-    if ! sudo dnf repo list | grep -q "docker-ce"; then
-        echo "Uninstalling docker potential conflicts"
+    if ! __command-exists docker; then
+        __sub-sub-section docker
         sudo dnf remove docker \
                   docker-client \
                   docker-client-latest \
@@ -20,21 +20,22 @@ __init() {
         
         echo "Adding Docker repository..."
         sudo dnf -y install dnf-plugins-core
-        sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
-    
-        echo "Installing docker packages"
-        sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+        sudo dnf-3 config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+        
+        sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-        echo "Starting docker daemon"
         sudo systemctl enable --now docker
 
-        echo "Setting user permissions"
         sudo groupadd docker
         sudo usermod -aG docker $USER
-        newgrp docker
+    fi
+    if ! __command-exists code; then
+        __sub-sub-section code
+        sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+        echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 
-        echo "Test with hello world"
-        docker run hello-world
+        dnf check-update
+        sudo dnf install -y code # or code-insiders
     fi
 }
 

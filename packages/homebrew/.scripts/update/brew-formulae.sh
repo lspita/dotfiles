@@ -2,7 +2,7 @@
 # https://github.com/Homebrew/homebrew-bundle/issues/1226
 
 __list-requirements() {
-    echo brew
+    __command-exists brew
 }
 
 __list-packages() {

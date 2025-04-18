@@ -10,10 +10,20 @@ __sub-section() {
     __unset-colors
 }
 
+__sub-sub-section() {
+    __init-colors
+    echo "${TEXT_BOLD}${TEXT_MAGENTA}$1${TEXT_RESET}"
+    __unset-colors
+}
+
 __unset-func() {
     if declare -f "$1" > /dev/null; then
         unset -f "$1"
     fi
+}
+
+__command-exists() {
+    command -v $@ > /dev/null
 }
 
 __dump-file() {
@@ -27,7 +37,7 @@ __run-script-action() {
         source $script
         if 
             declare -f __list-requirements > /dev/null && 
-            command -v `__list-requirements` > /dev/null &&
+            __list-requirements &&
             { [ $# -eq 1 ] || declare -f ${@:2} > /dev/null };
         then
             __sub-section $name

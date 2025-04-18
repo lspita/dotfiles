@@ -1,11 +1,12 @@
 __list-requirements() {
-    echo apt
+    __command-exists apt
 }
 
 __init() {
     # docker repo
     # https://docs.docker.com/engine/install/debian/#install-using-the-repository
-    if ! grep -q "download.docker.com" /etc/apt/sources.list.d/docker.list 2>/dev/null; then
+    if ! __command-exists docker; then
+        __sub-sub-section docker
         echo "Uninstallling docker potential conflicts"
         for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do
             sudo apt-get remove $pkg;
@@ -29,13 +30,10 @@ __init() {
         echo "Setting user permissions"
         sudo groupadd docker
         sudo usermod -aG docker $USER
-        newgrp docker
-
-        echo "Test with hello world"
-        docker run hello-world
     fi
     # aptitude for apt-mark command
-    if ! dpkg -s aptitude >/dev/null 2>&1; then
+    if ! __command-exists apt-mark; then
+        __sub-sub-section aptitude
         echo "Installing dependency aptitude"
         sudo apt install aptitude
     fi
