@@ -5,6 +5,8 @@ DOTFILES_DUMPS="$DOTFILES_ROOT/dumps"
 mkdir -p $DOTFILES_SCRIPTS
 mkdir -p $DOTFILES_DUMPS
 
+setopt NULL_GLOB
+
 # https://unix.stackexchange.com/questions/9957/how-to-check-if-bash-can-print-colors
 __init-colors() {
     # check if stdout is a terminal

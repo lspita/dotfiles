@@ -1,7 +1,7 @@
 > [!IMPORTANT]
 > If you want to use this dotfiles, remember to adapt them to your needs,
 > because they aren't modular or configurable (ex. user name and email in the 
-> [git config file](./packages/git/.gitconfig))
+> [git config file](./packages/git/.gitconfig) or some paths starting with /home/lspita)
 
 # Utils
 
