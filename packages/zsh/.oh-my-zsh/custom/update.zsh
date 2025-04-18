@@ -26,6 +26,10 @@ __command-exists() {
     command -v $@ > /dev/null
 }
 
+__function-exists() {
+    declare -f $@ > /dev/null
+}
+
 __dump-file() {
     echo $DOTFILES_DUMPS/$1.dump
 }
@@ -36,9 +40,9 @@ __run-script-action() {
         local name=`basename ${script%.*}`
         source $script
         if 
-            declare -f __list-requirements > /dev/null && 
-            __list-requirements &&
-            { [ $# -eq 1 ] || declare -f ${@:2} > /dev/null };
+            __function-exists __check-requirements && 
+            __check-requirements &&
+            { [ $# -eq 1 ] || __function-exists ${@:2} };
         then
             __sub-section $name
             __script-action
@@ -48,8 +52,9 @@ __run-script-action() {
         __unset-func __dump
         __unset-func __upgrade
         __unset-func __clean
-        __unset-func __uninstall
         __unset-func __install
+        __unset-func __uninstall
+        __unset-func __post-install
     done
     __unset-func __script-action
 }
@@ -79,10 +84,13 @@ system-init() {
 system-restore() {
     __script-action() {
         local dump=`__dump-file $name`
-        __list-packages | sort | comm -23 - $dump | __uninstall-packages # uninstall extra
-        __list-packages | sort | comm -13 - $dump | __install-packages # install missing
+        __dump | sort | comm -23 - $dump | __uninstall # uninstall extra
+        __dump | sort | comm -13 - $dump | __install # install missing
+        if __function-exists __post-install; then
+            __post-install
+        fi
     }
-    __run-script-action "Restoring" __list-packages __uninstall-packages __install-packages
+    __run-script-action "Restoring" __dump __uninstall __install
 }
 
 system-upgrade() {
@@ -101,9 +109,9 @@ system-clean() {
 
 system-dump() {
     __script-action() {
-        __list-packages | sort > `__dump-file $name`
+        __dump | sort > `__dump-file $name`
     }
-    __run-script-action "Dumping" __list-packages
+    __run-script-action "Dumping" __dump
 }
 
 system-backup() {
