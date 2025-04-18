@@ -5,6 +5,13 @@
 
 # Utils
 
+## Set ZSH as default shell
+
+```sh
+command -v zsh | sudo tee -a /etc/shells # prevent zsh invalid shell with brew
+chsh -s $(which zsh) # set zsh as default
+```
+
 ## WSL Hello sudo
 
 http://github.com/nullpo-head/WSL-Hello-sudo/
@@ -24,9 +31,16 @@ cd wsl-hello-sudo
 sudo chmod 600 id_ed25519
 ```
 
-## Set ZSH as default shell
+## Sudo timeout
+
+Open the sudoers file
 
 ```sh
-command -v zsh | sudo tee -a /etc/shells # prevent zsh invalid shell with brew
-chsh -s $(which zsh) # set zsh as default
+sudo visudo
+```
+
+And add this (replace `<user>` and `<minutes>`)
+
+```
+Defaults:<user> timestamp_timeout=<minutes>
 ```
