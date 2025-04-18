@@ -63,7 +63,5 @@ __post-install() {
     if __command-exists input-remapper-gtk && ! systemctl is-active --quiet input-remapper; then
         __sub-sub-section input-remapper
         sudo systemctl enable --now input-remapper
-    else
-        echo b
     fi
 }
