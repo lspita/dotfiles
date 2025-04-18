@@ -60,9 +60,14 @@ system-restore() {
     }
     __run-script-action __dump-packages __uninstall __install
     __script-action() {
-        __restore-total < `__dump-file $name`
+        local dump=`__dump-file $name`
+        local temp_file=`mktemp`
+        __dump-total > $temp_file
+        if ! diff -q $temp_file $dump > /dev/null; then
+            __restore-total < $dump
+        fi
     }
-    __run-script-action __restore-total
+    __run-script-action __dump-total __restore-total
 }
 
 system-upgrade() {
