@@ -106,6 +106,10 @@ sort-order=['org.gnome.Settings.desktop', 'org.gnome.Contacts.desktop', 'org.gno
 
 [wm/keybindings]
 close=['<Super>q']
+move-to-workspace-left=['<Shift><Control>Left']
+move-to-workspace-right=['<Shift><Control>Right']
+switch-to-workspace-left=['<Control><Super>Left']
+switch-to-workspace-right=['<Control><Super>Right']
 
 [wm/preferences]
 button-layout='appmenu:minimize,maximize,close'
@@ -208,8 +212,8 @@ world-clock=false
 location=(40.851799999999997, 14.2681)
 manual-schedule=false
 nightthemeswitcher-ondemand-keybinding=['<Super>F5']
-sunrise=6.6967240814498226
-sunset=19.37159789780079
+sunrise=6.6897588512140835
+sunset=19.376560804669438
 
 [extensions/vertical-workspaces]
 center-app-grid=true
