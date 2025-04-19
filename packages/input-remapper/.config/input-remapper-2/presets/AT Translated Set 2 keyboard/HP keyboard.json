@@ -15,5 +15,27 @@
         "target_uinput": "keyboard",
         "output_symbol": "KEY_102ND",
         "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 125,
+                "origin_hash": "a72e58402a3ca90395439a59615f68b8"
+            },
+            {
+                "type": 1,
+                "code": 42,
+                "origin_hash": "a72e58402a3ca90395439a59615f68b8"
+            },
+            {
+                "type": 1,
+                "code": 193,
+                "origin_hash": "a72e58402a3ca90395439a59615f68b8"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Super_R",
+        "mapping_type": "key_macro"
     }
 ]
