@@ -106,8 +106,12 @@ sort-order=['org.gnome.Settings.desktop', 'org.gnome.Contacts.desktop', 'org.gno
 
 [wm/keybindings]
 close=['<Super>q']
-move-to-workspace-left=['<Shift><Control>Left']
-move-to-workspace-right=['<Shift><Control>Right']
+move-to-monitor-down=['<Shift><Control><Super>Down']
+move-to-monitor-left=['<Shift><Control><Super>Left']
+move-to-monitor-right=['<Shift><Control><Super>Right']
+move-to-monitor-up=['<Shift><Control><Super>Up']
+move-to-workspace-left=['<Shift><Super>Left']
+move-to-workspace-right=['<Shift><Super>Right']
 switch-to-workspace-left=['<Control><Super>Left']
 switch-to-workspace-right=['<Control><Super>Right']
 
