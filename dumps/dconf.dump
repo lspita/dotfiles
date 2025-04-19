@@ -43,7 +43,7 @@ sources=[('xkb', 'it')]
 clock-show-date=true
 clock-show-seconds=false
 clock-show-weekday=true
-color-scheme='default'
+color-scheme='prefer-light'
 cursor-blink=true
 document-font-name='Adwaita Sans 12'
 enable-animations=true
@@ -113,8 +113,8 @@ button-layout='appmenu:minimize,maximize,close'
 >>>/org/gnome/shell/
 [/]
 app-picker-layout=[{'com.bitwarden.desktop.desktop': <{'position': <0>}>, 'org.gnome.Boxes.desktop': <{'position': <1>}>, 'org.gnome.Calculator.desktop': <{'position': <2>}>, 'org.gnome.Calendar.desktop': <{'position': <3>}>, 'org.gnome.Snapshot.desktop': <{'position': <4>}>, 'org.gnome.clocks.desktop': <{'position': <5>}>, 'org.gnome.baobab.desktop': <{'position': <6>}>, 'org.gnome.DiskUtility.desktop': <{'position': <7>}>, 'simple-scan.desktop': <{'position': <8>}>, 'org.gnome.Evince.desktop': <{'position': <9>}>, 'com.mattjakeman.ExtensionManager.desktop': <{'position': <10>}>, 'org.fedoraproject.MediaWriter.desktop': <{'position': <11>}>, 'org.gnome.font-viewer.desktop': <{'position': <12>}>, 'yelp.desktop': <{'position': <13>}>, 'org.gnome.Loupe.desktop': <{'position': <14>}>, 'input-remapper-gtk.desktop': <{'position': <15>}>, 'org.gnome.Logs.desktop': <{'position': <16>}>, 'org.freedesktop.GnomeAbrt.desktop': <{'position': <17>}>, 'org.gnome.Rhythmbox3.desktop': <{'position': <18>}>, 'org.gnome.Settings.desktop': <{'position': <19>}>, 'org.gnome.Software.desktop': <{'position': <20>}>, 'com.spotify.Client.desktop': <{'position': <21>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <22>}>, 'org.gnome.TextEditor.desktop': <{'position': <23>}>}, {'org.gnome.tweaks.desktop': <{'position': <0>}>, 'org.gnome.Totem.desktop': <{'position': <1>}>, 'org.gnome.Weather.desktop': <{'position': <2>}>}]
-disabled-extensions=['apps-menu@gnome-shell-extensions.gcampax.github.com', 'background-logo@fedorahosted.org', 'window-list@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['light-style@gnome-shell-extensions.gcampax.github.com', 'nightthemeswitcher@romainvigier.fr', 'blur-my-shell@aunetx', 'vertical-workspaces@G-dH.github.com', 'just-perfection-desktop@just-perfection', 'AlphabeticalAppGrid@stuarthayhurst', 'caffeine@patapon.info', 'places-menu@gnome-shell-extensions.gcampax.github.com']
+disabled-extensions=['apps-menu@gnome-shell-extensions.gcampax.github.com', 'background-logo@fedorahosted.org', 'window-list@gnome-shell-extensions.gcampax.github.com', 'light-style@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['nightthemeswitcher@romainvigier.fr', 'blur-my-shell@aunetx', 'vertical-workspaces@G-dH.github.com', 'just-perfection-desktop@just-perfection', 'AlphabeticalAppGrid@stuarthayhurst', 'caffeine@patapon.info', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'luminus-desktop@dikasp.gitlab']
 favorite-apps=['org.mozilla.firefox.desktop', 'code.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Ptyxis.desktop']
 welcome-dialog-last-shown-version='48.0'
 
@@ -125,6 +125,9 @@ settings-version=2
 [extensions/blur-my-shell/appfolder]
 brightness=0.59999999999999998
 sigma=30
+
+[extensions/blur-my-shell/applications]
+blur=false
 
 [extensions/blur-my-shell/coverflow-alt-tab]
 pipeline='pipeline_default'
@@ -143,7 +146,7 @@ unblur-in-overview=false
 pipeline='pipeline_default'
 
 [extensions/blur-my-shell/overview]
-pipeline='pipeline_default'
+pipeline='pipeline_01283352522231'
 style-components=3
 
 [extensions/blur-my-shell/panel]
