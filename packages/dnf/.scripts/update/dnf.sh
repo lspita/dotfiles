@@ -44,7 +44,10 @@ __dump-packages() {
 }
 
 __upgrade() {
+    __echo-sudo "inside dnf"
     sudo dnf upgrade
+    __echo-sudo "inside dnf"
+    read
 }
 
 __clean() {

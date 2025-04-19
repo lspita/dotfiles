@@ -2,17 +2,31 @@ __dump-file() {
     echo $DOTFILES_DUMPS/$1.dump
 }
 
+__echo-sudo() {
+    echo -n "$1: "
+    if sudo -n true 2>/dev/null; then
+        echo "sudo"
+    else
+        echo "no sudo"
+    fi
+}
+
 __run-script-action() {
     for script in $DOTFILES_SCRIPTS/update/*.sh; do
         local name=`basename ${script%.*}`
+        echo "---- $name ----"
+        __echo-sudo "before source"
         source $script
+        __echo-sudo "after source"
         if
             __function-exists __check-requirements && 
             __check-requirements && 
             ( [ $# -eq 0 ] || __function-exists $@ ); 
         then
             __h2 $name
+            __echo-sudo "before call"
             __script-action
+            __echo-sudo "after call"
         fi
         __unset-func __check-requirements
         __unset-func __init

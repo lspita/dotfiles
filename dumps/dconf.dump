@@ -49,6 +49,7 @@ document-font-name='Adwaita Sans 12'
 enable-animations=true
 font-name='Adwaita Sans 12'
 gtk-key-theme='Default'
+gtk-theme='Adwaita'
 monospace-font-name='FiraCode Nerd Font 12'
 show-battery-percentage=true
 
@@ -118,6 +119,7 @@ favorite-apps=['org.mozilla.firefox.desktop', 'code.desktop', 'org.gnome.Nautilu
 welcome-dialog-last-shown-version='48.0'
 
 [extensions/blur-my-shell]
+pipelines={'pipeline_default': {'name': <'Default'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_000000000000'>, 'params': <{'radius': <30>, 'brightness': <0.59999999999999998>}>}>]>}, 'pipeline_default_rounded': {'name': <'Default rounded'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_000000000001'>, 'params': <{'radius': <30>, 'brightness': <0.59999999999999998>}>}>, <{'type': <'corner'>, 'id': <'effect_000000000002'>, 'params': <{'radius': <24>}>}>]>}, 'pipeline_01283352522231': {'name': <'Default intense'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_07794153242618'>, 'params': <{'unscaled_radius': <40>, 'brightness': <1>}>}>]>}}
 settings-version=2
 
 [extensions/blur-my-shell/appfolder]
@@ -142,6 +144,7 @@ pipeline='pipeline_default'
 
 [extensions/blur-my-shell/overview]
 pipeline='pipeline_default'
+style-components=3
 
 [extensions/blur-my-shell/panel]
 blur=false
