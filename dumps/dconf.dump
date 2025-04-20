@@ -59,8 +59,14 @@ application-children=['org-gnome-software', 'org-freedesktop-problems-applet', '
 [notifications/application/ca-desrt-dconf-editor]
 application-id='ca.desrt.dconf-editor.desktop'
 
+[notifications/application/com-spotify-client]
+application-id='com.spotify.Client.desktop'
+
 [notifications/application/gnome-datetime-panel]
 application-id='gnome-datetime-panel.desktop'
+
+[notifications/application/gnome-power-panel]
+application-id='gnome-power-panel.desktop'
 
 [notifications/application/gnome-printers-panel]
 application-id='gnome-printers-panel.desktop'
@@ -87,6 +93,7 @@ application-id='org.gnome.tweaks.desktop'
 application-id='org.mozilla.firefox.desktop'
 
 [peripherals/touchpad]
+disable-while-typing=true
 speed=0.69999999999999996
 two-finger-scrolling-enabled=true
 
@@ -125,6 +132,9 @@ disabled-extensions=['apps-menu@gnome-shell-extensions.gcampax.github.com', 'bac
 enabled-extensions=['nightthemeswitcher@romainvigier.fr', 'blur-my-shell@aunetx', 'vertical-workspaces@G-dH.github.com', 'just-perfection-desktop@just-perfection', 'AlphabeticalAppGrid@stuarthayhurst', 'caffeine@patapon.info', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'luminus-desktop@dikasp.gitlab']
 favorite-apps=['org.mozilla.firefox.desktop', 'code.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Ptyxis.desktop']
 welcome-dialog-last-shown-version='48.0'
+
+[app-switcher]
+current-workspace-only=true
 
 [extensions/blur-my-shell]
 pipelines={'pipeline_default': {'name': <'Default'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_000000000000'>, 'params': <{'radius': <30>, 'brightness': <0.59999999999999998>}>}>]>}, 'pipeline_default_rounded': {'name': <'Default rounded'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_000000000001'>, 'params': <{'radius': <30>, 'brightness': <0.59999999999999998>}>}>, <{'type': <'corner'>, 'id': <'effect_000000000002'>, 'params': <{'radius': <24>}>}>]>}, 'pipeline_01283352522231': {'name': <'Default intense'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_07794153242618'>, 'params': <{'unscaled_radius': <40>, 'brightness': <1>}>}>]>}}

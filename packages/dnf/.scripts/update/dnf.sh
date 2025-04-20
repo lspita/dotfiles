@@ -47,10 +47,6 @@ __upgrade() {
     sudo dnf upgrade
 }
 
-__clean() {
-    sudo dnf autoremove
-}
-
 __install() {
     xargs -I {} sudo dnf install -y {}
 }
