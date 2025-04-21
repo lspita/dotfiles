@@ -40,9 +40,9 @@ system-pull() {
     if [[ `__dotfiles-git-sha` != $old_sha ]]; then
         __h2 "Applying changes"
         source $HOME/.zshrc
-        return 0
+        echo true
     else
-        return 1
+        echo false
     fi
 }
 
@@ -55,7 +55,7 @@ system-init() {
 }
 
 system-restore() {
-    if [ ! $1 -eq 0 ]; then
+    if [[ $1 = false ]]; then
         return
     fi
     __h1 "Restoring"
@@ -127,8 +127,8 @@ system-backup() {
 }
 
 system-sync() {
-    system-pull
-    local has_changes=$?
+    local has_changes=`system-pull`
+    has_changes=${2:-$has_changes}
     system-init $has_changes
     system-restore $has_changes
     system-upgrade $has_changes
