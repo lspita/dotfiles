@@ -9,4 +9,5 @@ org.freedesktop.Platform.GL.default
 org.freedesktop.Platform.openh264
 org.gnome.Platform
 org.gnome.Platform
+org.gtk.Gtk3theme.Adwaita-dark
 org.mozilla.firefox
