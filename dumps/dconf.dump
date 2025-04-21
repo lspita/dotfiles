@@ -252,6 +252,7 @@ ws-thumbnails-position=9
 
 [weather]
 automatic-location=true
+locations=@av []
 
 [world-clocks]
 locations=@av []
