@@ -38,8 +38,11 @@ system-pull() {
     git -C $DOTFILES_ROOT pull
     make -C $DOTFILES_ROOT restow
     if [[ `__dotfiles-git-sha` != $old_sha ]]; then
-        __h1 "Reloading"
+        __h2 "Applying changes"
         source $HOME/.zshrc
+        return 0
+    else
+        return 1
     fi
 }
 
@@ -52,6 +55,9 @@ system-init() {
 }
 
 system-restore() {
+    if [ ! $1 -eq 0 ]; then
+        return
+    fi
     __h1 "Restoring"
     __script-action() {
         local dump=`__dump-file $name`
@@ -99,7 +105,7 @@ system-dump() {
 }
 
 system-backup() {
-    __h1 "Pushing changes"
+    __h1 "Checking changes"
     git -C $DOTFILES_ROOT add $DOTFILES_ROOT
     git -C $DOTFILES_ROOT status
 
@@ -122,10 +128,11 @@ system-backup() {
 
 system-sync() {
     system-pull
-    system-init
-    system-restore
-    system-upgrade
-    system-clean
-    system-dump
+    local has_changes=$?
+    system-init $has_changes
+    system-restore $has_changes
+    system-upgrade $has_changes
+    system-clean $has_changes
+    system-dump $has_changes
     system-backup $1
 }
