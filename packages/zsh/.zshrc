@@ -83,6 +83,13 @@ __function-exists() {
     declare -f $@ > /dev/null
 }
 
+__enable-service() {
+    if __command-exists ${@:2} && ! systemctl is-active --quiet $1; then
+        __h1 "Enabling $1 service"
+        sudo systemctl enable --now $1
+    fi
+}
+
 for script in $DOTFILES_SCRIPTS/init/*.sh; do
     source $script
 done
