@@ -43,13 +43,13 @@ sources=[('xkb', 'it')]
 clock-show-date=true
 clock-show-seconds=false
 clock-show-weekday=true
-color-scheme='prefer-light'
+color-scheme='prefer-dark'
 cursor-blink=true
 document-font-name='Adwaita Sans 12'
 enable-animations=true
 font-name='Adwaita Sans 12'
 gtk-key-theme='Default'
-gtk-theme='Adwaita'
+gtk-theme='Adwaita-dark'
 monospace-font-name='FiraCode Nerd Font 12'
 show-battery-percentage=true
 
@@ -184,10 +184,10 @@ sigma=30
 
 [extensions/caffeine]
 enable-fullscreen=false
-indicator-position-max=2
+indicator-position-max=3
 show-notifications=true
-toggle-state=true
-user-enabled=true
+toggle-state=false
+user-enabled=false
 
 [extensions/just-perfection]
 accent-color-icon=false
@@ -233,8 +233,8 @@ world-clock=false
 location=(40.851799999999997, 14.2681)
 manual-schedule=false
 nightthemeswitcher-ondemand-keybinding=['<Super>F5']
-sunrise=6.639871602520266
-sunset=19.412504521631625
+sunrise=6.6367491414853994
+sunset=19.414778559915064
 
 [extensions/vertical-workspaces]
 center-app-grid=true
