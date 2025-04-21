@@ -129,8 +129,8 @@ button-layout='appmenu:minimize,maximize,close'
 [/]
 app-picker-layout=[{'b3027da2-5630-4155-8c64-a5a0b0121476': <{'position': <0>}>, 'com.bitwarden.desktop.desktop': <{'position': <1>}>, 'org.gnome.Boxes.desktop': <{'position': <2>}>, 'org.gnome.Calculator.desktop': <{'position': <3>}>, 'org.gnome.Calendar.desktop': <{'position': <4>}>, 'org.gnome.Snapshot.desktop': <{'position': <5>}>, 'ca.desrt.dconf-editor.desktop': <{'position': <6>}>, 'org.gnome.baobab.desktop': <{'position': <7>}>, 'org.gnome.DiskUtility.desktop': <{'position': <8>}>, 'simple-scan.desktop': <{'position': <9>}>, 'org.gnome.Evince.desktop': <{'position': <10>}>, 'com.mattjakeman.ExtensionManager.desktop': <{'position': <11>}>, 'org.fedoraproject.MediaWriter.desktop': <{'position': <12>}>, 'org.gnome.font-viewer.desktop': <{'position': <13>}>, 'com.google.Chrome.desktop': <{'position': <14>}>, 'yelp.desktop': <{'position': <15>}>, 'org.gnome.Loupe.desktop': <{'position': <16>}>, 'input-remapper-gtk.desktop': <{'position': <17>}>, 'org.gnome.Logs.desktop': <{'position': <18>}>, 'org.freedesktop.GnomeAbrt.desktop': <{'position': <19>}>, 'org.gnome.Rhythmbox3.desktop': <{'position': <20>}>, 'org.gnome.Settings.desktop': <{'position': <21>}>, 'org.gnome.Software.desktop': <{'position': <22>}>, 'com.spotify.Client.desktop': <{'position': <23>}>}, {'org.gnome.SystemMonitor.desktop': <{'position': <0>}>, 'org.gnome.TextEditor.desktop': <{'position': <1>}>, 'org.gnome.tweaks.desktop': <{'position': <2>}>, 'org.gnome.Totem.desktop': <{'position': <3>}>, 'org.gnome.Weather.desktop': <{'position': <4>}>}]
 disable-user-extensions=false
-disabled-extensions=['apps-menu@gnome-shell-extensions.gcampax.github.com', 'background-logo@fedorahosted.org', 'window-list@gnome-shell-extensions.gcampax.github.com', 'light-style@gnome-shell-extensions.gcampax.github.com', 'just-perfection-desktop@just-perfection']
-enabled-extensions=['nightthemeswitcher@romainvigier.fr', 'vertical-workspaces@G-dH.github.com', 'AlphabeticalAppGrid@stuarthayhurst', 'caffeine@patapon.info', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'luminus-desktop@dikasp.gitlab', 'blur-my-shell@aunetx']
+disabled-extensions=['apps-menu@gnome-shell-extensions.gcampax.github.com', 'background-logo@fedorahosted.org', 'window-list@gnome-shell-extensions.gcampax.github.com', 'light-style@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['nightthemeswitcher@romainvigier.fr', 'vertical-workspaces@G-dH.github.com', 'AlphabeticalAppGrid@stuarthayhurst', 'caffeine@patapon.info', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'luminus-desktop@dikasp.gitlab', 'blur-my-shell@aunetx', 'just-perfection-desktop@just-perfection']
 favorite-apps=['org.mozilla.firefox.desktop', 'code.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Ptyxis.desktop']
 welcome-dialog-last-shown-version='48.0'
 
@@ -202,8 +202,10 @@ double-super-to-appgrid=true
 max-displayed-search-results=0
 osd=true
 panel=true
+panel-icon-size=0
 panel-in-overview=true
 panel-notification-icon=true
+panel-size=0
 power-icon=true
 ripple-box=true
 search=true
@@ -211,7 +213,7 @@ show-apps-button=false
 startup-status=1
 support-notifier-showed-version=34
 support-notifier-type=0
-theme=true
+theme=false
 weather=false
 window-demands-attention-focus=true
 window-maximized-on-create=false
@@ -228,11 +230,11 @@ workspaces-in-app-grid=true
 world-clock=false
 
 [extensions/nightthemeswitcher/time]
-location=(40.849670451147929, 14.2681)
+location=(40.851799999999997, 14.2681)
 manual-schedule=false
 nightthemeswitcher-ondemand-keybinding=['<Super>F5']
-sunrise=6.6410194163200913
-sunset=19.411653923520468
+sunrise=6.6408795214990803
+sunset=19.411771104919922
 
 [extensions/vertical-workspaces]
 center-app-grid=true

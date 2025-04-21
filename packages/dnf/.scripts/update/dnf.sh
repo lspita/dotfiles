@@ -44,7 +44,7 @@ __dump-packages() {
 }
 
 __upgrade() {
-    sudo dnf upgrade
+    sudo dnf upgrade -y
 }
 
 __install() {
