@@ -273,6 +273,7 @@ plocate
 plymouth
 plymouth-system-theme
 podman
+podman-compose
 policycoreutils
 policycoreutils-python-utils
 polkit

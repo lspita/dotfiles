@@ -93,7 +93,7 @@ application-id='org.gnome.tweaks.desktop'
 application-id='org.mozilla.firefox.desktop'
 
 [peripherals/touchpad]
-disable-while-typing=true
+disable-while-typing=false
 speed=0.69999999999999996
 two-finger-scrolling-enabled=true
 
@@ -233,8 +233,8 @@ world-clock=false
 location=(40.851799999999997, 14.2681)
 manual-schedule=false
 nightthemeswitcher-ondemand-keybinding=['<Super>F5']
-sunrise=6.6342668859910319
-sunset=19.416588477992185
+sunrise=6.6331707839756007
+sunset=19.417388296540793
 
 [extensions/vertical-workspaces]
 center-app-grid=true
