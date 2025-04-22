@@ -25,11 +25,11 @@ __restore-total() {
 
     local old_ifs="$IFS"
     while IFS= read -r line; do
-        if [[ "$line" == ">>>"* ]]; then
+        if [[ "$line" = ">>>"* ]]; then
             current_path="${line#>>>}"
             temp_file=`mktemp`
-        elif [[ "$line" == "<<<" ]]; then
-	    dconf load "$current_path" < "$temp_file"
+        elif [[ "$line" = "<<<" ]]; then
+	        dconf load "$current_path" < "$temp_file"
     	    rm "$temp_file"
         elif [[ "$temp_file" != "" ]]; then
             echo "$line" >> "$temp_file"

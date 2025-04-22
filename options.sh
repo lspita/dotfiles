@@ -1,7 +1,7 @@
-PACKAGES_LIST=`
-ls -1 $PACKAGES_DIR |
-__require-command gnome-shell "gnome.*"
-`
+__packages-list() {
+    __default-list |
+    __require-command gnome-shell "gnome.*"
+}
 
 declare -A target
 declare -A sudo

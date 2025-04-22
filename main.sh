@@ -2,6 +2,10 @@
 
 PACKAGES_DIR="packages"
 
+__default-list() {
+	ls -1 $PACKAGES_DIR
+}
+
 __require-command() {
 	if ! command -v $1 > /dev/null; then
 		grep -vE "$2"
@@ -11,6 +15,21 @@ __require-command() {
 }
 
 source ./options.sh
+
+case "$1" in
+	"restow")
+		PACKAGES=`__packages-list`
+		FLAGS="-R"
+		;;
+	"delete")
+		PACKAGES=`__default-list`
+		FLAGS="-D"
+		;;
+	*)
+		echo "Invalid command $1" 1>&2
+		exit 1
+		;;
+esac
 
 get_package_attribute() {
 	local package="$1"
@@ -25,20 +44,24 @@ get_package_attribute() {
 	fi
 }
 
-for package in $PACKAGES_LIST; do
+for package in $PACKAGES; do
 	target=`get_package_attribute $package target`
 	sudo=`get_package_attribute $package sudo`
 
-	if [ $sudo == true ]; then
-		prefix="sudo "
-	elif [ $sudo == false ]; then
-		prefix=""
-	else
-		echo "Invalid sudo value $sudo for package $package" 1>&2
-		exit 1
-	fi
+	case $sudo in
+		"true")
+			prefix="sudo "
+			;;
+		"false")
+			prefix=""
+			;;
+		*)
+			echo "Invalid sudo value $sudo for package $package" 1>&2
+			exit 1
+			;;
+	esac
 
-	command="${prefix}stow -d $PACKAGES_DIR -t $target $@ $package"
+	command="${prefix}stow -d $PACKAGES_DIR -t $target $FLAGS $package"
 	echo "$command"
 	eval "$command"
 done
