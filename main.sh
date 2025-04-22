@@ -6,19 +6,28 @@ __default-list() {
 	ls -1 $PACKAGES_DIR
 }
 
-__require-command() {
-	if ! command -v $1 > /dev/null; then
-		grep -vE "$2"
-	else
+__require() {
+	eval "$2" > /dev/null
+	if [ $? -eq 0 ]; then
 		cat # pass trough
+	else
+		grep -vE "$1"
 	fi
+}
+
+__require-command() {
+	__require $1 "command -v ${@:2} > /dev/null"
+}
+
+__require-path() {
+	__require $1 "test -e ${@:2}"
 }
 
 source ./options.sh
 
 case "$1" in
 	"restow")
-		PACKAGES=`__packages-list`
+		PACKAGES=`__default-list | __packages-filter`
 		FLAGS="-R"
 		;;
 	"delete")

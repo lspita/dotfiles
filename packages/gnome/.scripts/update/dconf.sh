@@ -7,10 +7,6 @@ __DCONF_DIRS=(
     "/org/gnome/tweaks/"
 )
 
-__check-requirements() {                
-    __command-exists dconf
-}
-
 __dump-total() {
     for dir in "${__DCONF_DIRS[@]}"; do
         echo ">>>$dir"

@@ -1,7 +1,3 @@
-__check-requirements() {
-    __command-exists dnf
-}
-
 __init() {
     # docker repo
     # https://docs.docker.com/engine/install/fedora/#install-using-the-repository

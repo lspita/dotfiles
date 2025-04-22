@@ -6,11 +6,7 @@ __run-script-action() {
     for script in $DOTFILES_SCRIPTS/update/*.sh; do
         local name=`basename ${script%.*}`
         source $script
-        if
-            __function-exists __check-requirements && 
-            __check-requirements && 
-            ( [ $# -eq 0 ] || __function-exists $@ ); 
-        then
+        if [ $# -eq 0 ] || __function-exists $@; then
             __h2 "$name"
             __script-action
         fi

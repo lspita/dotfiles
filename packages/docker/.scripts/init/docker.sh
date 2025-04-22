@@ -1,1 +1,1 @@
-__enable-service docker docker
+__enable-service docker

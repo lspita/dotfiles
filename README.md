@@ -12,19 +12,6 @@ command -v zsh | sudo tee -a /etc/shells # prevent zsh invalid shell with brew
 chsh -s $(which zsh) # set zsh as default
 ```
 
-## WSL Hello sudo
-
-http://github.com/nullpo-head/WSL-Hello-sudo/
-
-```sh
-cd $HOME
-wget http://github.com/nullpo-head/WSL-Hello-sudo/releases/latest/download/release.tar.gz
-tar xvf release.tar.gz
-mv release wsl-hello-sudo
-cd wsl-hello-sudo
-./install.sh
-```
-
 ## SSH private key permissions
 
 ```sh

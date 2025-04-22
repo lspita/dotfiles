@@ -1,7 +1,3 @@
-__check-requirements() {
-    __command-exists flatpak
-}
-
 __dump-packages() {
     flatpak list --columns=application | tail -n +1
 }

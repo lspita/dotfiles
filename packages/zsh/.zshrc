@@ -109,7 +109,7 @@ __function-exists() {
 }
 
 __enable-service() {
-    if __command-exists ${@:2} && ! systemctl is-active --quiet $1; then
+    if ! systemctl is-active --quiet $1; then
         __h1 "Enabling $1 service"
         sudo systemctl enable --now $1
     fi

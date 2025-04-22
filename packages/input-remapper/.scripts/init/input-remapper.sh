@@ -1,1 +1,1 @@
-__enable-service input-remapper input-remapper-gtk
+__enable-service input-remapper
