@@ -6,7 +6,7 @@ __init() {
     # docker repo
     # https://docs.docker.com/engine/install/debian/#install-using-the-repository
     if ! __command-exists docker; then
-        __h3 docker
+        __h3 "docker"
         echo "Uninstallling docker potential conflicts"
         for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do
             sudo apt-get remove $pkg;
@@ -33,7 +33,7 @@ __init() {
     fi
     # aptitude for apt-mark command
     if ! __command-exists apt-mark; then
-        __h3 aptitude
+        __h3 "aptitude"
         echo "Installing dependency aptitude"
         sudo apt install aptitude
     fi

@@ -11,7 +11,7 @@ __run-script-action() {
             __check-requirements && 
             ( [ $# -eq 0 ] || __function-exists $@ ); 
         then
-            __h2 $name
+            __h2 "$name"
             __script-action
         fi
         __unset-func __check-requirements
@@ -40,9 +40,9 @@ system-pull() {
     if [[ `__dotfiles-git-sha` != $old_sha ]]; then
         __h2 "Applying changes"
         source $HOME/.zshrc
-        echo true
+        return 0
     else
-        echo false
+        return 1
     fi
 }
 
@@ -113,22 +113,33 @@ system-backup() {
         return # no changes
     fi
 
-    __init-colors
-    echo -n "${TEXT_BOLD}Commit and push? [Y/n] ${TEXT_RESET}"
-    __unset-colors
+    __bold "Commit and push? [Y/n] " -n
     read YESNO
     YESNO=${YESNO:-"y"}
     if [[ $YESNO =~ ^[Yy]$ ]]; then
         # push changes
-        message=${1:-"Backup $(date +"%Y-%m-%d %H:%M:%S %Z")"}
-        git -C $DOTFILES_ROOT commit -m $message
+        local time_stamp=`date +"%Y-%m-%d %H:%M:%S %Z"`
+        message=${1:-"Backup $time_stamp"}
+        git -C $DOTFILES_ROOT commit -m "$message"
         git -C $DOTFILES_ROOT push
     fi
 }
 
 system-sync() {
-    local has_changes=`system-pull`
-    has_changes=${2:-$has_changes}
+    local message=$1
+    local force_changes=$2
+    system-pull
+    if [[ $? = 0 ]]; then
+        local has_changes=true
+    else
+        local has_changes=false
+    fi
+    if [[ $force_changes = true || $force_changes = false ]]; then
+        local has_changes=$force_changes
+    elif [[ "$force_changes" != "" ]]; then
+        echo "Second parameter must be a boolean true|false"
+        return 1
+    fi
     system-init $has_changes
     system-restore $has_changes
     system-upgrade $has_changes

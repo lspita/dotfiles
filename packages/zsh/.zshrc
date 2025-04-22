@@ -8,65 +8,90 @@ mkdir -p $DOTFILES_DUMPS
 setopt NULL_GLOB
 
 # https://unix.stackexchange.com/questions/9957/how-to-check-if-bash-can-print-colors
-__init-colors() {
-    # check if stdout is a terminal
-    if test -t 1; then
-        # see if it supports colors
-        ncolors=$(tput colors)
-        if test -n "$ncolors" && test $ncolors -ge 8; then
-            TEXT_BOLD="$(tput bold)"
-            TEXT_UNDERLINE="$(tput smul)"
-            TEXT_STANDOUT="$(tput smso)"
-            TEXT_RESET="$(tput sgr0)"
-            TEXT_BLACK="$(tput setaf 0)"
-            TEXT_RED="$(tput setaf 1)"
-            TEXT_GREEN="$(tput setaf 2)"
-            TEXT_YELLOW="$(tput setaf 3)"
-            TEXT_BLUE="$(tput setaf 4)"
-            TEXT_MAGENTA="$(tput setaf 5)"
-            TEXT_CYAN="$(tput setaf 6)"
-            TEXT_WHITE="$(tput setaf 7)"
-        fi
+declare -A TEXT_COLORS
+
+# check if stdout is a terminal
+if [ -t 1 ]; then
+    # see if it supports colors
+    ncolors=$(tput colors)
+    if [ -n "$ncolors" ] && [ $ncolors -ge 8 ]; then
+        TEXT_COLORS[bold]="$(tput bold)"
+        TEXT_COLORS[underline]="$(tput smul)"
+        TEXT_COLORS[standout]="$(tput smso)"
+        TEXT_COLORS[reset]="$(tput sgr0)"
+        TEXT_COLORS[black]="$(tput setaf 0)"
+        TEXT_COLORS[red]="$(tput setaf 1)"
+        TEXT_COLORS[green]="$(tput setaf 2)"
+        TEXT_COLORS[yellow]="$(tput setaf 3)"
+        TEXT_COLORS[blue]="$(tput setaf 4)"
+        TEXT_COLORS[magenta]="$(tput setaf 5)"
+        TEXT_COLORS[cyan]="$(tput setaf 6)"
+        TEXT_COLORS[white]="$(tput setaf 7)"
     fi
+fi
+
+__bold() {
+    echo ${@:2} "${TEXT_COLORS[bold]}$1${TEXT_COLORS[reset]}"
 }
 
-__unset-colors() {
-    unset TEXT_BOLD
-    unset TEXT_UNDERLINE
-    unset TEXT_STANDOUT
-    unset TEXT_RESET
-    unset TEXT_BLACK
-    unset TEXT_RED
-    unset TEXT_GREEN
-    unset TEXT_YELLOW
-    unset TEXT_BLUE
-    unset TEXT_MAGENTA
-    unset TEXT_CYAN
-    unset TEXT_WHITE
+__underline() {
+    echo ${@:2} "${TEXT_COLORS[underline]}$1${TEXT_COLORS[reset]}"
+}
+
+__standout() {
+    echo ${@:2} "${TEXT_COLORS[standout]}$1${TEXT_COLORS[reset]}"
+}
+
+__reset() {
+    echo ${@:2} "${TEXT_COLORS[reset]}$1${TEXT_COLORS[reset]}"
+}
+
+__black() {
+    echo ${@:2} "${TEXT_COLORS[black]}$1${TEXT_COLORS[reset]}"
+}
+
+__red() {
+    echo ${@:2} "${TEXT_COLORS[red]}$1${TEXT_COLORS[reset]}"
+}
+
+__green() {
+    echo ${@:2} "${TEXT_COLORS[green]}$1${TEXT_COLORS[reset]}"
+}
+
+__yellow() {
+    echo ${@:2} "${TEXT_COLORS[yellow]}$1${TEXT_COLORS[reset]}"
+}
+
+__blue() {
+    echo ${@:2} "${TEXT_COLORS[blue]}$1${TEXT_COLORS[reset]}"
+}
+
+__magenta() {
+    echo ${@:2} "${TEXT_COLORS[magenta]}$1${TEXT_COLORS[reset]}"
+}
+
+__cyan() {
+    echo ${@:2} "${TEXT_COLORS[cyan]}$1${TEXT_COLORS[reset]}"
+}
+
+__white() {
+    echo ${@:2} "${TEXT_COLORS[white]}$1${TEXT_COLORS[reset]}"
 }
 
 __h1() {
-    __init-colors
-    echo "${TEXT_BOLD}${TEXT_BLUE}$1${TEXT_RESET}"
-    __unset-colors
+    __bold "`__blue "$1"`" ${@:2}
 }
 
 __h2() {
-    __init-colors
-    echo "${TEXT_BOLD}${TEXT_CYAN}$1${TEXT_RESET}"
-    __unset-colors
+    __bold "`__cyan "$1"`" ${@:2}
 }
 
 __h3() {
-    __init-colors
-    echo "${TEXT_BOLD}${TEXT_MAGENTA}$1${TEXT_RESET}"
-    __unset-colors
+    __bold "`__magenta "$1"`" ${@:2}
 }
 
 __error() {
-    __init-colors
-    echo "${TEXT_BOLD}${TEXT_RED}$1${TEXT_RESET}"
-    __unset-colors
+    __bold "`__red "$1"`" ${@:2}
 }
 
 __unset-func() {

@@ -17,8 +17,8 @@ get_package_attribute() {
 	fi
 }
 
-for package_dir in ${PACKAGES_DIR}/*; do
-	package=`basename ${package_dir}`
+for package_dir in $PACKAGES_DIR/*; do
+	package=`basename $package_dir`
 
 	target=`get_package_attribute $package target`
 	sudo=`get_package_attribute $package sudo`
