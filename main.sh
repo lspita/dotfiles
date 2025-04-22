@@ -2,10 +2,6 @@
 
 PACKAGES_DIR="packages"
 
-__default-list() {
-	ls -1 $PACKAGES_DIR
-}
-
 __require() {
 	eval "$2" > /dev/null
 	if [ $? -eq 0 ]; then
@@ -25,21 +21,6 @@ __require-path() {
 
 source ./options.sh
 
-case "$1" in
-	"restow")
-		PACKAGES=`__default-list | __packages-filter`
-		FLAGS="-R"
-		;;
-	"delete")
-		PACKAGES=`__default-list`
-		FLAGS="-D"
-		;;
-	*)
-		echo "Invalid command $1" 1>&2
-		exit 1
-		;;
-esac
-
 get_package_attribute() {
 	local package="$1"
 	local table="$2"
@@ -53,7 +34,7 @@ get_package_attribute() {
 	fi
 }
 
-for package in $PACKAGES; do
+for package in `ls -1 $PACKAGES_DIR | __packages-filter`; do
 	target=`get_package_attribute $package target`
 	sudo=`get_package_attribute $package sudo`
 
@@ -70,7 +51,7 @@ for package in $PACKAGES; do
 			;;
 	esac
 
-	command="${prefix}stow -d $PACKAGES_DIR -t $target $FLAGS $package"
+	command="${prefix}stow -d $PACKAGES_DIR -t $target $@ $package"
 	echo "$command"
 	eval "$command"
 done

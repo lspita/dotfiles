@@ -1,7 +1,7 @@
 all: restow
 
 restow:
-	./main.sh restow
+	./main.sh -R
 
 delete:
-	./main.sh delete
+	./main.sh -D
