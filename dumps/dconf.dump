@@ -184,10 +184,8 @@ sigma=30
 
 [extensions/caffeine]
 enable-fullscreen=false
-indicator-position-max=3
+indicator-position-max=1
 show-notifications=true
-toggle-state=false
-user-enabled=false
 
 [extensions/just-perfection]
 accent-color-icon=false
@@ -233,8 +231,8 @@ world-clock=false
 location=(40.851799999999997, 14.2681)
 manual-schedule=false
 nightthemeswitcher-ondemand-keybinding=['<Super>F5']
-sunrise=6.6209819067815872
-sunset=19.426307678923628
+sunrise=6.6202786925225112
+sunset=19.426823694072013
 
 [extensions/vertical-workspaces]
 center-app-grid=true
