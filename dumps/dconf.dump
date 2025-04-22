@@ -50,7 +50,7 @@ enable-animations=true
 font-name='Adwaita Sans 12'
 gtk-key-theme='Default'
 gtk-theme='Adwaita'
-monospace-font-name='FiraCode Nerd Font 12'
+monospace-font-name='NotoMono Nerd Font 12'
 show-battery-percentage=true
 
 [notifications]
@@ -233,8 +233,8 @@ world-clock=false
 location=(40.851799999999997, 14.2681)
 manual-schedule=false
 nightthemeswitcher-ondemand-keybinding=['<Super>F5']
-sunrise=6.6219816249774652
-sunset=19.425574361158823
+sunrise=6.6209819067815872
+sunset=19.426307678923628
 
 [extensions/vertical-workspaces]
 center-app-grid=true
