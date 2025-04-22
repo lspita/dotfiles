@@ -1,3 +1,5 @@
+__require-command gnome-shell "gnome.*"
+
 declare -A target
 declare -A sudo
 

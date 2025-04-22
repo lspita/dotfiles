@@ -1,8 +1,15 @@
-#! /bin/bash
+#!/bin/bash
 
 PACKAGES_DIR="packages"
+PACKAGES_LIST=`ls -1 $PACKAGES_DIR`
 
-source ./overrides.sh # load package attributes
+__require-command() {
+	if command -v $1 > /dev/null; then
+		PACKAGES_LIST=`echo $PACKAGES_LIST | grep -vE "$2"`
+	fi
+}
+
+source ./overrides.sh
 
 get_package_attribute() {
 	local package="$1"
@@ -17,9 +24,7 @@ get_package_attribute() {
 	fi
 }
 
-for package_dir in $PACKAGES_DIR/*; do
-	package=`basename $package_dir`
-
+for package in $PACKAGES_LIST; do
 	target=`get_package_attribute $package target`
 	sudo=`get_package_attribute $package sudo`
 
