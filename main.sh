@@ -1,15 +1,18 @@
 #!/bin/bash
 
 PACKAGES_DIR="packages"
-PACKAGES_LIST=`ls -1 $PACKAGES_DIR`
 
 __require-command() {
-	if command -v $1 > /dev/null; then
-		PACKAGES_LIST=`echo $PACKAGES_LIST | grep -vE "$2"`
+	if ! command -v $1 > /dev/null; then
+		grep -vE "$2"
+	else
+		cat # pass trough
 	fi
 }
 
-source ./overrides.sh
+source ./options.sh
+echo $PACKAGES_LIST
+echo -------------------------
 
 get_package_attribute() {
 	local package="$1"
