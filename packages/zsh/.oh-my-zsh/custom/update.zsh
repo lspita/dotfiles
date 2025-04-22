@@ -128,17 +128,17 @@ system-backup() {
 system-sync() {
     local message=$1
     local force_changes=$2
-    system-pull
-    if [[ $? = 0 ]]; then
-        local has_changes=true
-    else
-        local has_changes=false
-    fi
-    if [[ $force_changes = true || $force_changes = false ]]; then
-        local has_changes=$force_changes
-    elif [[ "$force_changes" != "" ]]; then
-        echo "Second parameter must be a boolean true|false"
+    if [[ "$force_changes" = "" ]]; then
+        force_changes=false
+    elif [[ $force_changes != true && $force_changes != false ]]; then
+        echo "Second parameter must be a boolean true|false" 1>&2
         return 1
+    fi
+    system-pull
+    local pull_result=$?
+    local has_changes=false
+    if [[ $force_changes = true || $pull_result = 0 ]]; then
+        has_changes=true
     fi
     system-init $has_changes
     system-restore $has_changes

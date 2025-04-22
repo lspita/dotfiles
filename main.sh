@@ -28,7 +28,7 @@ for package_dir in $PACKAGES_DIR/*; do
 	elif [ $sudo == false ]; then
 		prefix=""
 	else
-		echo "Invalid sudo value $sudo for package $package"
+		echo "Invalid sudo value $sudo for package $package" 1>&2
 		exit 1
 	fi
 
