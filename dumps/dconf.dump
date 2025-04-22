@@ -43,13 +43,13 @@ sources=[('xkb', 'it')]
 clock-show-date=true
 clock-show-seconds=false
 clock-show-weekday=true
-color-scheme='prefer-dark'
+color-scheme='prefer-light'
 cursor-blink=true
 document-font-name='Adwaita Sans 12'
 enable-animations=true
 font-name='Adwaita Sans 12'
 gtk-key-theme='Default'
-gtk-theme='Adwaita-dark'
+gtk-theme='Adwaita'
 monospace-font-name='FiraCode Nerd Font 12'
 show-battery-percentage=true
 
