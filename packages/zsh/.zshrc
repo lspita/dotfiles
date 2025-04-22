@@ -224,3 +224,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+for script in $DOTFILES_SCRIPTS/custom/*.sh; do
+    source $script
+done
