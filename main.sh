@@ -1,37 +1,38 @@
 #! /bin/bash
 
 PACKAGES_DIR="packages"
-if [[ -z "${STOW_FLAGS}" ]]; then
-	STOW_FLAGS="-R" # restow by default
-fi
 
 source ./overrides.sh # load package attributes
-default_target=${HOME}
-default_sudo=0
 
 get_package_attribute() {
-	local package_attr_var="${1}_${2}"
+	local package="$1"
+	local table="$2"
 
-	if [[ ! -v ${package_attr_var} || -z "${!package_attr_var}" ]]; then
-		package_attr_var="default_${2}"
+	declare -n table_ref="$table"
+
+	if [[ -z "${table_ref[$package]}" ]]; then
+		echo "${table_ref[default]}"
+	else
+		echo "${table_ref[$package]}"
 	fi
-
-	echo ${!package_attr_var}
 }
 
 for package_dir in ${PACKAGES_DIR}/*; do
-	PACKAGE=`basename ${package_dir}`
+	package=`basename ${package_dir}`
 
-	TARGET_PATH=`get_package_attribute ${PACKAGE} target`
-	USE_SUDO=`get_package_attribute ${PACKAGE} sudo`
+	target=`get_package_attribute $package target`
+	sudo=`get_package_attribute $package sudo`
 
-	if [ ${USE_SUDO} -eq 0 ]; then
-		SUDO_PREFIX=""
+	if [ $sudo == true ]; then
+		prefix="sudo "
+	elif [ $sudo == false ]; then
+		prefix=""
 	else
-		SUDO_PREFIX="sudo "
+		echo "Invalid sudo value $sudo for package $package"
+		exit 1
 	fi
 
-	command="${SUDO_PREFIX}stow -d ${PACKAGES_DIR} -t ${TARGET_PATH} ${STOW_FLAGS} ${PACKAGE}"
-	echo ${command}
-	eval ${command}
+	command="${prefix}stow -d $PACKAGES_DIR -t $target $@ $package"
+	echo "$command"
+	eval "$command"
 done

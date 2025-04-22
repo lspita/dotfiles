@@ -1,14 +1,10 @@
-# The default package attributes are:
-# - target: ${HOME}
-# - sudo: 0
-# 
-# Override a package attributes by creating variables like this:
-# 
-# <package-name>_target=<target path [str]>
-# <package-name>_sudo=<if sudo is required [0-1]>
-# 
-# Example:
-# bash_target=${HOME}/bash
-# bash_sudo=1
-# 
-# IMPORTANT: "default" is a reserved package name, do not use it
+declare -A target
+declare -A sudo
+
+# default is a reserved name, don't use it as a package
+
+target[default]=$HOME
+sudo[default]=false
+
+target[gnome-system]=/
+sudo[gnome-system]=true
