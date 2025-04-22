@@ -11,8 +11,6 @@ __require-command() {
 }
 
 source ./options.sh
-echo $PACKAGES_LIST
-echo -------------------------
 
 get_package_attribute() {
 	local package="$1"
