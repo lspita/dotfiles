@@ -113,7 +113,7 @@ system-backup() {
         return # no changes
     fi
 
-    __bold "Commit and push? [Y/n] " -n
+    __bold "Continue with backup? [Y/n] " -n
     read YESNO
     YESNO=${YESNO:-"y"}
     if [[ $YESNO =~ ^[Yy]$ ]]; then
