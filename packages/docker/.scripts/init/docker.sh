@@ -1,1 +1,3 @@
-__enable-service docker
+if __command-exists docker; then
+    __enable-service docker
+fi

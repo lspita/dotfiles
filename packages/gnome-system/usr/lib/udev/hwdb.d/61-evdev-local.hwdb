@@ -1,6 +1,0 @@
-# HP OmniBook Ultra Flip 14
-evdev:name:SYNA3580:00 06CB:CFD2 Touchpad:dmi:*svnHP:*pnHPOmniBookUltraFlipLaptop14-fh0xxx**
- EVDEV_ABS_00=::30
- EVDEV_ABS_01=::29
- EVDEV_ABS_35=::30
- EVDEV_ABS_36=::29

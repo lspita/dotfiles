@@ -199,3 +199,4 @@ vim-tiny
 wget
 whiptail
 zlib1g
+zsh

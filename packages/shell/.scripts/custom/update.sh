@@ -6,21 +6,24 @@ __run-script-action() {
     for script in $DOTFILES_SCRIPTS/update/*.sh; do
         local name=`basename ${script%.*}`
         source $script
-        if [ $# -eq 0 ] || __function-exists $@; then
+        if 
+            (! __function-exists __require || __require) &&
+            ([ $# -eq 0 ] || __function-exists $@)
+        ; then
             __h2 "$name"
             __script-action
         fi
-        __unset-func __check-requirements
-        __unset-func __init
-        __unset-func __dump-packages
-        __unset-func __dump-total
-        __unset-func __upgrade
-        __unset-func __clean
-        __unset-func __install
-        __unset-func __uninstall
-        __unset-func __restore-total
+        __unset-function __check-requirements
+        __unset-function __init
+        __unset-function __dump-packages
+        __unset-function __dump-total
+        __unset-function __upgrade
+        __unset-function __clean
+        __unset-function __install
+        __unset-function __uninstall
+        __unset-function __restore-total
     done
-    __unset-func __script-action
+    __unset-function __script-action
 }
 
 __dotfiles-git-sha() {
@@ -30,14 +33,18 @@ __dotfiles-git-sha() {
 system-pull() {
     __h1 "Pulling remote"
     local old_sha=`__dotfiles-git-sha`
+    __h2 "Unlinking packages"
     make -C $DOTFILES_ROOT delete
+    __h2 "Pulling repo"
     git -C $DOTFILES_ROOT pull
+    __h2 "Relinking packages"
     make -C $DOTFILES_ROOT restow
     if [[ `__dotfiles-git-sha` != $old_sha ]]; then
         __h2 "Applying changes"
         source $HOME/.zshrc
         return 0
     else
+        __h2 "No changes to apply"
         return 1
     fi
 }

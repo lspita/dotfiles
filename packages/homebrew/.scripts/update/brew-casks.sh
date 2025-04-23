@@ -1,3 +1,7 @@
+__require() {
+    __command-exists brew
+}
+
 __dump-packages() {
     brew list -1 --casks --full-name
 }

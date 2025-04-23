@@ -22,7 +22,6 @@ tree-sitter
 valgrind
 wget
 zig
-zsh
 zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting

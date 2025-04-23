@@ -94,7 +94,7 @@ __error() {
     __bold "`__red "$1"`" ${@:2}
 }
 
-__unset-func() {
+__unset-function() {
     if declare -f "$1" > /dev/null; then
         unset -f "$1"
     fi
@@ -106,6 +106,10 @@ __command-exists() {
 
 __function-exists() {
     declare -f $@ > /dev/null
+}
+
+__path-exists() {
+    test -e $1
 }
 
 __enable-service() {

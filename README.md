@@ -3,6 +3,12 @@
 > because they aren't modular or configurable (ex. user name and email in the 
 > [git config file](./packages/git/.gitconfig) or some paths starting with /home/lspita)
 
+# Install
+
+```sh
+./install.sh
+```
+
 # Utils
 
 ## Set ZSH as default shell

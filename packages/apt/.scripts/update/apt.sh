@@ -1,3 +1,7 @@
+__require() {
+    __command-exists apt
+}
+
 __init() {
     # docker repo
     # https://docs.docker.com/engine/install/debian/#install-using-the-repository

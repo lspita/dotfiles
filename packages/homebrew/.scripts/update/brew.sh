@@ -1,3 +1,7 @@
+__require() {
+    __command-exists brew
+}
+
 __upgrade() {
     brew update
 }
