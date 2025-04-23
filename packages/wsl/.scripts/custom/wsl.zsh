@@ -1,4 +1,4 @@
-if ! __is-wsl; then
+if __is-wsl; then
     export BROWSER="/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe"
 
     clean-zone-identifier() {
