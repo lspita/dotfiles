@@ -1,7 +1,7 @@
 MESSAGE=${MESSAGE:-""}
 FORCE_REINSTALL=${FORCE_REINSTALL:-false}
 
-if [[ ! $FORCE_REINSTALL =~ true|false ]]; then
+if [[ ! $FORCE_REINSTALL =~ "true|false" ]]; then
     echo "Second argument must be true or false" 1>&2
     return 1
 fi
