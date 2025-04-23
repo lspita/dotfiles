@@ -1,4 +1,4 @@
-if [[ $(systemd-detect-virt) = wsl ]]; then
+if ! __is-wsl; then
     export BROWSER="/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe"
 
     clean-zone-identifier() {
@@ -6,13 +6,4 @@ if [[ $(systemd-detect-virt) = wsl ]]; then
     }
 
     alias winget=winget.exe
-
-    # WSL_HELLO_PATH=$HOME/wsl-hello-sudo
-    # if [ ! -d $WSL_HELLO_PATH ]; then
-    #     wget http://github.com/nullpo-head/WSL-Hello-sudo/releases/latest/download/release.tar.gz
-    #     tar xvf release.tar.gz
-    #     mv release $WSL_HELLO_PATH
-    #     $WSL_HELLO_PATH/install.sh
-    # fi
-    # unset WSL_HELLO_PATH
 fi

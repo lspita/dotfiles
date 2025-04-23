@@ -129,6 +129,10 @@ __source-if-exists() {
     fi
 }
 
+__is-wsl() {
+    [[ $(systemd-detect-virt) = wsl ]]
+}
+
 for script in $DOTFILES_SCRIPTS/init/*.zsh; do
     source $script
 done
