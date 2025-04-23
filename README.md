@@ -49,6 +49,9 @@ Custom italian keyboards for development (can be found in [assets](./assets/keyb
     - altgr + l = <
     - altgr + shift + l = >
 
+> [!WARNING]
+> To use the installers, copy the files on your windows host
+
 # Utils
 
 ## Set ZSH as default shell
