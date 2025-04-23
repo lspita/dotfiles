@@ -79,19 +79,19 @@ __white() {
 }
 
 __h1() {
-    __bold "`__blue "$1"`" ${@:2}
+    __bold "$(__blue "$1")" ${@:2}
 }
 
 __h2() {
-    __bold "`__cyan "$1"`" ${@:2}
+    __bold "$(__cyan "$1")" ${@:2}
 }
 
 __h3() {
-    __bold "`__magenta "$1"`" ${@:2}
+    __bold "$(__magenta "$1")" ${@:2}
 }
 
 __error() {
-    __bold "`__red "$1"`" ${@:2}
+    __bold "$(__red "$1")" ${@:2}
 }
 
 __unset-function() {
@@ -101,15 +101,11 @@ __unset-function() {
 }
 
 __command-exists() {
-    command -v $@ > /dev/null
+    which $@ > /dev/null
 }
 
 __function-exists() {
     declare -f $@ > /dev/null
-}
-
-__path-exists() {
-    test -e $1
 }
 
 __enable-service() {
@@ -119,7 +115,21 @@ __enable-service() {
     fi
 }
 
-for script in $DOTFILES_SCRIPTS/init/*.sh; do
+__yes-no() {
+    __bold "$1 [Y/n]: " -n
+    local answer
+    read answer
+    answer=${answer:-"y"}
+    [[ $answer =~ ^[Yy]$ ]]
+}
+
+__source-if-exists() {
+    if [ -f "$1" ]; then
+        source "$1"
+    fi
+}
+
+for script in $DOTFILES_SCRIPTS/init/*.zsh; do
     source $script
 done
 
@@ -228,6 +238,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-for script in $DOTFILES_SCRIPTS/custom/*.sh; do
+for script in $DOTFILES_SCRIPTS/custom/*.zsh; do
     source $script
 done

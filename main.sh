@@ -17,9 +17,9 @@ get_package_attribute() {
 	fi
 }
 
-for package in `ls -1 $PACKAGES_DIR`; do
-	target=`get_package_attribute $package target`
-	sudo=`get_package_attribute $package sudo`
+for package in $(ls -1 $PACKAGES_DIR); do
+	target=$(get_package_attribute $package target)
+	sudo=$(get_package_attribute $package sudo)
 
 	case $sudo in
 		"true")
@@ -35,6 +35,6 @@ for package in `ls -1 $PACKAGES_DIR`; do
 	esac
 
 	command="${prefix}stow -d $PACKAGES_DIR -t $target $@ $package"
-	# echo "$command" # debug
+	echo "$command" # debug
 	eval "$command"
 done

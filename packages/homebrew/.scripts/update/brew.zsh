@@ -1,3 +1,5 @@
+PRIORITY=1
+
 __require() {
     __command-exists brew
 }

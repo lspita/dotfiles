@@ -1,4 +1,4 @@
-if [[ `systemd-detect-virt` = wsl ]]; then
+if [[ $(systemd-detect-virt) = wsl ]]; then
     export BROWSER="/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe"
 
     clean-zone-identifier() {

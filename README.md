@@ -6,20 +6,24 @@
 # Install
 
 ```sh
-./install.sh
+source install.sh
 ```
+
+Variables
+ - `MESSAGE`: commit message for system-sync
+ - `FORCE_REINSTALL`: true to reinstall existing things, like brew and oh-my-zsh (default: false)
 
 # Utils
 
 ## Set ZSH as default shell
 
 ```sh
-command -v zsh | sudo tee -a /etc/shells # prevent zsh invalid shell with brew
+which zsh | sudo tee -a /etc/shells # prevent zsh invalid shell with brew
 chsh -s $(which zsh) # set zsh as default
 ```
 
 ## SSH private key permissions
 
 ```sh
-sudo chmod 600 id_ed25519
+sudo chmod 600 ~/.ssh/id_ed25519
 ```
