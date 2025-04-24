@@ -1,6 +1,7 @@
 #!/bin/bash
 
 PACKAGES_DIR="packages"
+FLAGS=$@
 
 source ./options.sh
 
@@ -17,24 +18,26 @@ get_package_attribute() {
 	fi
 }
 
+__create-command() {
+	echo "${1:+"$1 "}stow -d $PACKAGES_DIR -t $target ${FLAGS}${2:+" ${@:2}"} $package"
+}
+
 for package in $(ls -1 $PACKAGES_DIR); do
 	target=$(get_package_attribute $package target)
-	sudo=$(get_package_attribute $package sudo)
-
-	case $sudo in
-		"true")
-			prefix="sudo "
+	mode=$(get_package_attribute $package mode)
+	case $mode in
+		"normal")
+			command=$(__create-command)
 			;;
-		"false")
-			prefix=""
+		"sudo")
+			command=$(__create-command "sudo")
 			;;
 		*)
-			echo "Invalid sudo value $sudo for package $package" 1>&2
+			echo "Invalid mode $sudo for package $package" 1>&2
 			exit 1
 			;;
 	esac
 
-	command="${prefix}stow -d $PACKAGES_DIR -t $target $@ $package"
 	echo "$command" # debug
 	eval "$command"
 done

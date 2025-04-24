@@ -48,14 +48,14 @@ __dotfiles-git-sha() {
 }
 
 system-pull() {
-    __h1 "Pulling remote"
+    __h1 "Getting changes"
     local old_sha=$(__dotfiles-git-sha)
     __h2 "Unlinking packages"
     make -C $DOTFILES_ROOT delete
     __h2 "Pulling repo"
     git -C $DOTFILES_ROOT pull
     __h2 "Relinking packages"
-    make -C $DOTFILES_ROOT restow
+    make -C $DOTFILES_ROOT stow
     if [[ $(__dotfiles-git-sha) != $old_sha ]]; then
         __h2 "Applying changes"
         source $HOME/.zshrc
