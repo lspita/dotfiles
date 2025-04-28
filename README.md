@@ -42,7 +42,7 @@ Custom italian keyboards for development (can be found in [assets](./assets/keyb
     - base: italian
     - altgr + ì = ~
     - altgr + ' = `
-- [hpita](./assets/keyboards/hpita/): devita + fix for stupid Fn layout (HP OmniBook Ultra Flip 14)
+- [hpita](./assets/keyboards/hpita/): italian + dev additions + fix for stupid Fn layout (HP OmniBook Ultra Flip 14)
     - base: italian
     - altgr + ì = ~
     - altgr + ' = `
