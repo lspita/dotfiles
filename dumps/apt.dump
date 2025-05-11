@@ -8,7 +8,6 @@ bash
 bsdutils
 build-essential
 ca-certificates
-clang
 cmake
 containerd.io
 coreutils
@@ -39,7 +38,6 @@ fdisk
 findutils
 gcc
 gcc-12-base
-gdb
 git
 gpgv
 grep

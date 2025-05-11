@@ -5,6 +5,7 @@ curl
 dotnet
 fastfetch
 gcc
+gdb
 gh
 git
 go

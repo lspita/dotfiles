@@ -163,3 +163,12 @@ system-sync() {
     system-backup $1
     unset FORCE_CHANGES
 }
+
+system-override() {
+    # system-init
+    # system-restore
+    # system-upgrade
+    system-clean
+    system-dump
+    system-backup $1
+}
