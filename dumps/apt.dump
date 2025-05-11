@@ -8,6 +8,8 @@ bash
 bsdutils
 build-essential
 ca-certificates
+clang
+cmake
 containerd.io
 coreutils
 cpio
@@ -35,7 +37,9 @@ dpkg
 e2fsprogs
 fdisk
 findutils
+gcc
 gcc-12-base
+gdb
 git
 gpgv
 grep
@@ -194,6 +198,7 @@ udev
 usr-is-merged
 util-linux
 util-linux-extra
+valgrind
 vim-common
 vim-tiny
 wget
