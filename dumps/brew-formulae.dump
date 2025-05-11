@@ -1,5 +1,6 @@
 clang-format
 cmake
+codespell
 curl
 dotnet
 fastfetch
