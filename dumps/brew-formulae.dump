@@ -10,6 +10,7 @@ git
 go
 gradle
 jupyterlab
+lld
 llvm
 node
 openjdk
