@@ -3,11 +3,19 @@ if __is-wsl; then
         find . -type f -name "*:Zone.Identifier" -exec rm "{}" \;
     }
 
-    alias winget=winget.exe
-    alias open="explorer.exe"
-    export BROWSER="explorer.exe"
+    open() {
+        local args=()
+        for arg in "$@"; do
+            args+=("\"$arg\"")
+        done
+        powershell.exe -Command "Start-Process ${args[*]}"
+    }
+
+    export BROWSER=open
 else
-    alias open="xdg-open"
+    open() {
+        xdg-open $@
+    }
 fi
 
 alias purge-all="find . -mindepth 1 -maxdepth 1 -exec rm -rf '{}' \;"
