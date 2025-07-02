@@ -1,0 +1,10 @@
+{
+    // Git
+    // @jupyterlab/git:plugin
+    // jupyterlab-git settings.
+    // ************************
+
+    // Hide hidden file warning
+    // If true, the warning popup when opening the .gitignore file without hidden files will not be displayed.
+    "hideHiddenFileWarning": false
+}
