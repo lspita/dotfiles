@@ -100,12 +100,20 @@ __unset-function() {
     fi
 }
 
+__is-wsl() {
+    [[ $(systemd-detect-virt) = wsl ]]
+}
+
 __command-exists() {
     which $@ > /dev/null
 }
 
 __function-exists() {
     declare -f $@ > /dev/null
+}
+
+__win-command-exists() {
+    __is-wsl && powershell.exe -Command "if (Get-Command '$1' -ErrorAction SilentlyContinue) { exit 0 } else { exit 1 }"
 }
 
 __enable-service() {
@@ -127,10 +135,6 @@ __source-if-exists() {
     if [ -f "$1" ]; then
         source "$1"
     fi
-}
-
-__is-wsl() {
-    [[ $(systemd-detect-virt) = wsl ]]
 }
 
 for script in $DOTFILES_SCRIPTS/init/*.zsh; do
