@@ -182,6 +182,7 @@ procps
 readline-common
 sed
 sensible-utils
+socat
 stow
 sudo
 systemd
