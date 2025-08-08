@@ -105,11 +105,11 @@ __is-wsl() {
 }
 
 __command-exists() {
-    which $@ > /dev/null
+    command -v $@  >/dev/null 2>&1
 }
 
 __function-exists() {
-    declare -f $@ > /dev/null
+    declare -f $@ >/dev/null 2>&1
 }
 
 __win-command-exists() {
