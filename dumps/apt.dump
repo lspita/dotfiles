@@ -118,8 +118,6 @@ libnewt0.52
 libnftables1
 libnftnl11
 libnss3
-libnvidia-container1
-libnvidia-container-tools
 libp11-kit0
 libpam0g
 libpam-modules
@@ -178,8 +176,6 @@ ncurses-base
 ncurses-bin
 netbase
 nftables
-nvidia-container-toolkit
-nvidia-container-toolkit-base
 passwd
 perl-base
 procps
