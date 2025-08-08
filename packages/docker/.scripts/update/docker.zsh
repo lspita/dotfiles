@@ -31,7 +31,7 @@ __init() {
         fi
     fi
 
-    if ! __command-exists nvidia-container-cli; then
+    if __command-exists nvidia-smi && ! __command-exists nvidia-container-cli; then
         __h3 "NVIDIA Container Toolkit"
         # https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#installation
         if __command-exists apt; then
