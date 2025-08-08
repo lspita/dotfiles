@@ -5,7 +5,7 @@ __require() {
 __init() {
     # aptitude for apt-mark command
     if ! __command-exists apt-mark; then
-        __h3 "aptitude"
+        __h3 "Aptitude"
         echo "Installing dependency aptitude"
         sudo apt install aptitude
     fi
