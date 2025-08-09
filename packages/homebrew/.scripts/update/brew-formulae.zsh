@@ -1,4 +1,4 @@
-PRIORITY=2
+PRIORITY=1 # after general brew
 
 __require() {
     __command-exists brew
