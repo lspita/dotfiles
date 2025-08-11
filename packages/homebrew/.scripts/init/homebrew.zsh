@@ -5,5 +5,7 @@ if [ -d /home/linuxbrew/ ]; then
     export HOMEBREW_NO_ENV_HINTS=true
     
     # Increase file descriptor limit for Homebrew/LLVM, etc.
-    ulimit -n 65535
+    if __is-wsl; then
+        ulimit -n 65535
+    fi
 fi

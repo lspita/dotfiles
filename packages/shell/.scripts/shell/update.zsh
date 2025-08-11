@@ -1,7 +1,3 @@
-__dump-file() {
-    echo $DOTFILES_DUMPS/$1.dump
-}
-
 __run-script-action() {
     __unset-all() {
         unset PRIORITY
@@ -11,9 +7,6 @@ __run-script-action() {
         __unset-function __dump-total
         __unset-function __upgrade
         __unset-function __clean
-        __unset-function __install
-        __unset-function __uninstall
-        __unset-function __restore-total
     }
 
     local scripts=()
@@ -74,28 +67,6 @@ system-init() {
     __run-script-action __init
 }
 
-system-restore() {
-    if [[ $1 = false ]]; then
-        return
-    fi
-    __h1 "Restoring"
-    __script-action() {
-        local dump=$(__dump-file $name)
-        __dump-packages | sort | comm -23 - $dump | __uninstall # uninstall extra
-        __dump-packages | sort | comm -13 - $dump | __install # install missing
-    }
-    __run-script-action __dump-packages __uninstall __install
-    __script-action() {
-        local dump=$(__dump-file $name)
-        local temp_file=$(mktemp)
-        __dump-total > $temp_file
-        if ! diff -q $temp_file $dump > /dev/null; then
-            __restore-total < $dump
-        fi
-    }
-    __run-script-action __dump-total __restore-total
-}
-
 system-upgrade() {
     __h1 "Upgrading"
     __script-action() {
@@ -110,18 +81,6 @@ system-clean() {
         __clean
     }
     __run-script-action __clean
-}
-
-system-dump() {
-    __h1 "Dumping"
-    __script-action() {
-        __dump-packages | sort > $(__dump-file $name)
-    }
-    __run-script-action __dump-packages
-    __script-action() {
-        __dump-total > $(__dump-file $name)
-    }
-    __run-script-action __dump-total
 }
 
 system-backup() {
@@ -143,32 +102,17 @@ system-backup() {
 }
 
 system-sync() {
-    local message=$1
-    FORCE_CHANGES=${FORCE_CHANGES:-false}
-    if [[ $FORCE_CHANGES != true && $FORCE_CHANGES != false ]]; then
-        echo "FORCE_CHANGES be a boolean true|false" 1>&2
-        return 1
-    fi
     system-pull
-    local pull_result=$?
-    local has_changes=false
-    if [[ $FORCE_CHANGES = true || $pull_result = 0 ]]; then
-        has_changes=true
-    fi
-    system-init $has_changes
-    system-restore $has_changes
-    system-upgrade $has_changes
-    system-clean $has_changes
-    system-dump $has_changes
+    system-init
+    system-upgrade
+    system-clean
     system-backup $1
-    unset FORCE_CHANGES
 }
 
 system-override() {
+    # system-pull
     # system-init
-    # system-restore
-    # system-upgrade
+    system-upgrade
     system-clean
-    system-dump
     system-backup $1
 }

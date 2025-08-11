@@ -4,6 +4,7 @@ __require() {
 
 __upgrade() {
     brew update
+    brew upgrade
 }
 
 __clean() {
